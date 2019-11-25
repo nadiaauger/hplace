@@ -1,2 +1,11 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>h place</h1>
+<p>En établissement hospitalier aussi, on peut être bien entouré</p>
+
+<div class="search-form-home">
+  <%= form_tag root_path, method: :get do %>
+    <div class="d-flex">
+      <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Votre hôpital"%>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
