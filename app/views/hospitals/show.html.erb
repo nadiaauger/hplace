@@ -1,0 +1,7 @@
+
+<%= @hospital.name %>
+<br>
+<%= @hospital.events %>
+<% @hospital.events.each do |event| %>
+  <%= event.name %>
+<% end %>
