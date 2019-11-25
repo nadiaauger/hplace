@@ -1,11 +1,35 @@
-<h1>h place</h1>
-<p>En établissement hospitalier aussi, on peut être bien entouré</p>
+<div class="body-home">
 
-<div class="search-form-home">
-  <%= form_tag root_path, method: :get do %>
-    <div class="d-flex">
-      <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Votre hôpital"%>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
+  <div class="text-home">
+
+    <div class="slogan">
+      <div class="first-home">
+        <div class="slogan-text">
+            <div id="typed-strings">
+              <h1><strong>Happy</strong></h1>
+              <h1><strong>Humain</strong></h1>
+              <h1><strong>Hôpital</strong></h1>
+              <h1><strong>Hhhhhhh</strong></h1>
+              <h1><strong>Humain</strong></h1>
+              <h1><strong>Hôpital</strong></h1>
+            </div>
+            <span id="typed"></span>
+            <span><strong>...place</strong></span>
+        </div>
+      </div>
     </div>
-  <% end %>
+    <p style="padding: 6em;"><em>En établissement hospitalier aussi, on peut être bien entouré</em></p>
+  </div>
+
+  <div class="search-bar-homepage">
+    <%= form_tag root_path, method: :get do %>
+      <div class="d-flex">
+        <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Votre hôpital"%>
+        <button name="button" type="submit" class="icone-loupe">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    <% end %>
+  </div>
 </div>
+
