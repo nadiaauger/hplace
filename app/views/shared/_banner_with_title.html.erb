@@ -1,0 +1,13 @@
+<% if event.photo.attached? %>
+  <div class="banner_with_title" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path event.photo.key%>'); background-position: inherit;">
+    <div class="container">
+      <%= event.name %>
+    </div>
+  </div>
+<% else %>
+  <div class="banner_with_title" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png'); background-position: inherit;">
+    <div class="container">
+      <%= event.name %>
+    </div>
+  </div>
+<% end %>

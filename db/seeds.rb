@@ -169,7 +169,7 @@ belotte.user = leo
 # belotte.photo.attach(io: file, filename: 'belotte.jpg', content_type: 'image/jpg')
 belotte.save
 
-file = URI.open('https://images.unsplash.com/photo-1568270363382-992bd101f48e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
+# file = URI.open('https://images.unsplash.com/photo-1568270363382-992bd101f48e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
 
 
 
