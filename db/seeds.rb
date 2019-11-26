@@ -5,6 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'json'
+
+filepath = 'db/hospitals.json'
+
+serialized_hospitals = File.read(filepath)
+
+hospitals = JSON.parse(serialized_hospitals)
+
 
 puts "Destroy reservations"
 Reservation.destroy_all
@@ -21,21 +29,16 @@ Hospital.destroy_all
 
 
 puts 'Creating hospital...'
+puts hospitals.class
+puts "aaa"
 
-
-i = 0
-while i < 19
-  url = "https://www.sanitaire-social.com/annuaire-voir-plus/hopitaux-cliniques/ile-de-france/#{i}"
-
-  html_file = open(url).read
-  html_doc = Nokogiri::HTML(html_file)
-
-  html_doc.search('article header h1 a').each do |element|
-    Hospital.create!({
-      name: element.text.strip
-    })
-  end
-  i = i + 1
+puts "bb"
+puts hospitals["hospital"]
+puts "cc"
+hospitals["hospital"].each do |hospital|
+  Hospital.create!({
+    name: hospital
+  })
 end
 
 st_louis = Hospital.new({
