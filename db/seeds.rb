@@ -5,6 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'json'
+
+filepath = 'db/hospitals.json'
+
+serialized_hospitals = File.read(filepath)
+
+hospitals = JSON.parse(serialized_hospitals)
+
 
 puts "Destroy reservations"
 Reservation.destroy_all
@@ -21,6 +29,17 @@ Hospital.destroy_all
 
 
 puts 'Creating hospital...'
+puts hospitals.class
+puts "aaa"
+
+puts "bb"
+puts hospitals["hospital"]
+puts "cc"
+hospitals["hospital"].each do |hospital|
+  Hospital.create!({
+    name: hospital
+  })
+end
 
 st_louis = Hospital.new({
   name: 'Hospital St-Louis'
@@ -54,8 +73,10 @@ file = URI.open('https://avatars0.githubusercontent.com/u/53259210?v=4')
   })
 
 leo.hospital = st_louis
-   leo.photo.attach(io: file, filename: 'leo.jpg', content_type: 'image/jpg')
- 
+
+ leo.photo.attach(io: file, filename: 'leo.jpg', content_type: 'image/jpg')
+
+
 leo.save
 
 
