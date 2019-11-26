@@ -1,0 +1,17 @@
+<% if event.photo.attached? %>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path event.photo.key%>'); background-position: inherit;">
+<% else %>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1503482618211-c70b46ede8b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80'); background-position: inherit;">
+<% end %>
+
+  <div class="container">
+    <h1> <%= event.name %> </h1>
+    <p> <%= event.description %> </p>
+    <% if Reservation.where(user: current_user, event: event).exists? %>
+      <%= link_to "Unregister", event_reservation_path(@event), method: :delete, class: "btn btn-danger" %>
+      <%= link_to "Chat-Room", "#", class: "btn btn-danger" %>
+    <% else %>
+      <%= link_to "Register", event_reservations_path(@event), method: :post, class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

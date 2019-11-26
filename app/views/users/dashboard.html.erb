@@ -1,0 +1,28 @@
+<div>
+<br>
+  <br>
+  <p>Vos évéments</p>
+    <% @user.events.each do |event| %>
+      <p><%= event.name %></p>
+      <p><%= event.start %></p>
+      <p><%= event.end %></p>
+      <p><%= event.location %></p>
+      <p><%= event.max_participants %></p>
+      <p><%= event.description %></p>
+    <% end %>
+</div>
+
+<div>
+<br>
+  <br>
+  <p>Vos invitations</p>
+    <% @user.events.each do |event| %>
+      <p><%= event.name %></p>
+      <p><%= event.start %></p>
+      <p><%= event.end %></p>
+      <p><%= event.location %></p>
+      <p><%= event.max_participants %></p>
+      <p><%= event.description %></p>
+    <% end %>
+</div>
+
