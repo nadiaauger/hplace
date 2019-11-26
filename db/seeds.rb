@@ -74,8 +74,8 @@ file = URI.open('https://avatars0.githubusercontent.com/u/53259210?v=4')
 
 leo.hospital = st_louis
  leo.photo.attach(io: file, filename: 'leo.jpg', content_type: 'image/jpg')
- 
- 
+
+
 
 leo.save
 
@@ -187,7 +187,7 @@ file = URI.open('https://images.unsplash.com/photo-1501003878151-d3cb87799705?ix
     location:      'Cafeteria',
     start:         Time.now + 300,
     end:         Time.now + 450,
-    max_particpants: 6,
+    max_participants: 6,
     description: 'We rely on advertising to provide you with free content! Our third-party vendors or we use cookies to access and use information about your device to ensure the proper functioning of our website or as required for: personalization; ad selection, delivery, and reporting; content selection.'
   })
 
@@ -208,7 +208,7 @@ file = URI.open('https://images.unsplash.com/photo-1568270363382-992bd101f48e?ix
     start:         Time.now + 600,
     end:         Time.now + 850,
 
-    max_particpants: 6,
+    max_participants: 6,
     description: 'We rely on advertising to provide you with free content! Our third-party vendors or we use cookies to access and use information about your device to ensure the proper functioning of our website or as required for: personalization; ad selection, delivery, and reporting; content selection.'
 
   })
@@ -227,7 +227,7 @@ file = URI.open('https://images.unsplash.com/photo-1556112353-ad4fb98d81e7?ixlib
     location:      'Salle A204',
     start:         Time.now + 900,
     end:         Time.now + 1350,
-    max_particpants: 8,
+    max_participants: 8,
     description: 'We rely on advertising to provide you with free content! Our third-party vendors or we use cookies to access and use information about your device to ensure the proper functioning of our website or as required for: personalization; ad selection, delivery, and reporting; content selection.'
 
   })
@@ -246,7 +246,7 @@ file = URI.open('https://images.unsplash.com/photo-1535016120720-40c646be5580?ix
     location:      'Salle A204',
     start:         Time.now + 2000,
     end:         Time.now + 2350,
-    max_particpants: 8,
+    max_participants: 8,
     description: 'We rely on advertising to provide you with free content! Our third-party vendors or we use cookies to access and use information about your device to ensure the proper functioning of our website or as required for: personalization; ad selection, delivery, and reporting; content selection.'
 
   })
