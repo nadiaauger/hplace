@@ -6,4 +6,18 @@
   text-align: center;
   min-width: 10vw;
   min-height: 20vh;
+
+  p{
+    color: $gray;
+  }
+}
+
+.cards_participant{
+  scroll-direction: horizontal;
+}
+
+.click-to-user {
+  &hover{
+    color:red;
+  }
 }

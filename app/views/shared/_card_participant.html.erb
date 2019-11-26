@@ -1,3 +1,4 @@
+
 <% if user.photo.attached? %>
   <div class= "text-center">
     <%= cl_image_tag user.photo.key, height: 50, width: 50, crop: :fill, class: 'avatar' %>
@@ -8,4 +9,4 @@
   </div>
 <% end %>
 
-<%= user.username %>
+<p> <%= user.username %> </p>
