@@ -53,7 +53,7 @@ file = URI.open('https://avatars0.githubusercontent.com/u/53259210?v=4')
   })
 
 leo.hospital = st_louis
-#  leo.photo.attach(io: file, filename: 'leo.jpg', content_type: 'image/jpg')
+  leo.photo.attach(io: file, filename: 'leo.jpg', content_type: 'image/jpg')
 leo.save
 
 
