@@ -53,7 +53,7 @@ file = URI.open('https://avatars0.githubusercontent.com/u/53259210?v=4')
   })
 
 leo.hospital = st_louis
-#  leo.photo.attach(io: file, filename: 'leo.jpg', content_type: 'image/jpg')
+ leo.photo.attach(io: file, filename: 'leo.jpg', content_type: 'image/jpg')
 leo.save
 
 
@@ -70,7 +70,7 @@ file = URI.open('https://avatars1.githubusercontent.com/u/54894352?v=4')
 
   nadia.hospital = st_louis
 
-# nadia.photo.attach(io: file, filename: 'nadia.jpg', content_type: 'image/jpg')
+nadia.photo.attach(io: file, filename: 'nadia.jpg', content_type: 'image/jpg')
 
 
  nadia.save
@@ -88,7 +88,7 @@ file = URI.open('https://avatars1.githubusercontent.com/u/54894352?v=4')
 
   boris.hospital = st_louis
 
-# boris.photo.attach(io: file, filename: 'boris.jpg', content_type: 'image/jpg')
+boris.photo.attach(io: file, filename: 'boris.jpg', content_type: 'image/jpg')
 boris.save
 
 
@@ -106,7 +106,7 @@ boris.save
 
 donald.hospital = st_louis
 
-# donald.photo.attach(io: file, filename: 'donald.jpg', content_type: 'image/jpg')
+donald.photo.attach(io: file, filename: 'donald.jpg', content_type: 'image/jpg')
 donald.save
 
  file = URI.open('https://hips.hearstapps.com/digitalspyuk.cdnds.net/18/03/1516016506-vhp.jpg?crop=0.598xw:1.00xh;0.254xw,0&resize=480:*')
@@ -123,7 +123,7 @@ donald.save
 
    tom.hospital = st_louis
 
-# tom.photo.attach(io: file, filename: 'tom.jpg', content_type: 'image/jpg')
+tom.photo.attach(io: file, filename: 'tom.jpg', content_type: 'image/jpg')
 tom.save
 
  file = URI.open('https://www.essence.com/wp-content/uploads/2018/06/image/2017/11/main/beyonce-tout_0-1472x1472.jpg')
@@ -141,7 +141,7 @@ tom.save
 
    beyonce.hospital = st_louis
 
-# beyonce.photo.attach(io: file, filename: 'beyonce.jpg', content_type: 'image/jpg')
+beyonce.photo.attach(io: file, filename: 'beyonce.jpg', content_type: 'image/jpg')
 beyonce.save
 
 puts 'Finished!'
@@ -166,7 +166,7 @@ file = URI.open('https://images.unsplash.com/photo-1501003878151-d3cb87799705?ix
 
 belotte.hospital = st_louis
 belotte.user = leo
-# belotte.photo.attach(io: file, filename: 'belotte.jpg', content_type: 'image/jpg')
+belotte.photo.attach(io: file, filename: 'belotte.jpg', content_type: 'image/jpg')
 belotte.save
 
 file = URI.open('https://images.unsplash.com/photo-1568270363382-992bd101f48e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
@@ -185,7 +185,7 @@ file = URI.open('https://images.unsplash.com/photo-1568270363382-992bd101f48e?ix
 
 tricot.hospital = st_louis
 tricot.user = nadia
-# tricot.photo.attach(io: file, filename: 'tricot.jpg', content_type: 'image/jpg')
+tricot.photo.attach(io: file, filename: 'tricot.jpg', content_type: 'image/jpg')
 belotte.save
 
 puts 'Finished!'
