@@ -1,2 +1,36 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="body-home">
+
+  <div class="text-home">
+
+    <div class="slogan">
+      <div class="first-home">
+        <div class="slogan-text">
+            <div id="typed-strings">
+              <h1><strong>Happy</strong></h1>
+              <h1><strong>Humain</strong></h1>
+              <h1><strong>Hôpital</strong></h1>
+              <h1><strong>Hhhhhh</strong></h1>
+              <h1><strong>Humain</strong></h1>
+              <h1><strong>Hôpital</strong></h1>
+            </div>
+            <span id="typed"></span>
+            <span><strong>...place</strong></span>
+        </div>
+      </div>
+    </div>
+    <p style="padding: 6em;"><em>En établissement hospitalier aussi, on peut être bien entouré</em></p>
+  </div>
+
+  <div class="search-bar-homepage">
+    <%= form_tag root_path, method: :get do %>
+      <div class="d-flex">
+        <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Votre hôpital"%>
+        <button name="button" type="submit" class="icone-loupe">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<h2 style="margin-top: 3em; margin-left: 1em;">Événements à venir</h2>

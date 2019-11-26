@@ -48,13 +48,15 @@ file = URI.open('https://avatars0.githubusercontent.com/u/53259210?v=4')
  leo = User.new( {
     username:      'chapschaps',
     room:      '3 rue mirbel, 75005, Paris',
-     email: 'leo@gmail.com',
-    password: '123456'
+
+    email: 'leo@gmail.com',
+     password: '123456'
   })
 
- leo.hospital = st_louis
+leo.hospital = st_louis
  leo.photo.attach(io: file, filename: 'leo.jpg', content_type: 'image/jpg')
- leo.save
+
+leo.save
 
 
 file = URI.open('https://avatars1.githubusercontent.com/u/54894352?v=4')
@@ -174,22 +176,24 @@ belotte.user = leo
 belotte.photo.attach(io: file, filename: 'belotte.jpg', content_type: 'image/jpg')
 belotte.save
 
-file = URI.open('https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
+file = URI.open('https://images.unsplash.com/photo-1568270363382-992bd101f48e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
 
 
 
    tricot = Event.new ({
     name:      'Tricot',
     location:      'Salle M304',
+
     start:         Time.now + 600,
     end:         Time.now + 850,
+
     max_particpants: 6,
     description: 'We rely on advertising to provide you with free content! Our third-party vendors or we use cookies to access and use information about your device to ensure the proper functioning of our website or as required for: personalization; ad selection, delivery, and reporting; content selection.'
 
   })
 
 tricot.hospital = st_louis
-tricot.user = leo
+tricot.user = nadia
 tricot.photo.attach(io: file, filename: 'tricot.jpg', content_type: 'image/jpg')
 tricot.save
 
