@@ -1,13 +1,14 @@
 .banner-create-event {
   display: flex;
-  justify-content: space-around;
+  justify-content: left;
+  text-align: center;
+  align-items: center;
   background-color: #a594f9;
   height: 10vh;
 
   h1 {
     color: white;
     font-size: 26px;
-    padding: 20px;
   }
 }
 
@@ -32,10 +33,10 @@
 }
 
 
-.form-control {
-  // border: none;
-}
-
 .form_group {
   text-decoration: underline;
+
+.form_group > label {
+    color: red;
+  }
 }
