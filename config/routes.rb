@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :hospitals, only: [:show]
-  resources :events, only: [:show, :new, :create]
+  resources :events, only: [:show, :new, :create, :edit, :update]
 
 end
