@@ -1,0 +1,9 @@
+<% if user.photo.attached? %>
+  <%= cl_image_tag user.photo.key, height: 50, width: 60, crop: :fill, class: 'avatar' %>
+  <%= user.username %>
+<% else %>
+  <%= cl_image_tag "smiley-logo.jpg", height: 50, width: 60, crop: :fill, class: 'avatar' %>
+  <%= user.username %>
+<% end %>
+
+
