@@ -5,8 +5,13 @@
 <% end %>
 
   <div class="container">
-     <h1> <%= event.name %> </h1>
-     <p> <%= event.description %> </p>
-     <%= link_to "Register", event_reservations_path(@event), method: :post, class: "btn btn-primary" %>
+    <h1> <%= event.name %> </h1>
+    <p> <%= event.description %> </p>
+    <% if Reservation.where(user: current_user, event: event).exists? %>
+      <%= link_to "Unregister", event_reservation_path(@event), method: :delete, class: "btn btn-danger" %>
+      <%= link_to "Chat-Room", "#", class: "btn btn-danger" %>
+    <% else %>
+      <%= link_to "Register", event_reservations_path(@event), method: :post, class: "btn btn-primary" %>
+    <% end %>
   </div>
 </div>

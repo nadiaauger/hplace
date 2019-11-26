@@ -1,9 +1,11 @@
 <% if user.photo.attached? %>
-  <%= cl_image_tag user.photo.key, height: 50, width: 60, crop: :fill, class: 'avatar' %>
-  <%= user.username %>
+  <div class= "text-center">
+    <%= cl_image_tag user.photo.key, height: 50, width: 50, crop: :fill, class: 'avatar' %>
+  </div>
 <% else %>
-  <%= cl_image_tag "smiley-logo.jpg", height: 50, width: 60, crop: :fill, class: 'avatar' %>
-  <%= user.username %>
+  <div class= "text-center">
+    <%= cl_image_tag "smiley-logo.jpg", height: 50, width: 50, crop: :fill, class: 'avatar' %>
+  </div>
 <% end %>
 
-
+<%= user.username %>
