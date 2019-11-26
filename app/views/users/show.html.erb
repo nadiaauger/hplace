@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="card">
+    <% if @user.photo.attached? %>
+      <%= cl_image_tag @user.photo.key, height: 150, width: 150, crop: :fill%>
+    <% else %>
+      <%= cl_image_tag "smiley-logo.jpg", height: 150, width: 150, crop: :fill%>
+    <% end %>
+    <%= @user.username %>
+  </div>
+</div>

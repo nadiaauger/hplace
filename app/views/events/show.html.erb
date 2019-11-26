@@ -12,8 +12,10 @@
 </div>
 <div class="d-flex cards_participant">
   <% Reservation.where(event: @event).each do |resa| %>
-    <div class="card_participant">
-      <%= render 'shared/card_participant', user: resa.user %>
-    </div>
+    <%= link_to user_path(resa.user) do  %>
+      <div class="card_participant border">
+        <%= render 'shared/card_participant', user: resa.user %>
+      </div>
+    <% end %>
   <% end %>
 </div>
