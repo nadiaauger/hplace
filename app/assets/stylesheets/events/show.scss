@@ -4,8 +4,8 @@
   margin: 2vh;
   padding-top: 2vh;
   text-align: center;
-  min-width: 10vw;
-  min-height: 20vh;
+  width: 15vh;
+  height: 15vh;
 
   p{
     color: $gray;
@@ -13,11 +13,13 @@
 }
 
 .cards_participant{
-  scroll-direction: horizontal;
+  width: 100%;
+  overflow-y: auto;
+
 }
 
 .click-to-user {
-  &hover{
+  &:hover{
     color:red;
   }
 }
