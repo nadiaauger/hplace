@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   end
   resources :hospitals, only: [:show]
 
+  get '/dashboard', to: 'users#dashboard', as: 'dashboard'
+
 end
