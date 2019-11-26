@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_25_153428) do
+ActiveRecord::Schema.define(version: 2019_11_26_151457) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2019_11_25_153428) do
     t.string "location"
     t.date "start"
     t.date "end"
-    t.integer "max_particpants"
+    t.integer "max_participants"
     t.text "description"
     t.bigint "hospital_id"
     t.bigint "user_id"
