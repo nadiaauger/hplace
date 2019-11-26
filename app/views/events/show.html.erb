@@ -1,21 +1,28 @@
-<%= render 'shared/banner', event: @event %>
-<div class="d-flex justify-content-around">
-  <div class="participants text-center">
-    <p class= "title"><img src="https://img.icons8.com/cotton/64/000000/person-male--v2.png" width="15px">  Max participants</p>
-    <p> <%= @event.max_particpants %> </p>
-  </div>
-  <div class="loc text-center">
-    <p><img src="https://img.icons8.com/ios/100/000000/address.png" width="15px">   Location</p>
-    <p> <%= @event.location %> </p>
+<div class="show-event">
+  <%= render 'shared/banner', event: @event %>
+  <div class="d-flex justify-content-around mt-3">
+    <div class="participants text-center">
+      <p class= "title"><img src="https://img.icons8.com/cotton/64/000000/person-male--v2.png" width="15px">  Max participants</p>
+      <p> <%= @event.max_particpants %> </p>
+    </div>
+    <div class="loc text-center">
+      <p><img src="https://img.icons8.com/ios/100/000000/address.png" width="15px">   Où</p>
+      <p> <%= @event.location %> </p>
+    </div>
+    <div class="time text-center">
+      <p><img src="https://img.icons8.com/dotty/80/000000/calendar-2.png" width="15px"> Le <%= @event.start.day %>/<%= @event.start.month %>/<%= @event.start.year %></p>
+      <p> de <%= @event.start.hour %>h<%= @event.start.min %> à <%= @event.end.hour %>h<%= @event.end.min %></p>
+    </div>
   </div>
 
-</div>
-<div class="d-flex cards_participant">
-  <% Reservation.where(event: @event).each do |resa| %>
-    <%= link_to user_path(resa.user) do  %>
-      <div class="card_participant border">
-        <%= render 'shared/card_participant', user: resa.user %>
-      </div>
+  <p>Il y a <%= Reservation.where(event: @event).count %> participants :</p>
+  <div class="d-flex cards_participant">
+    <% Reservation.where(event: @event).each do |resa| %>
+      <%= link_to user_path(resa.user) , class: "test" do %>
+        <div class="card_participant border">
+          <%= render 'shared/card_participant', user: resa.user %>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>
