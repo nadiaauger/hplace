@@ -1,1 +1,36 @@
-// Specific CSS for your home-page
+.body-home {
+  background-color: #FA697C;
+  height: 100vh;
+  text-align: center;
+}
+
+.first-home {
+  padding-top: 3em;
+  display:flex;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center
+}
+.slogan {
+  color: white;
+}
+
+.slogan h1 {
+  margin-top: 3em;
+}
+
+#typed-strings h1 {
+  font-size: 26px;
+}
+
+.text-home {
+  text-align: left;
+  color: white;
+}
+
+.slogan-text {
+  display: flex;
+  align-items: center;
+
+}
