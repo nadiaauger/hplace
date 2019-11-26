@@ -10,9 +10,7 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %>
   </head>
   <body>
-    <div class='sticky-navbar'>
-      <%= yield %>
-    </div>
+    <%= yield %>
     <%= render 'shared/navbar' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>

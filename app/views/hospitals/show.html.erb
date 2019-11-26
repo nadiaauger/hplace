@@ -1,6 +1,11 @@
+<div class="container">
+  <div class="row">
+    <%= @hospital.name %>
+    <br>
+     <% @hospital.events.each do |event| %>
+      <%= render 'shared/card', event: event %>
+    <% end %>
+  </div>
+</div>
 
-<%= @hospital.name %>
-<br>
- <% @hospital.events.each do |event| %>
-  <%= event.name %>
-  <%= cl_image_tag event.photo.key, height: 200, width: 400, crop: :fill %><% end %>
+
