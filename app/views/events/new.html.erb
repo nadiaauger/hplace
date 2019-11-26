@@ -1,10 +1,15 @@
-simple_form_for(event) do |f| %>
-  <!-- [...] -->
-  <%= f.input :photo, as: :file %>
-  <%= f.input :name %>
-  <%= f.input :location %>
-  <%= f.input :start %>
-  <%= f.input :end %>
-  <%= f.input :description %>
+ 
+<div class="create-event-main-container">
+  <%= simple_form_for(@event) do |f| %>
+    <%= f.input :photo, as: :file %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :start, as: :date %>
+    <%= f.input :end, as: :date %>
+    <%= f.input :location %>
+    <%= f.input :max_particpants %>
+  <% end %>
+</div>
 
+ 
 
