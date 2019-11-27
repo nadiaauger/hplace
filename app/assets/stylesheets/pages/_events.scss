@@ -4,12 +4,17 @@
   padding-left: 30px;
   background-color: #673ab7;
   height: 10vh;
+  vertical-align: middle;
 
   h1 {
     color: white;
     font-size: 22px;
     padding: 20px;
     text-align: left;
+  }
+
+  a {
+      vertical-align: middle;
   }
 }
 
@@ -18,7 +23,18 @@
   // background-color: #f5efff;
   position: relative;
 
-  #add-event-picto {
+ }
+
+.lower-page {
+  background-color: white;
+}
+
+.string.required, .text.required, .string.optional, .time.required, .integer.optional {
+  font-size: 15px;
+  color: #673ab7;
+}
+
+ .add-event-picto {
     width: 50px;
     height: 50px;
     position: absolute;
@@ -26,21 +42,3 @@
     right: 18px;
     cursor: pointer;
   }
-
-}
-
-.lower-page {
-  background-color: white;
-}
-
-
-
-// .form_group {
-//   text-decoration: underline;
-// }
-
-
-.string.required, .text.required, .string.optional, .time.required, .integer.optional {
-  font-size: 15px;
-  color: #0E0000;
-}

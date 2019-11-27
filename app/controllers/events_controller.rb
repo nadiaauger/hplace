@@ -7,6 +7,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @event_seen = EventSeen.new(user: current_user, event: @event)
     @event_seen.save
+    @name_page = @event.name
   end
 
   def new
