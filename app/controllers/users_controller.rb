@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   def dashboard
     @user = current_user
+    @registrations = @user.reservations
   end
 
   def notification
