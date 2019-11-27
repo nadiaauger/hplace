@@ -1,19 +1,21 @@
 .banner-create-event {
   display: flex;
-  justify-content: space-around;
-  background-color: #a594f9;
+  justify-content: flex-start;
+  padding-left: 30px;
+  background-color: #673ab7;
   height: 10vh;
 
   h1 {
     color: white;
-    font-size: 26px;
+    font-size: 22px;
     padding: 20px;
+    text-align: left;
   }
 }
 
 .photo-create-event {
   height: 30vh;
-  background-color: #f5efff;
+  // background-color: #f5efff;
   position: relative;
 
   #add-event-picto {
@@ -32,10 +34,13 @@
 }
 
 
-.form-control {
-  // border: none;
-}
 
-.form_group {
-  text-decoration: underline;
+// .form_group {
+//   text-decoration: underline;
+// }
+
+
+.string.required, .text.required, .string.optional, .time.required, .integer.optional {
+  font-size: 15px;
+  color: #0E0000;
 }
