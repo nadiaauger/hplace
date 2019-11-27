@@ -2,11 +2,8 @@
   <div class="banner-create-event">
     <%= image_tag("arrow_back.svg") %>
     <h1>Update event</h1>
-    <%= image_tag("round_done.png") %>
   </div>
-  <div class="photo-create-event">
-    <%= image_tag("add-picto.svg", id:"add-event-picto") %>
-  </div>
+  <div class="photo-create-event" style="background-image: url('<%= cl_image_path @event.photo.key %>');background-position: inherit;"></div>
 </div>
 
 
@@ -22,7 +19,7 @@
         <%= f.input :end, label: 'Ending date', as: :date, required: true, input_html: {class: "datepicker"}, placeholder: "YYYY/MM/DD" %>
         <%= f.input :end, label: 'Ending time', as: :time %>
         <%= f.input :location %>
-        <%= f.input :max_particpants %>
+        <%= f.input :max_participants %>
         <%= f.button :submit, class: "btn btn-primary"%>
       <% end %>
     </div>
