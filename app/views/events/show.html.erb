@@ -1,4 +1,4 @@
- <div class="show-event">
+<div class="show-event">
   <%= render 'shared/banner', event: @event %>
   <div class="d-flex justify-content-around mt-3">
     <div class="participants text-center">
@@ -13,6 +13,7 @@
       <p><img src="https://img.icons8.com/dotty/80/000000/calendar-2.png" width="15px"> Le <%= @event.start.day %>/<%= @event.start.month %>/<%= @event.start.year %></p>
       <p> de <%= @event.start.hour %>h<%= @event.start.min %> à <%= @event.end.hour %>h<%= @event.end.min %></p>
     </div>
+
   </div>
 
   <p>Il y a <%= Reservation.where(event: @event).count %> participants :</p>
