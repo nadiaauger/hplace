@@ -1,7 +1,6 @@
 <div class="header-create-event">
   <div class="banner-create-event">
-    <%= image_tag("arrow_back.svg") %>
-    <h1>Create event</h1>
+    <%= render "shared/topbar" %>
   </div>
   <div class="photo-create-event">
     <%= image_tag("add-picto.svg", id:"add-event-picto") %>
@@ -16,9 +15,8 @@
         <%= f.input :photo, as: :file, label: false, input_html: { class: "d-none"} %>
         <%= f.input :name, label: 'Title' %>
         <%= f.input :description, label: 'Describe your event' %>
-        <%= f.input :start, label: 'Starting date', as: :date, required: true, input_html: {class: "datepicker"}, placeholder: "YYYY/MM/DD" %>
+        <%= f.input :start, label: 'Starting date', as: :string, required: true, input_html: {class: "datepicker"}, placeholder: "YYYY/MM/DD" %>
         <%= f.input :start, label: 'Starting time', as: :time %>
-        <%= f.input :end, label: 'Ending date', as: :date, required: true, input_html: {class: "datepicker"}, placeholder: "YYYY/MM/DD" %>
         <%= f.input :end, label: 'Ending time', as: :time %>
         <%= f.input :location %>
         <%= f.input :max_participants %>
