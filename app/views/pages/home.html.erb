@@ -34,27 +34,12 @@
 </div>
 
 
-<div class="top-events-leo">
+<div class="top-events-new">
   <h2 style="margin-top: 1em; margin-left: 1em; margin-bottom: 1em;">Événements à venir</h2>
-  <div class="cards-leo container">
+  <div class="cards-new container">
     <% best_events = [Event.find_by(name: "Belotte"), Event.find_by(name: "Tricot"), Event.find_by(name: "Uno")] %>
     <% best_events.each do |event| %>
-      <div class="card-event-leo card-home-leo">
-           <% if event.photo.attached? %>
-            <%= cl_image_tag event.photo.key, height: 200, width: 400, crop: :fill %>
-           <% else %>
-          <%= image_tag "test.jpg", height: 200, width: 400, crop: :fill %>
-             <% end %>
-
-        <div class="card-event-infos-leo">
-          <div>
-            <h2><%= event.name %></h2>
-            <p><%= event.location %></p>
-          </div>
-          <h2 class="card-event-pricing-leo"> <%= "#{event.start} #{event.end}" %></h2>
-          <%= cl_image_tag event.user.photo.key, height: 40, width: 40, crop: :fill, class: "card-event-user-leo avatar-bordered" %>
-         </div>
-      </div>
+      <%= render  'shared/card_new_event', event: event%>
     <% end %>
   </div>
 </div>

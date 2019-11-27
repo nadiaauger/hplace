@@ -6,6 +6,10 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
+# config.i18n.default_locale = :fr
+
+
 module Hplace
   class Application < Rails::Application
     config.generators do |generate|
