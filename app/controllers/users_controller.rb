@@ -27,6 +27,7 @@ class UsersController < ApplicationController
         if resa.notified == false && resa.user != current_user
           @notifications << resa
           resa.notified = true
+          resa.save
         elsif resa.notified == true && resa.user != current_user
           @notifications_seen << resa
         end
