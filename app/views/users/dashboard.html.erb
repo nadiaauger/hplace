@@ -1,3 +1,24 @@
+<div class="profil-infos">
+  <div class="links-dash">
+    <i class="far fa-edit" style="color:white; margin-right: 1em;"></i>
+    <i class="fas fa-cog" style="color:white;"></i>
+  </div>
+  <div class="profil-image-name">
+    <%= cl_image_tag @user.photo.key, height: 60, width: 60, class: "avatar-bordered" %>
+    <%= @user.username %>
+  </div>
+  <div class="infos-events-user">
+    <div class="text-event" style="margin-right: 30vw">
+      <h4 style="font-size: 3em;"><strong>4</strong></h4>
+      <p style="font-size: 2em;"> Événements à venir</p>
+    </div>
+    <div class="text-event">
+      <h4 style="font-size: 3em;"><strong>3</strong></h4>
+      <p style="font-size: 2em;"> Invitations</p>
+    </div>
+  </div>
+</div>
+
 <div>
 <br>
   <br>
@@ -15,6 +36,7 @@
 <div>
 <br>
   <br>
+
   <p>Vos invitations</p>
     <% @user.events.each do |event| %>
       <p><%= event.name %></p>
