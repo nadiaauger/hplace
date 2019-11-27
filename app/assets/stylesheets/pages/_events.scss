@@ -8,7 +8,7 @@
 
   h1 {
     color: white;
-    font-size: 22px;
+    font-size: 20px;
     padding: 20px;
     text-align: left;
   }
@@ -20,7 +20,7 @@
 
 .photo-create-event {
   height: 30vh;
-  // background-color: #f5efff;
+  background-color: #f5efff;
   position: relative;
 
  }
@@ -42,3 +42,14 @@
     right: 18px;
     cursor: pointer;
   }
+
+
+.container-topbar {
+  display: flex;
+  align-items: center;
+}
+
+#title-hospital-index {
+  text-align: center;
+
+}

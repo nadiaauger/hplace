@@ -1,23 +1,30 @@
+<div class="header-create-event">
+  <div class="banner-create-event">
+    <%= render "shared/topbar" %>
+  </div>
+
+  <div class="photo-create-event">
+    <% if @user.photo.attached? %>
+      <%= cl_image_tag @user.photo.key, id: "user-photo", height: 150, width: 150, crop: :fill%>
+    <% else %>
+      <%= cl_image_tag "smiley-logo.jpg", height: 150, width: 150, crop: :fill%>
+    <% end %>
+  </div>
+
 <div class="user-show container">
-  <h1> <%= @user.username %> </h1>
-  <div class="card">
-    <div class="d-flex justify-content-around">
-      <div class="photo">
-        <% if @user.photo.attached? %>
-          <%= cl_image_tag @user.photo.key, height: 150, width: 150, crop: :fill%>
-        <% else %>
-          <%= cl_image_tag "smiley-logo.jpg", height: 150, width: 150, crop: :fill%>
-        <% end %>
-      </div>
-      <div class="description-user">
-        <p>Situé(e) à <%= @user.hospital.name %></p>
-        <p><img src="https://img.icons8.com/dotty/80/000000/email.png" width="15px"> <%= @user.email %></p>
-        <p><img src="https://img.icons8.com/dotty/80/000000/cottage.png" width="15px"> <%= @user.room %></p>
-      </div>
+  <div class="empty"></div>
+  <div class="user-infos">
+  <h1 id="username"> <%= @user.username %> </h1>
+  <p id="hospital-name"><%= @user.hospital.name %></p>
+  <p id="picto-contact"><%= image_tag ("contact-message.png") %></p>
+  </div>
+
+  <div class="user-events">
+    <div class="user-registrations">
+      <p>Participe à :</p>
+      <% Event.where(user: @user) do |event|%>
+       <%= render 'shared/card_new_event', event: event %>
+      <% end %>
     </div>
   </div>
-  <p>Participe à :</p>
-  <% Event.where(user: @user) do |event|%>
-    <%= event.name %>
-  <% end %>
 </div>
