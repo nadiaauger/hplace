@@ -2,7 +2,7 @@ class HospitalsController < ApplicationController
 skip_before_action :authenticate_user!, only: [:show, :handler]
 
   def show
-     @hospital = Hospital.find(params[:id])
+    @hospital = Hospital.find(params[:id])
   end
 
   def handler

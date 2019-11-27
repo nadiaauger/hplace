@@ -1,0 +1,16 @@
+<div class="card-event-new card-home-new" style= >
+  <div class='event-image' style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path event.photo.key%>')">
+    <h1 class="card-title px-1"><%= event.name %></h1>
+  </div>
+  <div class="card-event-infos-new mt-3">
+    <div class="px-4 border-right">
+     <h2> <%= "#{I18n.localize(event.start, format: "%^a, %^b %d, %Y")} à #{event.start.strftime("%I:%M %p")} "%></h2>
+     <p><%= event.location %></p>
+     </div>
+    <div>
+      <p class="mt-2"> <img src="https://img.icons8.com/cotton/64/000000/person-male--v2.png" width="25px"><%= "#{event.reservations.count}/#{event.max_participants}" %></p>
+    </div>
+  </div>
+  <%= link_to "", event_path(event), class: "card-link" %>
+</div>
+

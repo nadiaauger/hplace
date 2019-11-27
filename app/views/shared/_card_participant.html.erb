@@ -7,5 +7,9 @@
     <%= cl_image_tag "smiley-logo.jpg", height: 50, width: 50, crop: :fill, class: 'avatar' %>
   </div>
 <% end %>
+<% if event.user == user %>
+  <p><strong> <%= user.username %></strong> </p>
+<% else %>
+  <p> <%= user.username %> </p>
+<% end %>
 
-<p> <%= user.username %> </p>

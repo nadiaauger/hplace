@@ -3,7 +3,7 @@
   <div class="d-flex justify-content-around mt-3">
     <div class="participants text-center">
       <p class= "title"><img src="https://img.icons8.com/cotton/64/000000/person-male--v2.png" width="15px">  Max participants</p>
-      <p> <%= @event.max_particpants %> </p>
+      <p> <%= @event.max_participants %> </p>
     </div>
     <div class="loc text-center">
       <p><img src="https://img.icons8.com/ios/100/000000/address.png" width="15px">   Où</p>
@@ -19,9 +19,9 @@
   <p>Il y a <%= Reservation.where(event: @event).count %> participants :</p>
   <div class="d-flex cards_participant">
     <% Reservation.where(event: @event).each do |resa| %>
-      <%= link_to user_path(resa.user) , class: "test" do %>
+      <%= link_to user_path(resa.user) , class: "link_to" do %>
         <div class="card_participant border">
-          <%= render 'shared/card_participant', user: resa.user %>
+          <%= render 'shared/card_participant', user: resa.user, event: @event %>
         </div>
       <% end %>
     <% end %>

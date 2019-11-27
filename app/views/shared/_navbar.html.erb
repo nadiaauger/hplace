@@ -1,6 +1,27 @@
 <div class='navbar'>
-       <p class="navbar-icon "><i class="fas fa-home"></i></p>
-      <p class="navbar-icon active"><i class="fas fa-comment"></i></p>
+  <% if user_signed_in?%>
+    <%= link_to hospital_path(current_user.hospital) do %>
+      <% if params["controller"] == 'hospitals' && params["action"] == 'show'%>
+         <p class="navbar-icon active">
+      <% else %>
+         <p class="navbar-icon">
+      <% end %>
+            <i class="fas fa-home"></i>
+          </p>
+      <% end %>
+      <p class="navbar-icon"><i class="fas fa-comment"></i></p>
       <p class="navbar-icon"><i class="fas fa-bell"></i></p>
-      <p class="navbar-icon"><i class="fas fa-columns"></i></p>
- </div>
+    <%= link_to dashboard_path do %>
+      <% if params["action"] == 'dashboard'%>
+        <p class="navbar-icon active">
+      <% else %>
+        <p class="navbar-icon">
+      <% end %>
+           <i class="fas fa-columns"></i>
+        </p>
+    <% end %>
+  <% end %>
+</div>
+
+
+
