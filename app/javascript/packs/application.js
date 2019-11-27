@@ -12,6 +12,7 @@ import "../plugins/event_form";
 import "../plugins/typed";
 import "../components/photo_preview";
 
+
 previewImageOnFileSelect();
 
 
