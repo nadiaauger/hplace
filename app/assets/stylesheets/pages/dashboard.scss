@@ -1,0 +1,38 @@
+.profil-infos {
+  background-color: $purple;
+  width: 100vw;
+  height: 40vh;
+  position: relative;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.links-dash {
+  position: absolute;
+  font-size: 3em;
+  right: 5%;
+  top: 2%;
+}
+
+.profil-image-name {
+  // position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.infos-events-user {
+  position: absolute;
+  display: flex;
+  color: white;
+  bottom: 5%;
+}
+
+.text-event {
+  text-align: center;
+}

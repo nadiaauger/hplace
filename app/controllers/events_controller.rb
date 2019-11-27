@@ -5,6 +5,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @name_page = @event.name
   end
 
   def new
