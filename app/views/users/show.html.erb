@@ -1,10 +1,23 @@
-<div class="container">
+<div class="user-show container">
+  <h1> <%= @user.username %> </h1>
   <div class="card">
-    <% if @user.photo.attached? %>
-      <%= cl_image_tag @user.photo.key, height: 150, width: 150, crop: :fill%>
-    <% else %>
-      <%= cl_image_tag "smiley-logo.jpg", height: 150, width: 150, crop: :fill%>
-    <% end %>
-    <%= @user.username %>
+    <div class="d-flex justify-content-around">
+      <div class="photo">
+        <% if @user.photo.attached? %>
+          <%= cl_image_tag @user.photo.key, height: 150, width: 150, crop: :fill%>
+        <% else %>
+          <%= cl_image_tag "smiley-logo.jpg", height: 150, width: 150, crop: :fill%>
+        <% end %>
+      </div>
+      <div class="description-user">
+        <p>Situé(e) à <%= @user.hospital.name %></p>
+        <p><img src="https://img.icons8.com/dotty/80/000000/email.png" width="15px"> <%= @user.email %></p>
+        <p><img src="https://img.icons8.com/dotty/80/000000/cottage.png" width="15px"> <%= @user.room %></p>
+      </div>
+    </div>
   </div>
+  <p>Participe à :</p>
+  <% Event.where(user: @user) do |event|%>
+    <%= event.name %>
+  <% end %>
 </div>
