@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_27_113924) do
+ActiveRecord::Schema.define(version: 2019_11_27_151605) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,15 @@ ActiveRecord::Schema.define(version: 2019_11_27_113924) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "event_seens", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_event_seens_on_event_id"
+    t.index ["user_id"], name: "index_event_seens_on_user_id"
   end
 
   create_table "events", force: :cascade do |t|
@@ -84,6 +93,8 @@ ActiveRecord::Schema.define(version: 2019_11_27_113924) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "event_seens", "events"
+  add_foreign_key "event_seens", "users"
   add_foreign_key "events", "hospitals"
   add_foreign_key "events", "users"
   add_foreign_key "reservations", "events"
