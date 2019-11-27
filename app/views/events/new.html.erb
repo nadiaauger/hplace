@@ -16,12 +16,12 @@
         <%= f.input :photo, as: :file, label: false, input_html: { class: "d-none"} %>
         <%= f.input :name, label: 'Title' %>
         <%= f.input :description, label: 'Describe your event' %>
-        <%= f.input :start, label: 'Date', as: :string, required: false, input_html: {class: "datepicker"}, placeholder: "YYYY/MM/DD" %>
-        <%= f.input :start, label: 'Starting time', as: :time %>
+        <%= f.input :start, label: 'Date', as: :string, required: true, input_html: {class: "datepicker"}, placeholder: "YYYY/MM/DD" %>
+        <%= f.input :start, label: 'Starting time', as: :time, input_html: { step: 15 } %>
         <%= f.input :end, label: 'Ending time', as: :time %>
         <%= f.input :location %>
         <%= f.input :max_participants %>
-        <%= f.button :submit, class: "btn btn-primary"%>
+        <%= f.button :submit, class: "btn btn-primary btn-lg"%>
       <% end %>
     </div>
   </div>
