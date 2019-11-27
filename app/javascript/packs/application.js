@@ -10,8 +10,8 @@ import "../plugins/event_form";
 //   stringsElement: '#typed-strings', typeSpeed: 100
 // });
 import "../plugins/typed";
-import "photo_preview";
 
+import { previewImageOnFileSelect } from '../components/photopreview';
 previewImageOnFileSelect();
 
 

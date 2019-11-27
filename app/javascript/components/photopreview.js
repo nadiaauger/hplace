@@ -8,7 +8,6 @@ const previewImageOnFileSelect = () => {
       displayPreview(input);
     })
   }
-  console.log("ok tu y es");
 }
 
 const displayPreview = (input) => {
