@@ -15,11 +15,12 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.user = current_user
     @event.hospital = current_user.hospital
-     unless @event.photo.attached?
-       file = URI.open('https://images.pexels.com/photos/230477/pexels-photo-230477.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')
-       @event.photo.attach(io: file, filename: "image.jpg", content_type: "image/jpg")
-     end
-    if @event.save
+    unless @event.photo.attached?
+      file = URI.open('https://images.pexels.com/photos/230477/pexels-photo-230477.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')
+      @event.photo.attach(io: file, filename: "image.jpg", content_type: "image/jpg")
+    end
+    @reservation = Reservation.new(user: current_user, event: @event)
+    if @event.save && @reservation.save
       redirect_to event_path(@event)
     else
       render :new
