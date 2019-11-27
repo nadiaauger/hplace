@@ -7,6 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'json'
 
+
+#
+
+
 filepath = 'db/hospitals.json'
 
 serialized_hospitals = File.read(filepath)
@@ -29,9 +33,19 @@ Hospital.destroy_all
 
 
 puts 'Creating hospital...'
+
+puts "Prepare for leo mega-list:"
+sleep 1
+puts '3'
+sleep 1
+puts '2'
+sleep 1
+puts '1'
+sleep 2
+puts 'LETSGOOOOOOOOO:'
+
 puts hospitals.class
 puts "aaa"
-
 puts "bb"
 puts hospitals["hospital"]
 puts "cc"
@@ -42,13 +56,13 @@ hospitals["hospital"].each do |hospital|
 end
 
 st_louis = Hospital.new({
-  name: 'Hospital St-Louis'
+  name: 'Hôpital St-Louis'
 })
 
 st_louis.save
 
 st_antoine = Hospital.new({
-  name: 'Hospital St-Antoine'
+  name: 'Hôpital St-Antoine'
 })
 
 st_antoine.save
@@ -273,7 +287,7 @@ file = URI.open('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ix
   })
 
 code.hospital = st_louis
-code.user = Leo
+code.user = leo
 code.photo.attach(io: file, filename: 'code.jpg', content_type: 'image/jpg')
 code.save
 
