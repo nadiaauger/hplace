@@ -10,6 +10,7 @@
     font-size: 22px;
     padding: 20px;
     text-align: left;
+    vertical-align: middle;
   }
 }
 
@@ -33,7 +34,9 @@
   background-color: white;
 }
 
-
+#back-button {
+  vertical-align: middle;
+}
 
 // .form_group {
 //   text-decoration: underline;
