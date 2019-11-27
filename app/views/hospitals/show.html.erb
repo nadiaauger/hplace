@@ -1,11 +1,14 @@
 <div class="container">
-  <div class="row">
-    <%= @hospital.name %>
+
+    <h2>
+      <%="Il y a #{@hospital.events.count} évenements à #{@hospital.name}" %>
+    </h2>
     <br>
-     <% @hospital.events.each do |event| %>
-      <%= render 'shared/card', event: event %>
-    <% end %>
+    <div class="cards-new">
+       <% @hospital.events.each do |event| %>
+        <%= render 'shared/card_new_event', event: event %>
+      <% end %>
+    </div>
   </div>
-</div>
 
 
