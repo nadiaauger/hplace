@@ -41,3 +41,12 @@
 .form_group {
   text-decoration: underline;
 }
+
+.control.label {
+  font-size: 15px;
+}
+
+.string.required, .text.required, .string.optional, .time.required, .integer.optional {
+  font-size: 15px;
+  color: #0E0000;
+}
