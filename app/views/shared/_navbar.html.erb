@@ -1,6 +1,6 @@
 <div class='navbar'>
-  <% if current.user_signed_in?%>
-    <%= link_to hospital_path(curent_user.hospital) do %>
+  <% if user_signed_in?%>
+    <%= link_to hospital_path(current_user.hospital) do %>
       <% if params["controller"] == 'hospitals' && params["action"] == 'show'%>
          <p class="navbar-icon active">
       <% else %>
