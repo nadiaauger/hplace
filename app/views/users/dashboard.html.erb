@@ -1,4 +1,4 @@
-<div class="profil-infos">
+ <div class="profil-infos">
   <div class="links-dash">
     <i class="far fa-edit" style="color:white; margin-right: 1em;"></i>
     <i class="fas fa-cog" style="color:white;"></i>
@@ -19,32 +19,20 @@
   </div>
 </div>
 
-<div>
-<br>
-  <br>
-  <p>Vos évéments</p>
-    <% @user.events.each do |event| %>
-      <p><%= event.name %></p>
-      <p><%= event.start %></p>
-      <p><%= event.end %></p>
-      <p><%= event.location %></p>
-      <p><%= event.max_participants %></p>
-      <p><%= event.description %></p>
+<div class="container">
+   <p>Vos évéments</p>
+  <div class="cards-new">
+    <% Event.where(user: current_user).each do |event| %>
+      <%= render 'shared/card', event: event %>
     <% end %>
-</div>
-
-<div>
-<br>
-  <br>
-
-  <p>Vos invitations</p>
-    <% @user.events.each do |event| %>
-      <p><%= event.name %></p>
-      <p><%= event.start %></p>
-      <p><%= event.end %></p>
-      <p><%= event.location %></p>
-      <p><%= event.max_participants %></p>
-      <p><%= event.description %></p>
-    <% end %>
-</div>
+  </div>
+   <br>
+    <br>
+    <p>Les evenements auxquels pour participez:</p>
+    <div class="cards-new">
+      <% @user.events.each do |event| %>
+        <%= render 'shared/card_new_event', event: event %>
+      <% end %>
+    </div>
+  </div>
 

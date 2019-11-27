@@ -1,16 +1,13 @@
- <div class="card-event m-3">
-        <%= cl_image_tag event.photo.key, height: 400, width: 400, crop: :fill, class: "event-img" %>
-    <div class="card-event-infos">
-      <div>
-        <h2><%= "#{event.name} " %></h2>
-        <p>   <%= event.location %></p>
-        <p> <%= "Start: #{event.start}." %></p>
-        <p class="mt-0"><%= "End: #{event.end}" %></p>
-      </div>
-      <div>
-        <%= cl_image_tag event.user.photo.key, height: 45, width: 45, class: "card-event-owner avatar-bordered" %>
-        <p><%= event.user.username %></p>
-      </div>
+<div class="card-event-old card-home-old" style= >
+  <div class='event-image' style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path event.photo.key%>')">
+   <div class="card-info">
+     <div class="event-text mx-3">
+      <h2> <%= "#{I18n.localize(event.start, format: "%^a, %^b %d, %Y")} à #{event.start.strftime("%I:%M %p")} "%></h2>
+      <h1 class="card-title mb-0"><%= event.name %></h1>
+     </div>
+      <p class ="m-2"> <img src="https://img.icons8.com/cotton/64/000000/person-male--v2.png" width="25px"><%= "#{event.reservations.count}/#{event.max_participants}" %></p>
     </div>
+   </div>
   <%= link_to "", event_path(event), class: "card-link" %>
 </div>
+
