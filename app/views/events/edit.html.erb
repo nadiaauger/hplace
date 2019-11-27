@@ -1,7 +1,6 @@
 <div class="header-create-event">
   <div class="banner-create-event">
-    <%= link_to image_tag("arrow_back.svg"), event_path(@event) %>
-    <h1>Update event</h1>
+    <%= render "shared/topbar" %>
   </div>
   <div class="photo-create-event" style="background-image: url('<%= cl_image_path @event.photo.key %>');background-position: inherit;"></div>
 </div>
