@@ -1,0 +1,11 @@
+<%= link_to user_path(notification.user) do %>
+  <% if notification.user.photo.attached? %>
+      <%= cl_image_tag notification.user.photo.key, height: 50, width: 50, crop: :fill, class: "avatar-large" %>
+  <% else %>
+      <%= cl_image_tag "smiley-logo.jpg", height: 50, width: 50, crop: :fill, class: "avatar-large" %>
+  <% end %>
+<% end %>
+<div class="notification-content">
+  <p><small><%= notification.created_at.strftime("%d %b %Y") %></small></p>
+  <p><strong> <%= notification.user.username %> </strong> souhaiterais rejoindre l'évenement <strong> <%= link_to notification.event.name, event_path(notification.event), class: "link_to" %>.</strong></p>
+</div>
