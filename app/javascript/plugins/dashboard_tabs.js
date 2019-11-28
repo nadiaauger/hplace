@@ -1,5 +1,5 @@
 
-if (document.querySelector(".tabs-underlined"){
+if (document.querySelector(".tabs-underlined")){
   const organise = document.querySelector(".organise")
 const participe = document.querySelector(".participe")
 
