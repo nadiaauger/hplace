@@ -1,10 +1,10 @@
 const displayNotifications = (data) => {
   const badge = document.querySelector(".button_badge");
-  badge.style.display = "";
-  badge.innerHTML = data.number_of_notifs
-  console.log("ok")
+  const baniere = document.querySelector("#notification-alert");
+  console.log(baniere)
+  badge.style.display = "inline";
+  baniere.style.display = "inline";
   console.log(data)
-
 }
 
 
