@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
+    <div class="col-sm-6 col-sm-offset-3" id="chat-refresh" data-room-id="<%= @chat_room.id %>" data-user-id="<%= @chatroom_user.id %>">
       <div class="chat-header"><h4>#<%= @chat_room.name %></h4></div>
       <div class="messages">
         <% @chat_room.messages.each do |message| %>
