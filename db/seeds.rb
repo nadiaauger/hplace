@@ -7,6 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'json'
 
+
+#
+
+
 filepath = 'db/hospitals.json'
 
 serialized_hospitals = File.read(filepath)
@@ -29,9 +33,19 @@ Hospital.destroy_all
 
 
 puts 'Creating hospital...'
+
+puts "Prepare for leo mega-list:"
+sleep 1
+puts '3'
+sleep 1
+puts '2'
+sleep 1
+puts '1'
+sleep 2
+puts 'LETSGOOOOOOOOO:'
+
 puts hospitals.class
 puts "aaa"
-
 puts "bb"
 puts hospitals["hospital"]
 puts "cc"
@@ -42,13 +56,13 @@ hospitals["hospital"].each do |hospital|
 end
 
 st_louis = Hospital.new({
-  name: 'Hospital St-Louis'
+  name: 'Hôpital St-Louis'
 })
 
 st_louis.save
 
 st_antoine = Hospital.new({
-  name: 'Hospital St-Antoine'
+  name: 'Hôpital St-Antoine'
 })
 
 st_antoine.save
@@ -256,6 +270,27 @@ film.user = tom
 film.photo.attach(io: file, filename: 'film.jpg', content_type: 'image/jpg')
 film.save
 
+
+
+file = URI.open('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
+
+
+
+   code = Event.new ({
+    name:      'Apprendre à coder',
+    location:      'Salle A204',
+    start:         Time.now + 20000,
+    end:         Time.now + 20350,
+    max_participants: 8,
+    description: 'L\'année dernière, j\'ai fait une formation intensive en dévelopment web. J\'adorerais partager ce que j\'ai appris avec ceux qui seraient intéressé. Ma spécialité etait le Javascript. Au menu: comment coder un super boutons avec de effets de ouf!'
+
+  })
+
+code.hospital = st_louis
+code.user = leo
+code.photo.attach(io: file, filename: 'code.jpg', content_type: 'image/jpg')
+code.save
+
 puts 'Finished!'
 
 puts 'Creating reservations...'
@@ -294,6 +329,26 @@ reserve.save
 reserve = Reservation.new
 reserve.user = tom
 reserve.event = tricot
+reserve.save
+
+reserve = Reservation.new
+reserve.user = tom
+reserve.event = code
+reserve.save
+
+reserve = Reservation.new
+reserve.user = beyonce
+reserve.event = code
+reserve.save
+
+reserve = Reservation.new
+reserve.user = nadia
+reserve.event = code
+reserve.save
+
+reserve = Reservation.new
+reserve.user = donald
+reserve.event = code
 reserve.save
 
 puts 'Finished!'

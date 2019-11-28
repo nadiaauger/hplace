@@ -5,6 +5,7 @@ class Event < ApplicationRecord
   belongs_to :hospital
   has_many :reservations, dependent: :destroy
   has_many :users, through: :reservations
+  has_many :event_seen, dependent: :destroy
 
   validates :name, presence: true
   validates :start, presence: true
