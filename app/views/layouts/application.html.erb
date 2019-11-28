@@ -17,7 +17,9 @@
     <br>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <div id="show-notif" data-user="<%= current_user.id %>" >
+    <% if user_signed_in? %>
+      <div id="show-notif" data-user="<%= current_user.id %>" >
+    <% end %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>

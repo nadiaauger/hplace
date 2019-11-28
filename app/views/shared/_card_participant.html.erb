@@ -1,10 +1,10 @@
 <% if user.photo.attached? %>
   <div class= "text-center">
-    <%= cl_image_tag user.photo.key, height: 50, width: 50, crop: :fill, class: 'avatar' %>
+    <%= cl_image_tag user.photo.key, height: 50, width: 50, crop: :fill, class: 'avatar', style: "object-size: cover;" %>
   </div>
 <% else %>
   <div class= "text-center">
-    <%= cl_image_tag "smiley-logo.jpg", height: 50, width: 50, crop: :fill, class: 'avatar' %>
+    <%= cl_image_tag "smiley-logo.jpg", height: 50, width: 50, crop: :fill, class: 'avatar', style: "object-size: cover;" %>
   </div>
 <% end %>
 <% if event.user == user %>

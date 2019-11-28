@@ -16,11 +16,8 @@ import "../components/photopreview";
 
 import { notifRefresh } from "../plugins/init_action_cable_notif";
 
-if (document.querySelector(".photo-create-event")){
-  previewImageOnFileSelect();
-}
 
-
-import { previewImageOnFileSelect } from '../components/photopreview';
+import { previewImageOnFileSelect } from '../plugins/photopreview';
 
 notifRefresh();
+previewImageOnFileSelect();

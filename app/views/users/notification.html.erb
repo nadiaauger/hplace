@@ -1,3 +1,4 @@
+<%= link_to "LOGOUT",  destroy_user_session_path, method: :delete %>
 <div class="container">
   <h1> Vos notifications : </h1>
   <% @notifications.each do |notification| %>
