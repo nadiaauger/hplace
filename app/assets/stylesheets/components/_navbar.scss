@@ -7,6 +7,10 @@
   bottom: 0;
   width: 100%;
 
+   .active{
+    background-color: $gray;
+   }
+
   p{
   color: white;
   text-align: center;
@@ -22,7 +26,4 @@
   margin: 0;
  }
 
- .active{
-  background-color: $gray;
- }
 
