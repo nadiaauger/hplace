@@ -31,7 +31,11 @@ position: absolute;
   height: 30vh;
   background-color: #f5efff;
   position: relative;
+ }
 
+ .photo-create-event h2 {
+  text-align: center;
+  padding: 20%;
  }
 
 .lower-page {
@@ -60,5 +64,5 @@ position: absolute;
 
 #title-hospital-index {
   text-align: center;
-
+vertical-align: middle;
 }
