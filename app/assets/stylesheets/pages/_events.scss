@@ -1,17 +1,20 @@
 .banner-create-event {
   display: flex;
+  justify-content: flex-start;
+  padding-left: 30px;
   background-color: #673ab7;
   height: 10vh;
-  align-items: center;
+  vertical-align: middle;
+
   h1 {
     color: white;
     font-size: 22px;
-    padding-left: 3em;
+    padding-left: 20px;
     text-align: left;
   }
 
   a {
-    vertical-align: middle;
+      vertical-align: middle;
   }
 }
 
