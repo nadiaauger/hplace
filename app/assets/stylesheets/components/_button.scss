@@ -1,0 +1,16 @@
+.btn-add{
+  background-color: $purple;
+  color: white;
+  padding: 2vh 3vh;
+  border-radius: 50%;
+  font-weight: bold;
+  opacity: 0.8;
+  width: min-content;
+  height: min-content;
+  font-size: 3vh;
+  position: fixed;
+  bottom: 85vh;
+  right: 2vh;
+  z-index: 20;
+}
+

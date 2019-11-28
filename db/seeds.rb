@@ -251,9 +251,27 @@ uno.user = nadia
 uno.photo.attach(io: file, filename: 'uno.jpg', content_type: 'image/jpg')
 uno.save
 
+
+file = URI.open('https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
+
+
+
+   fifa = Event.new ({
+    name:      'Tournoi de fifa',
+    location:      'Salle de Television',
+    start:         Time.now - 900000,
+    end:         Time.now - 900800,
+    max_participants: 8,
+    description: 'We rely on advertising to provide you with free content! Our third-party vendors or we use cookies to access and use information about your device to ensure the proper functioning of our website or as required for: personalization; ad selection, delivery, and reporting; content selection.'
+
+  })
+
+fifa.hospital = st_louis
+fifa.user = leo
+fifa.photo.attach(io: file, filename: 'fifa.jpg', content_type: 'image/jpg')
+fifa.save
+
 file = URI.open('https://images.unsplash.com/photo-1535016120720-40c646be5580?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
-
-
 
    film = Event.new ({
     name:      'Projection des Misérables',

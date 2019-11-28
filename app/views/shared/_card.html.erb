@@ -1,4 +1,5 @@
-<div class="card-event-old card-home-old" style= >
+
+<div class="card-event-old card-home-old <%= 'past-event' if event.end < DateTime.now %>">
   <div class='event-image' style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path event.photo.key%>')">
    <div class="card-info">
      <div class="event-text mx-3">
