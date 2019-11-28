@@ -22,7 +22,8 @@
 <div class="container">
    <p>Vos évéments</p>
   <div class="cards-new">
-    <% Event.where(user: current_user).each do |event| %>
+    <% events = Event.where(user: current_user).sort_by {|event| event.start} %>
+    <% events.each do |event| %>
       <%= render 'shared/card', event: event %>
     <% end %>
   </div>
@@ -30,7 +31,8 @@
     <br>
     <p>Les evenements auxquels pour participez:</p>
     <div class="cards-new">
-      <% @user.events.each do |event| %>
+      <% events = @user.events.sort_by {|event| event.start} %>
+      <% events.each do |event| %>
         <%= render 'shared/card_new_event', event: event %>
       <% end %>
     </div>
