@@ -17,5 +17,6 @@ import "../components/photo_preview";
 if (document.querySelector(".photo-create-event")){
   previewImageOnFileSelect();
 }
+ 
 
-
+import { previewImageOnFileSelect } from '../components/photopreview';

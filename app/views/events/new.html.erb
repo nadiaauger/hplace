@@ -3,7 +3,8 @@
     <%= render "shared/topbar" %>
   </div>
   <div class="photo-create-event">
-   <%= image_tag "", width: 300, class: "hidden add-event-picto", id: "photo-preview" %>
+    <%= image_tag "smiley-logo.jpg", class: "hidden photo-create-event", id: "photo-preview" %>
+    <%= image_tag "photo.png", class: "add-event-picto", id: "browsing-photo" %>
   </div>
 </div>
 
@@ -12,7 +13,8 @@
   <div class="row justify-content-center" >
     <div class="events-info col-12 col-lg-8">
       <%= simple_form_for(@event) do |f| %>
-        <%= f.input :photo, input_html: { class: 'hidden', id: 'photo-input'}, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo' %>        <%= f.input :name, label: 'Title' %>
+        <%= f.input :photo, input_html: { id: 'photo-input', class: 'd-none'}, label: false %>
+        <%= f.input :name, label: 'Title' %>
         <%= f.input :description, label: 'Describe your event' %>
         <%= f.input :start, label: 'Starting date', as: :string, required: true, input_html: {class: "datepicker"}, placeholder: "YYYY/MM/DD" %>
         <%= f.input :start, label: 'Starting time', as: :string, required: true, input_html: {class: "timepicker"} %>
