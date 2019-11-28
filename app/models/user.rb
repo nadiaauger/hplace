@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :reservations, dependent: :destroy
   has_many :events, through: :reservations, dependent: :destroy
   has_many :event_seen, dependent: :destroy
+  has_many :messages, dependent: :destroy
 
   has_one_attached :photo
 

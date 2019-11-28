@@ -9,10 +9,14 @@ Rails.application.routes.draw do
   end
 
   resources :hospitals, only: [:show]
-  
+
   get '/handler', to: 'hospitals#handler', as: 'handler'
   get '/dashboard', to: 'users#dashboard', as: 'dashboard'
   get '/notification', to: 'users#notification', as: 'notification'
+
+  resources :chat_rooms, only: [:show] do
+    resources :messages, only: [:create]
+  end
 
 
 end

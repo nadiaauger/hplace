@@ -13,6 +13,6 @@ import "../plugins/typed";
 import "../components/photo_preview";
 
 
-previewImageOnFileSelect();
+// previewImageOnFileSelect();
 
 
