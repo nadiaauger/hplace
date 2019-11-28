@@ -18,23 +18,35 @@
     </div>
   </div>
 </div>
+<div>
+  <ul class="list-inline tabs-underlined">
+    <li>
+      <h2 class="tab-underlined active organise">J'organise</h2>
+    </li>
+    <li>
+      <h2 class="tab-underlined participe">Je participe</h2>
+    </li>
+  </ul>
+</div>
 
-<div class="container">
-   <p>Vos évéments</p>
+
+<div class="container mine animated slideInLeft">
+  <p>Vos évéments</p>
   <div class="cards-new">
     <% events = Event.where(user: current_user).sort_by {|event| event.start} %>
     <% events.each do |event| %>
       <%= render 'shared/card', event: event %>
     <% end %>
   </div>
-   <br>
-    <br>
-    <p>Les evenements auxquels pour participez:</p>
-    <div class="cards-new">
-      <% events = @user.events.sort_by {|event| event.start} %>
-      <% events.each do |event| %>
-        <%= render 'shared/card_new_event', event: event %>
-      <% end %>
-    </div>
+</div>
+
+<div class="container their d-none animated slideInLeft">
+  <p>Les evenements auxquels pour participez:</p>
+  <div class="cards-new">
+    <% events = @user.events.sort_by {|event| event.start} %>
+    <% events.each do |event| %>
+      <%= render 'shared/card_new_event', event: event %>
+    <% end %>
   </div>
+</div>
 
