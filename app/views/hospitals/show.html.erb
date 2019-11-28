@@ -6,7 +6,7 @@
 
 
 <div class="container">
-
+    <%= render 'shared/add_event_btn' %>
     <br>
     <div class="cards-new">
       <% events = @hospital.events.sort_by {|event| event.start} %>
