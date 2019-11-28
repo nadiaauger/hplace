@@ -22,17 +22,18 @@
 <div class="container">
   <div class="user-events">
     <div class="user-registrations">
-      <p>Créateur de ces événements :</p>
+      <br>
+      <h2>Organisateur de : </h2>
       <% events = Event.where(user: @user) %>
-
       <% events.each do |event|%>
        <%= render 'shared/card_new_event', event: event %>
       <% end %>
     </div>
   </div>
 
-  <p>Les événements où <%= @user.username %> est inscrit ></p>
-  <div class="cards-new">
+  <br>
+  <div class="cards-user-show">
+  <h2>Participe à : </h2>
     <% events = @user.events.sort_by {|event| event.start} %>
     <% events.each do |event| %>
       <%= render 'shared/card_new_event', event: event %>
