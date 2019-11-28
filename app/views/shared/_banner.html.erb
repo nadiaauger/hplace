@@ -3,10 +3,11 @@
 <% else %>
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1503482618211-c70b46ede8b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80'); background-position: inherit;">
 <% end %>
-
   <div class="container">
-    <h2><em> <%= event.user.username %> </em></h2>
-    <h1> <%= event.name %> </h1>
+    <div class="d-flex tete-single-event">
+      <h1> <%= event.name %> </h1>
+      <p id="date-event-show"> <%= @event.start.day %>/<%= @event.start.month %></p>
+    </div>
     <p> <%= event.description %> </p>
     <% if current_user == event.user %>
       <div class="d-flex justify-content-between">
