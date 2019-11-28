@@ -19,12 +19,23 @@
   <p id="picto-contact"><%= image_tag ("contact-message.png") %></p>
   </div>
 
+<div class="container">
   <div class="user-events">
     <div class="user-registrations">
-      <p>Participe à :</p>
-      <% Event.where(user: @user) do |event|%>
+      <p>Créateur de ces événements :</p>
+      <% events = Event.where(user: @user) %>
+
+      <% events.each do |event|%>
        <%= render 'shared/card_new_event', event: event %>
       <% end %>
     </div>
+  </div>
+
+  <p>Les événements où <%= @user.username %> est inscrit ></p>
+  <div class="cards-new">
+    <% events = @user.events.sort_by {|event| event.start} %>
+    <% events.each do |event| %>
+      <%= render 'shared/card_new_event', event: event %>
+    <% end %>
   </div>
 </div>
