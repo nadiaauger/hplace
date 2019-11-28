@@ -14,7 +14,7 @@ import "../components/photo_preview";
 
 import { chatRefresh } from "../plugins/init_action_cable";
 import { receivedCall } from "../plugins/init_action_cable";
-import { scrollLastMessageIntoView } from "../plugins/scroll";
+
 // previewImageOnFileSelect();
 
 
@@ -22,4 +22,4 @@ flatPickrJs();
 eventFormExport();
 typedStringsExport();
 chatRefresh();
-scrollLastMessageIntoView();
+
