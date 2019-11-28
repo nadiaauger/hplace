@@ -1,6 +1,5 @@
 <div class="container">
   <h1> Vos notifications : </h1>
-
   <% @notifications.each do |notification| %>
     <div class="notification">
       <%= render 'shared/notification', notification: notification %>

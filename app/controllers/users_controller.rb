@@ -15,6 +15,7 @@ class UsersController < ApplicationController
     @notifications_seen = []
     @notifications_old = []
     @notifications_new = []
+    nb_notif = 0
     @user = current_user
     @events = Event.where(user: @user)
     @events.each do |event|
@@ -26,6 +27,7 @@ class UsersController < ApplicationController
       @reservations = Reservation.where(event: event)
       @reservations.each do |resa|
         if resa.notified == false && resa.user != current_user
+          nb_notif += 1
           @notifications << resa
           resa.notified = true
           resa.save

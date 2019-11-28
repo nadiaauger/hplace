@@ -16,10 +16,9 @@
     <br>
     <br>
     <%= render 'shared/navbar' %>
+    <%= render 'shared/flashes' %>
+    <div id="show-notif" data-user="<%= current_user.id %>" >
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <%= render 'shared/flashes' %>
   </body>
 </html>
