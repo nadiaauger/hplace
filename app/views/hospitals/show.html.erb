@@ -5,15 +5,20 @@
 </div>
 
 
+
 <div class="container">
     <%= render 'shared/add_event_btn' %>
     <br>
     <div class="cards-new">
       <% events = @hospital.events.sort_by {|event| event.start} %>
-       <% events.each do |event| %>
-        <%= render 'shared/card_new_event', event: event %>
+      <h2>Évenements à venir</h2>
+      <% events.each do |event| %>
+        <%= (render 'shared/card_new_event', event: event) if event.start > DateTime.now %>
+      <% end %>
+      <h2>Évenements passé</h2>
+      <% events.each do |event| %>
+        <%= (render 'shared/card_new_event', event: event) if event.end < DateTime.now %>
       <% end %>
     </div>
   </div>
-
 
