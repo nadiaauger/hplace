@@ -1,5 +1,6 @@
 
-const organise = document.querySelector(".organise")
+if (document.querySelector(".tabs-underlined"){
+  const organise = document.querySelector(".organise")
 const participe = document.querySelector(".participe")
 
 organise.addEventListener('click', (event) => {
@@ -24,4 +25,4 @@ participe.addEventListener('click', (event) => {
   participe.classList.add("active");
   organise.classList.remove("active");
 
-   });
+   });}

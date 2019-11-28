@@ -12,11 +12,11 @@ import "../plugins/dashboard_tabs";
 //   stringsElement: '#typed-strings', typeSpeed: 100
 // });
 import "../plugins/typed";
-import "../components/photo_preview";
+import "../components/photopreview";
 
 if (document.querySelector(".photo-create-event")){
   previewImageOnFileSelect();
 }
- 
+
 
 import { previewImageOnFileSelect } from '../components/photopreview';
