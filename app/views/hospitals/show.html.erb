@@ -13,7 +13,8 @@
 
     <br>
     <div class="cards-new">
-       <% @hospital.events.each do |event| %>
+      <% events = @hospital.events.sort_by {|event| event.start} %>
+       <% events.each do |event| %>
         <%= render 'shared/card_new_event', event: event %>
       <% end %>
     </div>
