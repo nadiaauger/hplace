@@ -12,6 +12,3 @@ import "../plugins/event_form";
 import "../plugins/typed";
 
 import { previewImageOnFileSelect } from '../components/photopreview';
-previewImageOnFileSelect();
-
-
