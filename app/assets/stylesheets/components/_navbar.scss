@@ -2,14 +2,13 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: $purple;
   position: fixed;
   bottom: 0;
   width: 100%;
 
    .active{
-    background-color: $gray;
-   }
+background-color:#43366E;   }
 
   p{
   color: white;
