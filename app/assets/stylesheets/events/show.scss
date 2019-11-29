@@ -35,58 +35,7 @@
   margin:0;
 }
 
-.btn-participer{
-  background: #ff5252;
-  border-radius: 5px;
-  font-size: 13px;
-  padding: 1.5vh;
-  color: white;
-  &:hover{
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-    opacity: 0.8;
-    text-decoration:none;
-    color: white;
-  }
-}
 
-.btn-desinscrire{
-  // background: $gray;
-  border-radius: 5px;
-  border: 2px solid black;
-  font-size: 13px;
-  padding: 1.5vh;
-  color: white;
-  opacity: 0.7;
-  &:hover{
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-    opacity: 0.9;
-    background-color: black;
-    text-decoration:none;
-    color: white;
-  }
-}
-
-.btn-chatroom{
-  color:black;
-  font-weight: bold;
-  background: white;
-  opacity:0.7;
-  font-size: 13px;
-  padding: 1.5vh;
-  border-radius: 5px;
-  max-height: 7vh;
-}
-
-.btn-del-up{
-  color:black;
-  font-weight: bold;
-  background: #D1CADA;
-  opacity:0.7;
-  font-size: 13px;
-  padding: 1.5vh;
-  border-radius: 5px;
-  margin:1vh;
-}
 
 .banner{
   color:white;
