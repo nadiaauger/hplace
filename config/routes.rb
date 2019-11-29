@@ -17,5 +17,6 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'users#dashboard', as: 'dashboard'
   get '/notification', to: 'users#notification', as: 'notification'
 
+  mount ActionCable.server => "/cable"
 
 end
