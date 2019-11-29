@@ -8,7 +8,7 @@
 require 'json'
 
 
-#
+
 
 
 filepath = 'db/hospitals.json'
@@ -375,25 +375,5 @@ reserve.save
 puts 'Finished!'
 
 
-puts 'Creating chat_rooms...'
-
-chat_room = ChatRoom.create!(name: "general")
 
 
-puts 'Finished!'
-
-
-puts 'Creating messages...'
-
-message_1 = Message.create!(
-  content: "Hello",
-  chat_room: chat_room,
-  user: leo
-)
-message_2 = Message.create!(
-  content: "Hey",
-  chat_room: chat_room,
-  user: nadia
-)
-
-puts 'Finished!'
