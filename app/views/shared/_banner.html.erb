@@ -15,16 +15,21 @@
           <%= link_to "Delete Event", "#", class: "btn-del-up" %>
           <%= link_to "Update Event", edit_event_path(event), class: "btn-del-up" %>
         </div>
-        <%= link_to "Chat-Room", "#", class: "btn-chatroom" %>
+        <%= link_to "Chat-Room",  event_chat_rooms_path(@event), method: :post, class: "btn-chatroom" %>
       </div>
     <% elsif Reservation.where(user: current_user, event: event).exists? %>
       <div class="d-flex justify-content-between">
+
+        <%= link_to "Se désinscrire", event_reservation_path(@event), method: :delete, class: "btn-desinscrire" %>
+        <%= link_to "Chat-Room",  event_chat_rooms_path(@event), method: :post, class: "btn-chatroom" %>
+
         <%= link_to event_reservation_path(@event), method: :delete do%>
           <div class="btn-desinscrire">
             <i class="fas fa-check"></i><%= " Participe" %>
           </div>
         <% end %>
         <%= render 'shared/chat_btn' %>
+
       </div>
     <% else %>
       <%= link_to " Participer", event_reservations_path(@event), method: :post, class: "btn-participer d-block"%>

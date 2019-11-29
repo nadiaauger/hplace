@@ -9,8 +9,11 @@ class User < ApplicationRecord
   has_many :events
   has_many :reserved_events, through: :reservations, source: :events
   has_many :event_seen, dependent: :destroy
-  has_many :bookings, through: :events, source: :reservations
 
+  has_many :messages, dependent: :destroy
+
+  has_many :bookings, through: :events, source: :reservations
+  
   has_one_attached :photo
 
   validates :username, presence: true, uniqueness: true
