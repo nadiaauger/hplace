@@ -1,13 +1,11 @@
-
 <br>
 <br>
-<div class="container">
-  <h2 id="title-hospital-index"><%="#{@hospital.events.count} événements vous sont proposés à #{@hospital.name}" %></h2>
+ <div class="container">
+  <h2 id="title-hospital-index"><%="#{@hospital.events.count} événements à venir" %></h2>
   <%= render 'shared/add_event_btn' %>
   <br>
   <div class="cards-new">
     <% events = @hospital.events.sort_by {|event| event.start} %>
-    <h2>Évenements à venir</h2>
     <% events.each do |event| %>
       <%= (render 'shared/card_new_event', event: event) if event.start > DateTime.now %>
     <% end %>

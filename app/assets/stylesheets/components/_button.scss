@@ -1,5 +1,5 @@
 .btn-round{
-  background-color: $purple;
+  background-color: #ff5252;
   color: white;
   padding: 2vh 3vh;
   border-radius: 50%;
@@ -10,7 +10,7 @@
   font-size: 3vh;
   &.sticky{
     position: fixed;
-    bottom: 85vh;
+    bottom: 81vh;
     right: 2vh;
     z-index: 20;
   }
