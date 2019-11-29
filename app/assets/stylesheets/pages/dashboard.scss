@@ -26,6 +26,11 @@
   font-size: 3em;
 }
 
+.dropdown-toggle {
+  height: 50px;
+  width: 50px;
+}
+
 .infos-events-user {
   position: absolute;
   display: flex;
@@ -35,4 +40,8 @@
 
 .text-event {
   text-align: center;
+}
+
+.dropdown-menu {
+  width: 80px;
 }
