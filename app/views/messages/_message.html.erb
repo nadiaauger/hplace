@@ -1,18 +1,4 @@
-<!-- # <%# if message.user == current_user %>
-#   <div class="message right">
-#     <%=# cl_image_tag message.user.photo.key, class: "avatar-chat" %>
-#     <div class="message-content"><%= message.content %></div>
-#   </div>
-# <%# else %>
-#   <div class="message">
-#     <%=# cl_image_tag message.user.photo.key, class: "avatar-chat" %>
-#     <div class="message-content"><%= message.content %></div>
-#   </div>
-# <%# end %>
-
- -->
-
-<div class="message">
+<div class="message <%= class_name %>">
   <%= cl_image_tag message.user.photo.key, class: "avatar-chat" %>
   <div class="message-content"><%= message.content %></div>
 </div>

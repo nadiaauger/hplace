@@ -4,7 +4,8 @@
       <div class="chat-header"><h4>#<%= @chat_room.name %></h4></div>
       <div class="messages">
         <% @chat_room.messages.each do |message| %>
-          <%= render "messages/message", message: message %>
+          <% message_class = message.user == current_user ? 'right' : nil %>
+          <%= render "messages/message", message: message, class_name: message_class %>
         <% end %>
       </div>
       <div id="create-message">

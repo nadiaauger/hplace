@@ -12,7 +12,7 @@ const chatRefresh = () => {
     { channel: 'ChatRoomsChannel', chat_room_id: selectId.dataset.roomId },
     {
       received: (data) => {
-        if (data.current_user_id !== selectId.dataset.userId) {
+        if (data.current_user_id !== parseInt(selectId.dataset.userId, 10)) {
           const messagesContainer = document.querySelector('.messages');
           messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
           scrollLastMessageIntoView();
