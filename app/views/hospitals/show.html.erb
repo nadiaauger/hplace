@@ -1,4 +1,4 @@
- 
+
 <br>
 <br>
 <div class="container">
@@ -10,10 +10,6 @@
     <h2>Évenements à venir</h2>
     <% events.each do |event| %>
       <%= (render 'shared/card_new_event', event: event) if event.start > DateTime.now %>
-    <% end %>
-    <h2>Évenements passé</h2>
-    <% events.each do |event| %>
-      <%= (render 'shared/card_new_event', event: event) if event.end < DateTime.now %>
     <% end %>
   </div>
 </div>
