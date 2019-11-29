@@ -14,9 +14,10 @@ import "../plugins/dashboard_tabs";
 import "../plugins/typed";
 import "../components/photopreview";
 
-if (document.querySelector(".photo-create-event")){
-  previewImageOnFileSelect();
-}
+import { notifRefresh } from "../plugins/init_action_cable_notif";
 
 
-import { previewImageOnFileSelect } from '../components/photopreview';
+import { previewImageOnFileSelect } from '../plugins/photopreview';
+
+notifRefresh();
+previewImageOnFileSelect();

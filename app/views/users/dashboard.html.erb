@@ -10,7 +10,11 @@
   </div>
 
   <div class="profil-image-name">
-    <%= cl_image_tag @user.photo.key, height: 60, width: 60, class: "avatar-bordered" %>
+    <% if @user.photo.attached? %>
+      <%= cl_image_tag @user.photo.key, height: 60, width: 60, class: "avatar-bordered" %>
+    <% else %>
+      <%= cl_image_tag "test.jpg", height: 60, width: 60, class: "avatar-bordered" %>
+    <% end %>
     <%= @user.username %>
   </div>
   <div class="infos-events-user">

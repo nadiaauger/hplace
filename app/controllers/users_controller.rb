@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @name_page = "Profile"
+
   end
 
   def dashboard
@@ -15,6 +16,7 @@ class UsersController < ApplicationController
     @notifications_seen = []
     @notifications_old = []
     @notifications_new = []
+    nb_notif = 0
     @user = current_user
     @events = Event.where(user: @user)
     @events.each do |event|
