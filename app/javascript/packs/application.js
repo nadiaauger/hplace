@@ -12,7 +12,6 @@ import "../plugins/dashboard_tabs";
 //   stringsElement: '#typed-strings', typeSpeed: 100
 // });
 import "../plugins/typed";
-import "../components/photopreview";
 
 import { notifRefresh } from "../plugins/init_action_cable_notif";
 
