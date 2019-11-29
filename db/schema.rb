@@ -97,7 +97,6 @@ ActiveRecord::Schema.define(version: 2019_11_28_114134) do
   add_foreign_key "event_seens", "users"
   add_foreign_key "events", "hospitals"
   add_foreign_key "events", "users"
-  add_foreign_key "notifications", "users"
   add_foreign_key "reservations", "events"
   add_foreign_key "reservations", "users"
   add_foreign_key "users", "hospitals"
