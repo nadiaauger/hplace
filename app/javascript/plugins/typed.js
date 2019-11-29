@@ -1,3 +1,5 @@
+import Typed from 'typed.js';
+
 const typedStringsExport = () => {
   if (document.querySelector('#typed-strings')) {
     new Typed('#typed', {
