@@ -24,7 +24,7 @@
             <i class="fas fa-check"></i><%= " Participe" %>
           </div>
         <% end %>
-        <%= render 'shared/chat_btn' %>
+        <%= render 'shared/chat_btn'  %>
       </div>
     <% else %>
       <%= link_to " Participer", event_reservations_path(@event), method: :post, class: "btn-participer d-block"%>
