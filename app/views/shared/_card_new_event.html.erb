@@ -8,7 +8,7 @@
   </div>
   <div class="card-event-infos-new mt-3">
     <div class="px-4 border-right">
-     <h2> <%= "#{I18n.localize(event.start, format: "%^a, %^b %d, %Y")} à #{event.start.strftime("%I:%M %p")} "%></h2>
+     <h2> <%= "#{I18n.localize(event.start, format: "%^a %d %^b %Y")} à #{event.start.strftime("%I:%M %p")} "%></h2>
      <p><%= event.location %></p>
      </div>
     <div>
