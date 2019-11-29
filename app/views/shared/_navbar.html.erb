@@ -10,7 +10,22 @@
           </p>
       <% end %>
       <p class="navbar-icon"><i class="fas fa-comment"></i></p>
-      <p class="navbar-icon"><i class="fas fa-bell"></i></p>
+
+      <div class = "ring">
+        <%= link_to notification_path do %>
+          <% if params["action"] == 'notification'%>
+             <p class="navbar-icon active">
+          <% else %>
+             <p class="navbar-icon">
+          <% end %>
+          <i class="fas fa-bell"></i>
+          </p>
+        <% end %>
+        <div class="disparait">
+        <span class="button_badge"><%= current_user.number_of_notifications %>
+        </span>
+        </div>
+      </div>
     <%= link_to dashboard_path do %>
       <% if params["action"] == 'dashboard'%>
         <p class="navbar-icon active">

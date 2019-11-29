@@ -84,6 +84,11 @@
     }
 }
 
+.past-event{
+  background-color: rgba(245, 245, 245, 1);
+  opacity: 0.5;
+}
+
 .card-event-infos-new{
   display:flex;
   margin-top:1em;
@@ -92,6 +97,7 @@
 }
 .card-event-new .card-link{
   position: absolute;
+  display: inline-grid;
   right: 0;
   left: 0;
   top: 0;
@@ -101,8 +107,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  position: relative;
 }
 
+#number-of-participants {
+  padding-left: 20px;
+  padding-top: 30px;
+}
 
 
 // Smallest device

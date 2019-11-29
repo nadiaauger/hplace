@@ -19,11 +19,23 @@
   }
 }
 
+#arrow{
+position: absolute;
+}
+
+#photo-preview{
+  width:100%;
+}
+
 .photo-create-event {
   height: 30vh;
   background-color: #f5efff;
   position: relative;
+ }
 
+ .photo-create-event h2 {
+  text-align: center;
+  padding: 20%;
  }
 
 .lower-page {
@@ -52,5 +64,5 @@
 
 #title-hospital-index {
   text-align: center;
-
+  vertical-align: middle;
 }
