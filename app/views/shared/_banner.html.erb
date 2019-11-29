@@ -3,11 +3,12 @@
 <% else %>
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1503482618211-c70b46ede8b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80'); background-position: inherit;">
 <% end %>
-
   <div class="container">
-    <h2><em> <%= event.user.username %> </em></h2>
-    <h1> <%= event.name %> </h1>
-    <p> <%= event.description %> </p>
+    <div class="d-flex tete-single-event">
+      <h1> <%= event.name %> </h1>
+      <p id="date-event-show"> <%= @event.start.day %>/<%= @event.start.month %></p>
+    </div>
+    <p class="mb-3"> <%= event.description %> </p>
     <% if current_user == event.user %>
       <div class="d-flex justify-content-between">
         <div class="d-flex">
@@ -18,11 +19,15 @@
       </div>
     <% elsif Reservation.where(user: current_user, event: event).exists? %>
       <div class="d-flex justify-content-between">
-        <%= link_to "Se désinscrire", event_reservation_path(@event), method: :delete, class: "btn-desinscrire" %>
-        <%= link_to "Chat-Room", "#", class: "btn-chatroom" %>
+        <%= link_to event_reservation_path(@event), method: :delete do%>
+          <div class="btn-desinscrire">
+            <i class="fas fa-check"></i><%= " Participe" %>
+          </div>
+        <% end %>
+        <%= render 'shared/chat_btn' %>
       </div>
     <% else %>
-      <%= link_to "Participer", event_reservations_path(@event), method: :post, class: "btn-participer"%>
+      <%= link_to " Participer", event_reservations_path(@event), method: :post, class: "btn-participer d-block"%>
     <% end %>
   </div>
 </div>
