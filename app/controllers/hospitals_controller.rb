@@ -3,6 +3,8 @@ skip_before_action :authenticate_user!, only: [:show, :handler]
 
   def show
     @hospital = Hospital.find(params[:id])
+    @name_page = @hospital.name
+
   end
 
   def handler

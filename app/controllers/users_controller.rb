@@ -9,9 +9,12 @@ class UsersController < ApplicationController
   def dashboard
     @user = current_user
     @registrations = @user.reservations
+    @name_page = 'Dashboard'
+
   end
 
   def notification
+    @name_page = 'notifications'
     @notifications = []
     @notifications_seen = []
     @notifications_old = []

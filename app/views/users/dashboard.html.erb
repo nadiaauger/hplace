@@ -1,14 +1,4 @@
  <div class="profil-infos">
-  <div class="links-dash">
-    <li class="nav-item dropdown">
-      <%= image_tag "https://www.pngix.com/pngfile/middle/112-1121371_settings-icon-svg-setting-icon-hd-png-download.png", class: "dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-      <%= link_to "Edit Profile", "#", class: "dropdown-item" %>
-    <%= link_to "Logout", "#", class: "dropdown-item" %>
-    </div>
-    </li>
-  </div>
-
   <div class="profil-image-name">
     <% if @user.photo.attached? %>
       <%= cl_image_tag @user.photo.key, height: 60, width: 60, class: "avatar-bordered" %>
@@ -61,7 +51,7 @@
     <% events.each do |event| %>
       <%= (render 'shared/card_new_event', event: event) if event.start > DateTime.now %>
     <% end %>
-    <h2>Évenements passé</h2>
+    <h2>Évenements passés</h2>
     <% events.each do |event| %>
       <%= (render 'shared/card_new_event', event: event) if event.end < DateTime.now %>
     <% end %>
