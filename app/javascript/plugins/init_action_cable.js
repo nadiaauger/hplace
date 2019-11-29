@@ -8,6 +8,7 @@ import { scrollLastMessageIntoView } from "plugins/scroll";
 const chatRefresh = () => {
   const selectId = document.querySelector('#chat-refresh');
   if (selectId) {
+    scrollLastMessageIntoView();
     App[`chat_room_${selectId.dataset.roomId}`] = App.cable.subscriptions.create(
       { channel: 'ChatRoomsChannel', chat_room_id: selectId.dataset.roomId },
       {
