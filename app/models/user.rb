@@ -6,7 +6,8 @@ class User < ApplicationRecord
 
   belongs_to :hospital
   has_many :reservations, dependent: :destroy
-  has_many :events, through: :reservations, dependent: :destroy
+  has_many :events
+  has_many :reserved_events, through: :reservations, source: :events
   has_many :event_seen, dependent: :destroy
   has_many :bookings, through: :events, source: :reservations
 
@@ -18,4 +19,5 @@ class User < ApplicationRecord
   def number_of_notifications
     bookings.where(notified: false).count
   end
+
 end

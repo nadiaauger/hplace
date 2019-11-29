@@ -1,9 +1,8 @@
 const displayNotifications = (data) => {
   const badge = document.querySelector(".button_badge");
   const baniere = document.querySelector("#notification-alert");
-  console.log(baniere)
   badge.style.display = "inline";
-  baniere.style.display = "inline";
+  // baniere.style.display = "inline";
   console.log(data)
 }
 

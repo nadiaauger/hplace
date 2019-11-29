@@ -28,7 +28,6 @@ class UsersController < ApplicationController
       @reservations = Reservation.where(event: event)
       @reservations.each do |resa|
         if resa.notified == false && resa.user != current_user
-          nb_notif += 1
           @notifications << resa
           resa.notified = true
           resa.save
