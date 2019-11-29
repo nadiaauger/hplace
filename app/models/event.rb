@@ -3,6 +3,7 @@ class Event < ApplicationRecord
 
   belongs_to :user
   belongs_to :hospital
+  has_one :chat_room
   has_many :reservations, dependent: :destroy
   has_many :users, through: :reservations
   has_many :event_seen, dependent: :destroy

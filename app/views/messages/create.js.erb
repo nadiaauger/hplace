@@ -1,12 +1,16 @@
 function addmessage() {
   const selectId = document.querySelector('#chat-refresh')
   // if (selectId.dataset.userId === <%#= current_user.id %>) {
-    const messagesContainer = document.querySelector('.messages');
-    messagesContainer.insertAdjacentHTML('beforeend', '<%= j render "message", message: @message, class_name: "right" %>');
-    const input = document.querySelector('#message_content');
+  const messagesContainer = document.querySelector('.messages');
+  messagesContainer.insertAdjacentHTML('beforeend', '<%= j render "message", message: @message, class_name: "right" %>');
+  const input = document.querySelector('#message_content');
+  if (parseInt(selectId.dataset.userId, 10) === <%= current_user.id %>) {
+    input.value = '';
+  } else {
     input.value = '';
     input.blur();
-    scrollLastMessageIntoView();
+  };
+  scrollLastMessageIntoView();
   // }
   // else {
     // const input = document.querySelector('#message_content');
