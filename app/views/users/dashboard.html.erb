@@ -31,13 +31,14 @@
 
 
 <div class="container mine animated slideInLeft faster">
-  <h2>Vos évéments</h2>
+
+  <h2>Les evenements auxquels pour participez:</h2>
   <div class="cards-new">
-    <% events = Event.where(user: current_user).sort_by {|event| event.start} %>
+    <% events = @user.events.sort_by {|event| event.start} %>
     <% events.each do |event| %>
       <%= (render 'shared/card', event: event) if event.start > DateTime.now %>
     <% end %>
-    <h2>Évenements passé</h2>
+    <h2>Évenements passés</h2>
     <% events.each do |event| %>
       <%= (render 'shared/card', event: event) if event.end < DateTime.now %>
     <% end %>
@@ -45,16 +46,18 @@
 </div>
 
 <div class="container their d-none animated slideInRight faster">
-  <h2>Les evenements auxquels pour participez:</h2>
-  <div class="cards-new">
-    <% events = @user.events.sort_by {|event| event.start} %>
-    <% events.each do |event| %>
-      <%= (render 'shared/card_new_event', event: event) if event.start > DateTime.now %>
-    <% end %>
-    <h2>Évenements passés</h2>
-    <% events.each do |event| %>
-      <%= (render 'shared/card_new_event', event: event) if event.end < DateTime.now %>
-    <% end %>
+    <h2>Vos évéments</h2>
+    <div class="cards-new">
+      <% events = @user.reservations.sort_by {|reservation| reservation.event.start} %>
+      <% events.each do |event| %>
+        <%= (render 'shared/card_new_event', event: event.event) if event.event.start > DateTime.now %>
+      <% end %>
+      <h2>Évenements passé</h2>
+      <% events.each do |event| %>
+        <%= (render 'shared/card_new_event', event: event.event) if event.event.end < DateTime.now %>
+      <% end %>
+    </div>
   </div>
-</div>
+
+
 
