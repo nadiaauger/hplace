@@ -67,6 +67,8 @@ SimpleForm.setup do |config|
   # The default wrapper to be used by the FormBuilder.
   config.default_wrapper = :default
 
+  config.form_class = 'simple_form form-horizontal'
+
   # Define the way to render check boxes / radio buttons with labels.
   # Defaults to :nested for bootstrap config.
   #   inline: input + label
