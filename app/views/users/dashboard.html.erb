@@ -36,11 +36,11 @@
   <div class="cards-new">
     <% events = @user.events.sort_by {|event| event.start} %>
     <% events.each do |event| %>
-      <%= (render 'shared/card', event: event) if event.start > DateTime.now %>
+      <%= (render 'shared/card_new_event', event: event) if event.start > DateTime.now %>
     <% end %>
     <h2>Évenements passés</h2>
     <% events.each do |event| %>
-      <%= (render 'shared/card', event: event) if event.end < DateTime.now %>
+      <%= (render 'shared/card_new_event', event: event) if event.end < DateTime.now %>
     <% end %>
   </div>
 </div>
@@ -50,11 +50,11 @@
     <div class="cards-new">
       <% events = @user.reservations.sort_by {|reservation| reservation.event.start} %>
       <% events.each do |event| %>
-        <%= (render 'shared/card_new_event', event: event.event) if event.event.start > DateTime.now %>
+        <%= (render 'shared/card', event: event.event) if event.event.start > DateTime.now %>
       <% end %>
       <h2>Évenements passé</h2>
       <% events.each do |event| %>
-        <%= (render 'shared/card_new_event', event: event.event) if event.event.end < DateTime.now %>
+        <%= (render 'shared/card', event: event.event) if event.event.end < DateTime.now %>
       <% end %>
     </div>
   </div>

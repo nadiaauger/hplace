@@ -1,8 +1,4 @@
 <div class="header-create-event">
-  <div class="banner-create-event">
-    <%= render "shared/topbar" %>
-  </div>
-
   <div class="photo-create-event">
     <% if @user.photo.attached? %>
       <%= cl_image_tag @user.photo.key, id: "user-photo", height: 150, width: 150, crop: :fill%>
@@ -24,10 +20,16 @@
     <div class="user-registrations">
       <br>
       <h2>Organisateur de : </h2>
-      <% events = Event.where(user: @user) %>
-      <% events.each do |event|%>
-       <%= render 'shared/card_new_event', event: event %>
-      <% end %>
+      <div class="cards-new">
+            <% events = @user.reservations.sort_by {|reservation| reservation.event.start} %>
+            <% events.each do |event| %>
+              <%= (render 'shared/card_new_event', event: event.event) if event.event.start > DateTime.now %>
+            <% end %>
+            <h2>Évenements passé</h2>
+            <% events.each do |event| %>
+              <%= (render 'shared/card_new_event', event: event.event) if event.event.end < DateTime.now %>
+            <% end %>
+          </div>
     </div>
   </div>
 
