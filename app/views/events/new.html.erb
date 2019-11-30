@@ -9,20 +9,21 @@
 <div class="container-fluid lower-page ">
   <div class="row justify-content-center" >
     <div class="events-info col-12 col-lg-8">
-      <%= simple_form_for(@event) do |f| %>
+      <%= simple_form_for(@event)  do |f| %>
         <%= f.input :photo, input_html: { id: 'photo-input', class: 'd-none'}, label: false %>
-        <%= f.input :name, label: 'Title' %>
-        <%= f.input :description, label: 'Describe your event' %>
-        <%= f.input :start, label: 'Starting date', as: :string, required: true, input_html: {class: "datepicker"}, placeholder: "YYYY/MM/DD" %>
-        <%= f.input :start, label: 'Starting time', as: :string, required: true, input_html: {class: "timepicker"} %>
-        <%= f.input :end, label: 'Ending time', as: :string, required: true, input_html: {class: "timepicker"} %>
-        <%= f.input :location %>
-        <%= f.input :max_participants %>
-        <%= f.button :submit, class: "btn btn-primary", value: "Create" %>
+        <%= f.input :name, label: false,input_html: {class: 'ml-0'}, placeholder:'Nom de l\'évènement' %>
+        <%= f.input :start, label: false, wrapper_html: { class: 'fas fa-clock mr-10' }, as: :string, required: true, input_html: {class: "datepicker"}, placeholder: "YYYY/MM/DD" %>
+        <%= f.input :start, label: false, as: :string, required: true, input_html: {class: "startpicker time"}, placeholder:'Start' %>
+        <%= f.input :end, label: false, as: :string, required: true, input_html: {class: "endpicker time"}, placeholder:'End' %>
+        <%= f.input :description,label: false, wrapper_html: { class: 'fas fa-pen' },as: :string, placeholder: 'Détails' %>
+        <%= f.input :location, label: false,  wrapper_html: { class: 'fas fa-map-marker-alt' }, placeholder: 'Lieu' %>
+        <%= f.input :max_participants, label: false, wrapper_html: { class: 'fas fa-users' },  placeholder: 'Nombre maximum de participants' %>
+        <%= f.button :submit, class: "btn btn-primary", value: "CRÉER" %>
       <% end %>
     </div>
   </div>
-
 </div>
 
 
+<br>
+<br>
