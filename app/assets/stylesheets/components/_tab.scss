@@ -1,12 +1,17 @@
 .tabs-underlined {
   display: flex;
   align-items: center;
+  margin: 0;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  background-color: white;
+  // position: fixed;
+  // bottom:0;
 }
 
 .tabs-underlined .tab-underlined {
   color: black;
-  padding: 8px;
   margin: 8px 16px;
+  padding:5px;
   opacity: .4;
   cursor: pointer;
   text-decoration: none;
