@@ -10,14 +10,17 @@
     <%= stylesheet_pack_tag 'application', media: 'all' %>
   </head>
   <body>
-    <div class="banner-create-event">
-      <%= render "shared/topbar" %>
-    </div>
+    <% if user_signed_in? %>
+      <div class="banner-create-event">
+        <%= render "shared/topbar" %>
+      </div>
+    <% end %>
     <div class='sticky-navbar'>
       <%= yield %>
     </div>
     <br>
     <br>
+    <div class="space" style="padding:2em"></div>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= render 'shared/notification_alert' %>

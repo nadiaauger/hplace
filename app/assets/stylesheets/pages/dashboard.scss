@@ -9,7 +9,15 @@
   display: none;
 }
 
-
+h2 {
+  a{
+    text-decoration: none;
+    color:black;
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+}
 
 .links-dash {
   position: absolute;

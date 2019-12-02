@@ -1,16 +1,15 @@
 .navbar{
-  margin: 0;
   padding: 1em;
   overflow: hidden;
-  background-color: $purple;
+  background-color: #C4CBCA;
   position: fixed;
   bottom: 0;
   width: 100%;
   padding: inherit;
-
-
-   .active{
-background-color:#43366E;   }
+  .active{
+    background-color:#F5F5F5;
+    color:#C4CBCA;
+   }
 
   p{
   color: white;
