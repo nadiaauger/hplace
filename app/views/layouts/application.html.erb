@@ -30,7 +30,7 @@
   </head>
   <body>
     <% if user_signed_in? %>
-      <div class="banner-create-event">
+      <div class="topbar">
         <%= render "shared/topbar" %>
       </div>
     <% end %>
@@ -40,7 +40,7 @@
     <br>
     <br>
     <div class="space" style="padding:2em"></div>
-    <%= render 'shared/navbar' %>
+    <%#= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= render 'shared/notification_alert' %>
     <% if user_signed_in? %>
