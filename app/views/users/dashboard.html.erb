@@ -21,7 +21,7 @@
 <div>
   <ul class="list-inline tabs-underlined">
     <li>
-      <h2 class="tab-underlined active organise">Découvrire</h2>
+      <h2 class="tab-underlined active découvrire">Découvrire</h2>
     </li>
     <li>
       <h2 class="tab-underlined organise">J'organise</h2>
@@ -33,7 +33,7 @@
 </div>
 
 
-<div class="container mine animated  d-none slideInLeft faster">
+<div class="container mine animated  d-none fadeIn">
   <% events = Event.where(user: current_user).sort_by {|event| event.start} %>
   <% if Event.where("DATE(start) = ?", Date.today).count > 0 %>
     <h2>Vos évéments</h2>
@@ -51,7 +51,8 @@
   </div>
 </div>
 
-<div class="container their  animated slideInRight faster">
+<div class="container disc  animated fadeIn">
+  <h2 id="title-hospital-index"><%="#{@user.hospital.events.count} événements à venir" %></h2>
   <div class="cards-new">
       <% events = @user.hospital.events.sort_by {|event| event.start} %>
       <% events.each do |event| %>
@@ -62,7 +63,7 @@
 </div>
 
 
-<div class="container their d-none animated slideInRight faster">
+<div class="container their d-none animated fadeIn">
   <% events = @user.events.sort_by {|event| event.start} %>
   <% if events.length > 0 %>
     <h2>Les evenements auxquels vous participez:</h2>
@@ -80,19 +81,6 @@
   </div>
 </div>
 
-<div class="container their d-none animated slideInRight faster">
-    <h2>Vos évéments</h2>
-    <div class="cards-new">
-      <% events = @user.reservations.sort_by {|reservation| reservation.event.start} %>
-      <% events.each do |event| %>
-        <%= (render 'shared/card', event: event.event) if event.event.start > DateTime.now %>
-      <% end %>
-      <h2>Évenements passé</h2>
-      <% events.each do |event| %>
-        <%= (render 'shared/card', event: event.event) if event.event.end < DateTime.now %>
-      <% end %>
-    </div>
-  </div>
 
 
 
