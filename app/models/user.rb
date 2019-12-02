@@ -20,6 +20,12 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
 
   def number_of_notifications
-    bookings.where(notified: false).where.not(user_id: id).count
+    nb_of_notif = bookings.where(notified: false).where.not(user_id: id).count
+    hospital.events.each do |event|
+      if EventSeen.find_by(user: self, event: event).nil?
+        nb_of_notif += 1
+      end
+    end
+    return nb_of_notif
   end
 end

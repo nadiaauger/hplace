@@ -1,5 +1,6 @@
 class Event < ApplicationRecord
   has_one_attached :photo
+  after_create :broadcast_notification
 
   belongs_to :user
   belongs_to :hospital
@@ -13,4 +14,12 @@ class Event < ApplicationRecord
   validates :end, presence: true
   validates :location, presence: true
   validates :description, presence: true
+
+  private
+
+  def broadcast_notification
+    hospital.users.each do |patient|
+      ActionCable.server.broadcast("notification_for_user#{patient.id}", number_of_notifs: patient.number_of_notifications)
+    end
+  end
 end

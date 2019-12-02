@@ -5,6 +5,7 @@ const displayNotifications = (data) => {
   nbNotif.innerHTML = data.number_of_notifs
   badge.style.display = "inline";
   // baniere.style.display = "inline";
+  console.log(data)
 }
 
 
