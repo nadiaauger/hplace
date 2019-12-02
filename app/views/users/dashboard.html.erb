@@ -32,6 +32,9 @@
   </ul>
 </div>
 
+<%= render 'shared/add_event_btn' %>
+
+
 
 <div class="container mine animated  d-none fadeIn">
   <% events = Event.where(user: current_user).sort_by {|event| event.start} %>
@@ -50,9 +53,9 @@
   </div>
 </div>
 
-<div class="container disc  animated fadeIn">
+<div class="disc  animated fadeIn">
   <h2 id="title-hospital-index"><%="#{@user.hospital.events.count} événements à venir" %></h2>
-  <div class="cards-new">
+  <div class="d-flex cards-disc">
       <% events = @user.hospital.events.sort_by {|event| event.start} %>
       <% events.each do |event| %>
         <%= (render 'shared/card_new_event', event: event) if event.start > DateTime.now %>
