@@ -3,7 +3,7 @@
   <div class="text-home">
 
     <div class="slogan">
-      <div class="first-home">
+    <!--   <div class="first-home">
         <div class="slogan-text">
             <div id="typed-strings">
               <h1><strong>Happy</strong></h1>
@@ -16,31 +16,30 @@
             <span id="typed"></span>
             <span><strong>...place</strong></span>
         </div>
-      </div>
+      </div> -->
+
+    <div class="top-home sign-in-home">
+      <%= image_tag("icons/hplace-logo.png", size:"70") %>
+      <h2 id="btn-signin"><%=link_to "Sign in", new_user_session_path%></h2>
     </div>
-    <div class="container", style="height:30vh">
-    <p style="padding: 6em;"><em id="text-home-2">En établissement hospitalier aussi, on peut être bien entouré</em></p>
+
+    </div>
+    <div class="container", style="height:30vh", width="50vh">
+    <p style="padding: 3em;"><em id="text-home-2">Ne faîtes plus hôpital à part, participez à des événements entre patients</em></p>
     </div>
   </div>
 
   <div class="search-bar-homepage">
     <%= form_tag handler_path, method: :get do %>
-      <div class="d-flex">
-        <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Votre hôpital"%>
+      <div class="d-flex home-search">
+        <%= text_field_tag :query, params[:query], class: "form-control search-field", placeholder: "Sélectionner un hôpital"%>
         <button name="button" type="submit" class="icone-loupe">
           <i class="fas fa-search"></i>
         </button>
       </div>
     <% end %>
   </div>
-  <div class="container sign-in-home">
-    <h2><%=link_to "Sign in", new_user_registration_path, class: "btn-chatroom"%></h2>
-  </div>
 </div>
-
-
-
-
 
 <div class="top-events-new">
   <h2 style="margin-top: 1em; margin-left: 1em; margin-bottom: 1em;">Événements à venir</h2>
