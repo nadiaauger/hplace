@@ -6,12 +6,12 @@
   position:relative;
   margin-bottom: 0.5em;
   position: relative;
-  height: 30vh;
+  height: 22em;
 
     .event-image{
       background-size: cover;
       background-position: center;
-      height:30vh;
+      height:22em;
     }
 
     .event-text{
@@ -23,7 +23,7 @@
     .card-info{
       display:flex;
       position:absolute;
-      bottom: 1vh;
+      bottom: 1em;
       justify-content: space-between;
     }
 
@@ -56,13 +56,13 @@
   position:relative;
   margin-bottom: 0.5em;
   position: relative;
-  height: 30vh;
+  height: 22em;
 
 
     .event-image{
       background-size: cover;
       background-position: center;
-      height:20vh;
+      height:15em;
     }
 
     .card-title{
@@ -70,7 +70,7 @@
       margin-left: 1em;
       font-weight: bold;
       position:absolute;
-      top: 16vh;
+      top: 5em;
     }
     h2{
       margin-bottom:0;

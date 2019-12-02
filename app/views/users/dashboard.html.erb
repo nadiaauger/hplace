@@ -21,7 +21,10 @@
 <div>
   <ul class="list-inline tabs-underlined">
     <li>
-      <h2 class="tab-underlined active organise">J'organise</h2>
+      <h2 class="tab-underlined active organise">Découvrire</h2>
+    </li>
+    <li>
+      <h2 class="tab-underlined organise">J'organise</h2>
     </li>
     <li>
       <h2 class="tab-underlined participe">Je participe</h2>
@@ -30,7 +33,7 @@
 </div>
 
 
-<div class="container mine animated slideInLeft faster">
+<div class="container mine animated  d-none slideInLeft faster">
   <% events = Event.where(user: current_user).sort_by {|event| event.start} %>
   <% if Event.where("DATE(start) = ?", Date.today).count > 0 %>
     <h2>Vos évéments</h2>
@@ -47,6 +50,17 @@
     <% end %>
   </div>
 </div>
+
+<div class="container their  animated slideInRight faster">
+  <div class="cards-new">
+      <% events = @user.hospital.events.sort_by {|event| event.start} %>
+      <% events.each do |event| %>
+        <%= (render 'shared/card_new_event', event: event) if event.start > DateTime.now %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
 
 <div class="container their d-none animated slideInRight faster">
   <% events = @user.events.sort_by {|event| event.start} %>
