@@ -7,5 +7,9 @@
 <% end %>
 <div class="notification-content">
   <p><small><%= notification.created_at.strftime("%d %b %Y") %></small></p>
-  <p><strong> <%= notification.user.username %> </strong> souhaiterais rejoindre l'évenement <strong> <%= link_to notification.event.name, event_path(notification.event), class: "link_to" %>.</strong></p>
+  <% if notification.class.name == "Event" %>
+    <p>L'évenement <strong> <%= notification.name %> </strong> organisé par <strong> <%= link_to notification.user.username, event_path(notification), class: "link_to" %> </strong> viens d'être creé. </p>
+  <% else %>
+    <p><strong> <%= notification.user.username %> </strong> souhaiterais rejoindre l'évenement <strong> <%= link_to notification.event.name, event_path(notification.event), class: "link_to" %>.</strong></p>
+  <% end %>
 </div>

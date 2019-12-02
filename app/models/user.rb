@@ -13,14 +13,13 @@ class User < ApplicationRecord
   has_many :messages, dependent: :destroy
 
   has_many :bookings, through: :events, source: :reservations
-  
+
   has_one_attached :photo
 
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
 
   def number_of_notifications
-    bookings.where(notified: false).count
+    bookings.where(notified: false).where.not(user_id: id).count
   end
-
 end

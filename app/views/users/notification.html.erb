@@ -5,19 +5,9 @@
       <%= render 'shared/notification', notification: notification %>
     </div>
   <% end %>
-  <% @notifications_seen.each do |notification| %>
-    <div class="notification seen">
-      <%= render 'shared/notification', notification: notification %>
-    </div>
-  <% end %>
-  <% @notifications_new.each do |notification| %>
-    <div class="notification">
-      <%= render 'shared/notification_event', notification: notification %>
-    </div>
-  <% end %>
   <% @notifications_old.each do |notification| %>
     <div class="notification seen">
-      <%= render 'shared/notification_event', notification: notification %>
+      <%= render 'shared/notification', notification: notification %>
     </div>
   <% end %>
 </div>

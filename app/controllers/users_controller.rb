@@ -19,12 +19,11 @@ class UsersController < ApplicationController
     @notifications_seen = []
     @notifications_old = []
     @notifications_new = []
-    nb_notif = 0
     @user = current_user
     @events = Event.where(user: @user)
     @events.each do |event|
       if EventSeen.find_by(user: @user, event: event).nil?
-        @notifications_new << event
+        @notifications << event
       else
         @notifications_old << event
       end
@@ -35,9 +34,11 @@ class UsersController < ApplicationController
           resa.notified = true
           resa.save
         elsif resa.notified == true && resa.user != current_user
-          @notifications_seen << resa
+          @notifications_old << resa
         end
       end
     end
+    @notifications.sort_by {|obj| obj.created_at}
+    @notifications_old.sort_by {|obj| obj.created_at}
   end
 end
