@@ -18,10 +18,12 @@
         </div>
       </div> -->
 
-    <div class="top-home sign-in-home">
-      <%= image_tag("icons/hplace-logo.png", size:"70") %>
-      <h2 id="btn-signin"><%=link_to "Sign in", new_user_session_path%></h2>
-    </div>
+    <% unless user_signed_in? %>
+      <div class="top-home sign-in-home">
+        <%= image_tag("icons/hplace-logo.png", size:"70") %>
+        <h2 id="btn-signin"><%=link_to "Sign in", new_user_session_path%></h2>
+      </div>
+    <% end %>
 
     </div>
     <div class="container", style="height:30vh", width="50vh">
