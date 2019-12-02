@@ -1,4 +1,4 @@
- <div class="profil-infos">
+<div class="profil-infos">
   <div class="profil-image-name">
     <% if @user.photo.attached? %>
       <%= cl_image_tag @user.photo.key, height: 60, width: 60, class: "avatar-bordered" %>
@@ -31,13 +31,17 @@
 
 
 <div class="container mine animated slideInLeft faster">
-  <h2>Vos évéments</h2>
+  <% events = Event.where(user: current_user).sort_by {|event| event.start} %>
+  <% if Event.where("DATE(start) = ?", Date.today).count > 0 %>
+    <h2>Vos évéments</h2>
+  <% else %>
+    <h2> Vous n'avez pas d'événements à venir ! <%= link_to "CREEZ EN UN ", new_event_path %></h2>
+  <% end %>
   <div class="cards-new">
-    <% events = Event.where(user: current_user).sort_by {|event| event.start} %>
     <% events.each do |event| %>
       <%= (render 'shared/card', event: event) if event.start > DateTime.now %>
     <% end %>
-    <h2>Évenements passé</h2>
+    <h2>Évenements passés</h2>
     <% events.each do |event| %>
       <%= (render 'shared/card', event: event) if event.end < DateTime.now %>
     <% end %>
@@ -45,9 +49,13 @@
 </div>
 
 <div class="container their d-none animated slideInRight faster">
-  <h2>Les evenements auxquels pour participez:</h2>
+  <% events = @user.events.sort_by {|event| event.start} %>
+  <% if events.length > 0 %>
+    <h2>Les evenements auxquels vous participez:</h2>
+  <% else %>
+    <h2> Vous ne participez à aucun événement, <%= link_to 'allez découvrir les événements proche de vous', hospital_path(@user.hospital) %> </h2>
+  <% end %>
   <div class="cards-new">
-    <% events = @user.events.sort_by {|event| event.start} %>
     <% events.each do |event| %>
       <%= (render 'shared/card_new_event', event: event) if event.start > DateTime.now %>
     <% end %>

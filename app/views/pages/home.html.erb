@@ -33,9 +33,12 @@
       </div>
     <% end %>
   </div>
-  <div class="container sign-in-home">
-    <h2><%=link_to "Sign in", new_user_registration_path, class: "btn-chatroom"%></h2>
-  </div>
+  <% unless user_signed_in? %>
+    <div class="container sign-in-home">
+      <h2><%=link_to "Sign in", new_user_session_path, class: "btn-chatroom"%></h2>
+    </div>
+
+  <% end %>
 </div>
 
 
