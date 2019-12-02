@@ -55,7 +55,7 @@
   position:relative;
   margin-bottom: 0.5em;
   position: relative;
-  height: 45em;
+  height: 65vh;
   display: inline-grid;
   min-width:80%;
   margin: 1em;
@@ -64,7 +64,7 @@
     .event-image{
       background-size: cover;
       background-position: center;
-      height:45em;
+      height:65vh;
      }
 
     .card-title{
@@ -74,11 +74,7 @@
       margin: 1.5rem;
     }
 
-    .max-participants{
-      position: absolute;
-      top:.5em;
-      right: 1em;
-    }
+
     h2{
        color: white;
        margin-bottom:0;
@@ -88,13 +84,14 @@
       font-size:2em;
       color:white;
     }
+}
 
-    .see-more{
-      color: $coral !important;
-      font-size: 6em;
-      position: absolute;
-      bottom: .5em;
-      right: 41%;
+.card-top{
+  display:flex;
+  justify-content:space-between;
+   .max-participants{
+      font-size:2em;
+      margin:2rem;
     }
 }
 
@@ -105,8 +102,6 @@
 }
 
 .card-event-infos-new{
-  // position:absolute;
-  // top: 8em;
   margin: 1.5rem
 }
 .card-event-new .card-link{

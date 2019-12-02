@@ -4,16 +4,16 @@
   <% else %>
     <div class='event-image' style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('url('https://images.unsplash.com/photo-1503482618211-c70b46ede8b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80')">
   <% end %>
+  <div class="card-top">
     <h1 class="card-title"><%= event.name %></h1>
     <p class="max-participants"> <img src="https://img.icons8.com/cotton/64/000000/person-male--v2.png" width="25px"><%= "#{event.reservations.count}/#{event.max_participants}" %></p>
+  </div>
     <div class="card-event-infos-new mt-3">
     <h2> <i class="far fa-calendar-alt"></i><%= " #{I18n.localize(event.start, format: "%^a %d %^b")}" %></h2>
     <h2><i class="far fa-clock"></i> <%= "#{event.start.strftime("%I:%M %p")} - #{event.end.strftime("%I:%M %p")} "%></h2>
     <p><%= event.location %></p>
   </div>
-    <%= link_to event_path(event) do %>
-      <i class="fas fa-plus see-more"></i>
-    <% end %>
+    <%= link_to "", event_path(event), class: "card-link" %>
    </div>
 </div>
 
