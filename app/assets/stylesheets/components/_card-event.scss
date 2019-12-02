@@ -55,38 +55,49 @@
   position:relative;
   margin-bottom: 0.5em;
   position: relative;
-  height: 22em;
+  height: 45em;
   display: inline-grid;
-  min-width:90%;
+  min-width:80%;
   margin: 1em;
-
-
 
 
     .event-image{
       background-size: cover;
       background-position: center;
-      height:15em;
-    }
+      height:45em;
+     }
 
     .card-title{
       color:white;
-      margin-left: 1em;
       font-weight: bold;
-      position:absolute;
-      top: 5em;
+      font-size: 5em;
+      margin: 1.5rem;
+    }
+
+    .max-participants{
+      position: absolute;
+      top:.5em;
+      right: 1em;
     }
     h2{
-      margin-bottom:0;
-      color: #8F5750;
+       color: white;
+       margin-bottom:0;
+
     }
     p{
       font-size:2em;
-      opacity: 0.6;
-      margin-top:0;
-      margin-bottom:0;
+      color:white;
+    }
+
+    .see-more{
+      color: $coral !important;
+      font-size: 6em;
+      position: absolute;
+      bottom: .5em;
+      right: 41%;
     }
 }
+
 
 .past-event{
   background-color: rgba(245, 245, 245, 1);
@@ -94,10 +105,9 @@
 }
 
 .card-event-infos-new{
-  display:flex;
-  margin-top:1em;
-  margin-bottom:1em;
-  position:relative;
+  // position:absolute;
+  // top: 8em;
+  margin: 1.5rem
 }
 .card-event-new .card-link{
   position: absolute;
