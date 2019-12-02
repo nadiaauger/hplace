@@ -1,13 +1,13 @@
  <div>
    <ul class="list-inline tabs-underlined">
      <li>
-       <h2 class="tab-underlined active découvrire">Découvrire</h2>
+       <h2 class="tab-underlined active découvrire">Découvrir</h2>
      </li>
      <li>
-       <h2 class="tab-underlined organise">J'organise</h2>
+       <h2 class="tab-underlined participe">Calendrier</h2>
      </li>
      <li>
-       <h2 class="tab-underlined participe">Je participe</h2>
+       <h2 class="tab-underlined organise">Organisateurs</h2>
      </li>
    </ul>
  </div>
@@ -31,13 +31,12 @@
   <%= render 'shared/add_event_btn' %>
 </div>
 
-<div class="disc animated fadeIn">
+<div class="container disc animated fadeIn">
   <div class="discover-top">
-    <div class="mt-3">
+    <div class="home-title">
       <p class="mb-0"><%="#{@user.hospital.events.count} événements"%></p>
-      <h1 id="title-hospital-index"><%="#{@user.hospital.name}" %></h2>
+      <h1 class="mb-2"><%="#{@user.hospital.name}" %></h2>
     </div>
-    <%= render 'shared/add_event_btn' %>
   </div>
   <div class="d-flex cards-disc">
       <% events = @user.hospital.events.sort_by {|event| event.start} %>
@@ -46,6 +45,7 @@
       <% end %>
     </div>
   </div>
+  <%= render 'shared/add_event_btn' %>
 </div>
 
 
@@ -65,5 +65,5 @@
       <%= (render 'shared/card_new_event', event: event) if event.end < DateTime.now %>
     <% end %>
   </div>
-  <%= render 'shared/add_event_btn' %>
+    <%= render 'shared/add_event_btn' %>
 </div>
