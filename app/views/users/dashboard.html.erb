@@ -40,12 +40,11 @@
   <% else %>
     <h2> Vous n'avez pas d'événements à venir ! <%= link_to "CREEZ EN UN ", new_event_path %></h2>
   <% end %>
-  <div class="cards-new">
+  <div class="cards-discover">
     <% events.each do |event| %>
       <%= (render 'shared/card', event: event) if event.start > DateTime.now %>
     <% end %>
-    <h2>Évenements passés</h2>
-    <% events.each do |event| %>
+     <% events.each do |event| %>
       <%= (render 'shared/card', event: event) if event.end < DateTime.now %>
     <% end %>
   </div>
