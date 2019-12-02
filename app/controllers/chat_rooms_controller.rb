@@ -12,8 +12,8 @@ class ChatRoomsController < ApplicationController
     else
       @chat_room = ChatRoom.new
       @chat_room.event = @event
-      @chat_room.save
     end
+    @chat_room.save
     redirect_to event_chat_room_path(@event.id, @chat_room)
   end
 end

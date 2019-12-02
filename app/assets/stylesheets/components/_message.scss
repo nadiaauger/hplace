@@ -52,12 +52,38 @@ input.form-control {
     box-shadow: none;
   }
 }
+
 .chat-header {
-  background-color: #4F2F4C;
-  color: white;
+  position: sticky;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  color: #0E0000;
   padding: 10px 20px;
   margin-top: 10px;
+  overflow-x: auto;
   h4 {
     margin: 0;
   }
+}
+
+.chat-title {
+  position: relative;
+  min-width: 60px;
+  width: 60px;
+  margin-right: 10px;
+  overflow-x: hidden;
+  height: 60px;
+  p {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.link_to_chat {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
 }

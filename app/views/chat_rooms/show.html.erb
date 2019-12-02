@@ -1,14 +1,37 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3" id="chat-refresh" data-room-id="<%= @chat_room.id %>" data-user-id="<%= @chatroom_user.id %>">
-      <div class="chat-header"><h4>#<%= @chat_room.name %></h4></div>
+      <div class="chat-header">
+        <div class="chat-title">
+        <% if @chat_room.event.photo.attached? %>
+            <%= cl_image_tag @chat_room.event.photo.key, height: 50, width: 50, crop: :fill, class: 'avatar', style: "object-size: cover;border: 2px solid #E57067;" %>
+        <% else %>
+            <%= cl_image_tag "smiley-logo.jpg", height: 50, width: 50, crop: :fill, class: 'avatar', style: "object-size: cover;" %>
+        <% end %>
+        <p> <%= @chat_room.event.name %> </p>
+        </div>
+
+        <% @chatroom_user.events.each do |event| %>
+          <% if event != @chat_room.event %>
+            <div class="chat-title">
+              <% if event.photo.attached? %>
+                  <%= cl_image_tag event.photo.key, height: 50, width: 50, crop: :fill, class: 'avatar', style: "object-size: cover;" %>
+                  <%= link_to "", event_chat_rooms_path(event), class: 'link_to_chat', method: :post %>
+              <% else %>
+                  <%= cl_image_tag "smiley-logo.jpg", height: 50, width: 50, crop: :fill, class: 'avatar', style: "object-size: cover;" %>
+              <% end %>
+              <p><%= event.name %></p>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
       <div class="messages">
         <% @chat_room.messages.each do |message| %>
           <% message_class = message.user == current_user ? 'right' : nil %>
           <%= render "messages/message", message: message, class_name: message_class %>
         <% end %>
       </div>
-      <div id="create-message">
+      <div id="create-message" style="position: sticky;">
         <%= simple_form_for [ @event, @chat_room, Message.new ], remote: true do |f| %>
           <%= f.input :content, label: false, as: :string %>
         <% end %>
