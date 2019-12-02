@@ -6,13 +6,17 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   resources :events, only: [:show, :new, :create,:edit, :update] do
     resources :reservations, only: [:create, :destroy]
+    resources :chat_rooms, only: [:create, :show] do
+      resources :messages, only: [:create]
+    end
   end
 
   resources :hospitals, only: [:show]
-  
+
   get '/handler', to: 'hospitals#handler', as: 'handler'
   get '/dashboard', to: 'users#dashboard', as: 'dashboard'
   get '/notification', to: 'users#notification', as: 'notification'
 
+  mount ActionCable.server => "/cable"
 
 end

@@ -8,7 +8,7 @@
 require 'json'
 
 
-#
+
 
 
 filepath = 'db/hospitals.json'
@@ -20,6 +20,9 @@ hospitals = JSON.parse(serialized_hospitals)
 
 puts "Destroy reservations"
 Reservation.destroy_all
+
+puts "Destroy chat_rooms"
+ChatRoom.destroy_all
 
 puts "Destroy events"
 Event.destroy_all

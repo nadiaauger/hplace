@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_27_151605) do
+ActiveRecord::Schema.define(version: 2019_11_29_112625) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,14 @@ ActiveRecord::Schema.define(version: 2019_11_27_151605) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "chat_rooms", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "event_id"
+    t.index ["event_id"], name: "index_chat_rooms_on_event_id"
   end
 
   create_table "event_seens", force: :cascade do |t|
@@ -66,6 +74,16 @@ ActiveRecord::Schema.define(version: 2019_11_27_151605) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "messages", force: :cascade do |t|
+    t.text "content"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "chat_room_id"
+    t.index ["chat_room_id"], name: "index_messages_on_chat_room_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
   create_table "reservations", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "event_id"
@@ -93,10 +111,13 @@ ActiveRecord::Schema.define(version: 2019_11_27_151605) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "chat_rooms", "events"
   add_foreign_key "event_seens", "events"
   add_foreign_key "event_seens", "users"
   add_foreign_key "events", "hospitals"
   add_foreign_key "events", "users"
+  add_foreign_key "messages", "chat_rooms"
+  add_foreign_key "messages", "users"
   add_foreign_key "reservations", "events"
   add_foreign_key "reservations", "users"
   add_foreign_key "users", "hospitals"

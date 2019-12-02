@@ -1,14 +1,4 @@
- <div class="profil-infos">
-  <div class="links-dash">
-    <li class="nav-item dropdown">
-      <%= image_tag "https://www.pngix.com/pngfile/middle/112-1121371_settings-icon-svg-setting-icon-hd-png-download.png", class: "dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-      <%= link_to "Edit Profile", "#", class: "dropdown-item" %>
-    <%= link_to "Logout", "#", class: "dropdown-item" %>
-    </div>
-    </li>
-  </div>
-
+<div class="profil-infos">
   <div class="profil-image-name">
     <% if @user.photo.attached? %>
       <%= cl_image_tag @user.photo.key, height: 60, width: 60, class: "avatar-bordered" %>
@@ -31,7 +21,10 @@
 <div>
   <ul class="list-inline tabs-underlined">
     <li>
-      <h2 class="tab-underlined active organise">J'organise</h2>
+      <h2 class="tab-underlined active organise">Découvrire</h2>
+    </li>
+    <li>
+      <h2 class="tab-underlined organise">J'organise</h2>
     </li>
     <li>
       <h2 class="tab-underlined participe">Je participe</h2>
@@ -40,31 +33,66 @@
 </div>
 
 
-<div class="container mine animated slideInLeft faster">
-  <h2>Vos évéments</h2>
+<div class="container mine animated  d-none slideInLeft faster">
+  <% events = Event.where(user: current_user).sort_by {|event| event.start} %>
+  <% if Event.where("DATE(start) = ?", Date.today).count > 0 %>
+    <h2>Vos évéments</h2>
+  <% else %>
+    <h2> Vous n'avez pas d'événements à venir ! <%= link_to "CREEZ EN UN ", new_event_path %></h2>
+  <% end %>
   <div class="cards-new">
-    <% events = Event.where(user: current_user).sort_by {|event| event.start} %>
     <% events.each do |event| %>
       <%= (render 'shared/card', event: event) if event.start > DateTime.now %>
     <% end %>
-    <h2>Évenements passé</h2>
+    <h2>Évenements passés</h2>
     <% events.each do |event| %>
       <%= (render 'shared/card', event: event) if event.end < DateTime.now %>
     <% end %>
   </div>
 </div>
 
-<div class="container their d-none animated slideInRight faster">
-  <h2>Les evenements auxquels pour participez:</h2>
+<div class="container their  animated slideInRight faster">
   <div class="cards-new">
-    <% events = @user.events.sort_by {|event| event.start} %>
+      <% events = @user.hospital.events.sort_by {|event| event.start} %>
+      <% events.each do |event| %>
+        <%= (render 'shared/card_new_event', event: event) if event.start > DateTime.now %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+<div class="container their d-none animated slideInRight faster">
+  <% events = @user.events.sort_by {|event| event.start} %>
+  <% if events.length > 0 %>
+    <h2>Les evenements auxquels vous participez:</h2>
+  <% else %>
+    <h2> Vous ne participez à aucun événement, <%= link_to 'allez découvrir les événements proche de vous', hospital_path(@user.hospital) %> </h2>
+  <% end %>
+  <div class="cards-new">
     <% events.each do |event| %>
       <%= (render 'shared/card_new_event', event: event) if event.start > DateTime.now %>
     <% end %>
-    <h2>Évenements passé</h2>
+    <h2>Évenements passés</h2>
     <% events.each do |event| %>
       <%= (render 'shared/card_new_event', event: event) if event.end < DateTime.now %>
     <% end %>
   </div>
 </div>
+
+<div class="container their d-none animated slideInRight faster">
+    <h2>Vos évéments</h2>
+    <div class="cards-new">
+      <% events = @user.reservations.sort_by {|reservation| reservation.event.start} %>
+      <% events.each do |event| %>
+        <%= (render 'shared/card', event: event.event) if event.event.start > DateTime.now %>
+      <% end %>
+      <h2>Évenements passé</h2>
+      <% events.each do |event| %>
+        <%= (render 'shared/card', event: event.event) if event.event.end < DateTime.now %>
+      <% end %>
+    </div>
+  </div>
+
+
 

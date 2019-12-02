@@ -1,8 +1,10 @@
 .banner-create-event {
   display: flex;
   justify-content: flex-start;
-  background-color: #673ab7;
+  background-color: $coral;
   height: 10vh;
+  color:white;
+
 
 .navbartop {
   vertical-align: middle;
@@ -16,6 +18,8 @@
     font-size: 20px;
     padding: 20px;
     text-align: left;
+    margin-left: 30%;
+
   }
 }
 
