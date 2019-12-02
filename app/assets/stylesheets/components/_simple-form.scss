@@ -1,5 +1,5 @@
   .time{
-    margin-left: 11vw !important;
+    // margin-left: 11vw !important;
     color: #838284;
 
   }
@@ -12,7 +12,7 @@
   .form-control {
       border: 0;
       border-bottom: solid 1px #dee2e6;
-      margin-left: 1em;
+      // margin-left: 1em;
       padding:0;
 
       &.active{
@@ -45,9 +45,7 @@
 }
 
 div.boolean, .simple_form input[type='submit'] {
-  width:100%;
   margin:1vw;
-  background-color: $my-red;
   border: 0;
   font-size: 1.5em;
   color: white;
@@ -56,4 +54,18 @@ div.boolean, .simple_form input[type='submit'] {
 div.boolean label {
   float: none;
   margin: 0;
+}
+
+.first-block, .second-block, .third-block {
+  height: 20vh;
+  border-radius: 10px;
+}
+
+.third-block {
+  margin-bottom: 15px;
+}
+
+
+.actions {
+  vertical-align: middle;
 }

@@ -23,6 +23,9 @@ import { notifRefresh } from "../plugins/init_action_cable_notif";
 
 import { previewImageOnFileSelect } from '../plugins/photopreview';
 
+import { counterParticipants } from '../components/counterParticipants'
+
+
 
 flatPickrJs();
 eventFormExport();
@@ -32,4 +35,5 @@ window.scrollLastMessageIntoView = scrollLastMessageIntoView;
 
 notifRefresh();
 previewImageOnFileSelect();
+counterParticipants();
 

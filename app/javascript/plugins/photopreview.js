@@ -3,7 +3,7 @@ const previewImageOnFileSelect = () => {
   // we select the photo input
   if (document.getElementById('photo-input')) {
     const input = document.getElementById('photo-input');
-    const photo = document.getElementById("browsing-photo");
+    const photo = document.getElementById("photo-preview");
 
     photo.addEventListener('click', () => {
       input.click()
