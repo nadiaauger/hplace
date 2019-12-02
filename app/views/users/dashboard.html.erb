@@ -66,3 +66,19 @@
   </div>
 </div>
 
+<div class="container their d-none animated slideInRight faster">
+    <h2>Vos évéments</h2>
+    <div class="cards-new">
+      <% events = @user.reservations.sort_by {|reservation| reservation.event.start} %>
+      <% events.each do |event| %>
+        <%= (render 'shared/card', event: event.event) if event.event.start > DateTime.now %>
+      <% end %>
+      <h2>Évenements passé</h2>
+      <% events.each do |event| %>
+        <%= (render 'shared/card', event: event.event) if event.event.end < DateTime.now %>
+      <% end %>
+    </div>
+  </div>
+
+
+
