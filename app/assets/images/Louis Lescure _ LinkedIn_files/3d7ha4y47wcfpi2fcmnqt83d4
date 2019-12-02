@@ -1,0 +1,245 @@
+define.alias("artdeco-button/components/artdeco-button","me/components/artdeco-button")
+define.alias("artdeco-carousel/components/artdeco-carousel-item","me/components/artdeco-carousel-item")
+define.alias("artdeco-carousel/components/artdeco-carousel-slider","me/components/artdeco-carousel-slider")
+define.alias("artdeco-carousel/components/artdeco-carousel-title","me/components/artdeco-carousel-title")
+define.alias("artdeco-carousel/components/artdeco-carousel","me/components/artdeco-carousel")
+define.alias("artdeco-modal/components/artdeco-confirmation-dialog","me/components/artdeco-confirmation-dialog")
+define.alias("artdeco-dropdown/components/artdeco-dropdown-content","me/components/artdeco-dropdown-content")
+define.alias("artdeco-dropdown/components/artdeco-dropdown-header","me/components/artdeco-dropdown-header")
+define.alias("artdeco-dropdown/components/artdeco-dropdown-item","me/components/artdeco-dropdown-item")
+define.alias("artdeco-dropdown/components/artdeco-dropdown-trigger","me/components/artdeco-dropdown-trigger")
+define.alias("artdeco-dropdown/components/artdeco-dropdown","me/components/artdeco-dropdown")
+define.alias("artdeco-hoverables/components/artdeco-hoverable-content","me/components/artdeco-hoverable-content")
+define.alias("artdeco-hoverables/components/artdeco-hoverable-trigger","me/components/artdeco-hoverable-trigger")
+define.alias("artdeco-hoverables/components/artdeco-hovercard-content","me/components/artdeco-hovercard-content")
+define.alias("artdeco-loader/components/artdeco-loader","me/components/artdeco-loader")
+define.alias("artdeco-modal/components/container","me/components/artdeco-modal-container")
+define.alias("artdeco-modal/components/artdeco-modal-content","me/components/artdeco-modal-content")
+define.alias("artdeco-modal/components/artdeco-modal-footer","me/components/artdeco-modal-footer")
+define.alias("artdeco-modal/components/artdeco-modal-header","me/components/artdeco-modal-header")
+define.alias("artdeco-modal/components/artdeco-modal","me/components/artdeco-modal")
+define.alias("artdeco-pagination/components/artdeco-pagination-ellipsis","me/components/artdeco-pagination-ellipsis")
+define.alias("artdeco-pagination/components/artdeco-pagination-indicator","me/components/artdeco-pagination-indicator")
+define.alias("artdeco-pagination/components/artdeco-pagination","me/components/artdeco-pagination")
+define.alias("artdeco-hoverables/components/artdeco-tooltip-content","me/components/artdeco-tooltip-content")
+define.alias("ember-mpr-images/components/custom-image","me/components/custom-image")
+define.alias("ember-wormhole/components/ember-wormhole","me/components/ember-wormhole")
+define("me/components/high-charts",["exports","ember-highcharts/components/high-charts"],function(e,t){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var n=t.default
+e.default=n})
+define.alias("ember-mpr-images/components/lazy-background","me/components/lazy-background")
+define.alias("ember-mpr-images/components/lazy-image","me/components/lazy-image")
+define("me/components/learn-more",["exports","me-common/components/learn-more","global-utils/utils/get-location"],function(e,t,n){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var a=t.default.extend({navigate:function(){(0,n.default)().href="/psettings/privacy"}})
+e.default=a})
+define.alias("ember-line-clamp/components/line-clamp","me/components/line-clamp")
+define.alias("artdeco-icons-web/components/linkedin-logo","me/components/linkedin-logo")
+define.alias("ember-truncate/components/truncate-multiline","me/components/truncate-multiline")
+define.alias("me-common/components/wvmp-ge-section","me/components/wvmp-ge-section")
+define("me/components/wvmp-v2-insights-container",["exports","me-common/components/wvmp-v2-insights-container"],function(e,t){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var n=t.default.extend({classNames:["me-wvmp-insights-container","container-with-shadow","mb4"]})
+e.default=n})
+define.alias("me-common/components/wvmp-v2-main","me/components/wvmp-v2-main")
+define("me/components/wvmp-v2-pills-tab-carousel",["exports","me/templates/components/wvmp-v2-pills-tab-carousel","ember-stdlib/utils/is-browser","ember-batcher"],function(e,t,n,a){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var i=Ember.Component.extend({init:function(){this._super.apply(this,arguments)
+this.get("tracking").setupTrackableComponent(this)},tracking:Ember.inject.service("tracking"),layout:t.default,tagName:"section",classNames:["me-wvmp-pills-tab-carousel","relative","display-flex"],i18n:Ember.inject.service("i18n"),currentIndex:0,controlNameSuffix:Ember.computed.readOnly("currentInsightCard.value.controlNameSuffix"),horizontalOffset:0,hideCarouselLeftArrow:Ember.computed("horizontalOffset",(function(){return this.get("i18n.isRtlLanguage")?this.get("horizontalOffset")<=0:this.get("horizontalOffset")>=0})).readOnly(),hideCarouselRightArrow:Ember.computed("horizontalOffset","maxNegativeTranslateX",(function(){return this.get("i18n.isRtlLanguage")?this.get("horizontalOffset")>=-1*this.get("maxNegativeTranslateX"):this.get("horizontalOffset")<=this.get("maxNegativeTranslateX")})).readOnly(),didInsertElement:function(){var e=this;(0,a.readDOM)((function(){if(!e.isDestroying){var t=e.element.offsetWidth-e.element.querySelector(".me-wvmp-pills-tab-carousel__pills").offsetWidth-8;(0,a.mutateDOM)((function(){e.isDestroying||e.set("maxNegativeTranslateX",t)}))}}))},actions:{horizontalScroll:function(e){this._updateHorizontalOffset(e,300)},scrollIntoView:function(e){var t=this
+n.default&&(0,a.readDOM)((function(){if(!t.isDestroying&&t.element&&e){var n=t.element.getBoundingClientRect(),a=e.getBoundingClientRect(),i=a.left-n.left-40,s=n.left+n.width-(a.left+a.width)-40
+i<0?t._updateHorizontalOffset(-1,i,!0):s<0&&t._updateHorizontalOffset(1,s,!0)}}))}},_updateHorizontalOffset:function(e,t,n){var a,i=this.get("maxNegativeTranslateX"),s=this.get("i18n.isRtlLanguage"),o=this.get("horizontalOffset"),l=e
+if(s){o=-o
+n&&(l=-l)}a=o+t*l
+a=Math.max(Math.min(a,0),i)
+s&&(a=-a)
+this.set("horizontalOffset",a)}})
+e.default=i})
+define("me/components/wvmp-v2-pills-tab",["exports","me/templates/components/wvmp-v2-pills-tab","me-common/components/wvmp-insight-card","me-common/utils/constants","data-layer/utils/api-compat"],function(e,t,n,a,i){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var s=n.default.extend({layout:t.default,setCurrentInsightCard:"setCurrentInsightCard",needToRender:!0,isActive:Ember.computed.equal("index","collectionCurrentIndex").readOnly(),init:function(){this._super.apply(this,arguments)
+var e=(0,i.classNameOf)(this.get("card")),t=a.INSIGHT_CARD_TYPE_MAP[e]
+this.controlName=t?"wvmp_".concat(t.controlNameSuffix):null},actions:{slideTab:function(){var e=this.get("index"),t=this.get("onCurrentIndexChanged")
+t&&this.get("collectionCurrentIndex")!==e&&t(e)
+this.sendAction("scrollIntoViewAction",this.element)}}})
+e.default=s})
+define("me/components/wvmp-v2-views",["exports","me-common/components/wvmp-v2-views"],function(e,t){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var n=t.default.extend({classNames:["me-wvmp-views","ph5","pv3","display-flex"]})
+e.default=n})
+define("me/config/environment",["exports"],function(e){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var t
+try{var n=document.querySelector('meta[name="me/config/environment"]').getAttribute("content")
+t=JSON.parse(unescape(n))}catch(i){t={}}var a=t
+e.default=a})
+define.alias("me-common/controllers/no-profile-views","me/controllers/no-profile-views")
+define("me/engine",["exports","ember-engines/engine","ember-load-initializers","ember-resolver","me/utils/engine-dependencies"],function(e,t,n,a,i){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var s=t.default.extend({init:function(){this._super.apply(this,arguments)
+this.dependencies={externalRoutes:i.externalRoutes,services:i.services}},Resolver:a.default,modulePrefix:"me"});(0,n.default)(s,"me")
+var o=s
+e.default=o})
+define.alias("artdeco-icons-web/helpers/li-icon","me/helpers/li-icon")
+define.alias("ember-cli-pemberly-i18n/helpers/t","me/helpers/t")
+define.alias("ember-cli-pemberly-tracking/helpers/tracked-action","me/helpers/tracked-action")
+define.alias("ember-cli-pemberly-tracking/helpers/tracking","me/helpers/tracking")
+define("me/initializers/artdeco",["exports","artdeco-eyeglass","me/config/environment"],function(e,t,n){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.initialize=s
+e.default=void 0
+var a=[t.default.contextClasses,t.default.buttonAnimation,t.default.floatingLabel,t.default.focusOutline]
+function i(e,t){var n=e[t]
+e[t]=function(){a.forEach((function(e){return e&&"function"==typeof e.teardown&&e.teardown()}))
+n&&"function"==typeof n&&n.call(e)}}function s(e){if("undefined"!=typeof document){n.default.environment
+a.forEach((function(e){return e.install()}))
+"function"==typeof e.willDestroy?i(e,"willDestroy"):"function"==typeof e.destroy&&i(e,"destroy")}}var o={name:"artdeco",initialize:s}
+e.default=o})
+define("me/initializers/icons",["exports","artdeco-icons-web/src/icons","me/config/environment"],function(e,t,n){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+function a(e){throw e}var i={name:"icons",initialize:function(){var e="test"!==n.default.environment
+t.default.load(e).catch(a)}}
+e.default=i})
+define("me/instance-initializers/fastboot-rehydration-complete",["exports"],function(e){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var t={name:"fastboot-rehydration-complete",initialize:function(e){var t=e.lookup("service:fastboot")
+if(t.isRehydrating){var n=e.didCreateRootView
+e.didCreateRootView=function(){n.apply(this,arguments)
+Ember.run.schedule("afterRender",null,(function(){return t.isRehydrating=!1}))}}}}
+e.default=t})
+define.alias("me-common/routes/application","me/routes/application")
+define.alias("me-common/routes/index","me/routes/index")
+define("me/routes/no-profile-views",["exports","me-common/routes/no-profile-views","me-common/utils/me-utils","profile-ge-entry/utils/api-promises"],function(e,t,n,a){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var i=t.default.extend({actions:{didTransition:function(){var e=this
+if(this._isFromNestedGuidedEditRoute()){var t=Ember.getProperties(this,"identityStore","contextType"),n=t.identityStore,i=t.contextType,s=this.get("authenticatedUser.miniProfile.publicIdentifier");(0,a.getGERelevantData)(n,"relevantCategories",s,i,!0).then((function(t){if(!e.isDestroying){e.controllerFor(e.routeName).setProperties({"model.geData":t.get("geData"),"model.endorsedSkills":t.get("endorsedSkills")})}}))}}},_isFromNestedGuidedEditRoute:function(){return(0,n.isTransitionBetween)(this.controller,"me-no-views-ge.category.task","me.no-profile-views.index")}})
+e.default=i})
+define.alias("me-common/routes/no-profile-views/index","me/routes/no-profile-views/index")
+define("me/routes/post-analytics",["exports"],function(e){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var t=Ember.Route.extend({redirect:function(e){this.transitionToExternal("me.me-ca.post-analytics",e.contentUrn)}})
+e.default=t})
+define("me/routes/profile-views",["exports","me-common/routes/profile-views","me-common/utils/constants","me-common/utils/me-utils","profile-ge-entry/utils/api-promises"],function(e,t,n,a,i){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var s=t.default.extend({adBannerManager:Ember.inject.service("ads@ad-banner-manager"),uniqueMockViewCards:n.MVP_NUM_UNIQUE_MOCK_VIEW_CARDS,actions:{didTransition:function(){var e=this
+if(this._isFromNestedGuidedEditRoute()){var t=Ember.getProperties(this,"identityStore","contextType"),n=t.identityStore,a=t.contextType,s=this.get("authenticatedUser.miniProfile.publicIdentifier");(0,i.getGERelevantData)(n,"relevantCategories",s,a,!0).then((function(t){if(!e.isDestroying){var n=e.controllerFor(e.routeName)
+n.set("model.geData",t.get("geData"))
+n.set("model.endorsedSkills",t.get("endorsedSkills"))}}))}},triggerAdRefresh:function(){this.get("adBannerManager").triggerRefreshAdEvent()}},_isFromNestedGuidedEditRoute:function(){return(0,a.isTransitionBetween)(this.controller,"me-ge.category.task","me.profile-views")}})
+e.default=s})
+define.alias("me-common/routes/profile-views/connections-in-common","me/routes/profile-views/connections-in-common")
+define.alias("me-common/routes/profile-views/index","me/routes/profile-views/index")
+define("me/routes/profile-views/insight",["exports","me/utils/scroll-position","me-common/routes/profile-views/insight"],function(e,t,n){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var a=n.default.extend({actions:{willTransition:function(e){return(0,t.default)(e)}}})
+e.default=a})
+define.alias("me-common/routes/profile-views/insight/index","me/routes/profile-views/insight/index")
+define.alias("me-common/routes/profile-views/network-company","me/routes/profile-views/network-company")
+define("me/routes/share-analytics",["exports"],function(e){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var t=Ember.Route.extend({redirect:function(e){this.transitionToExternal("me.me-ca.share-analytics",e.contentUrn)}})
+e.default=t})
+define.alias("artdeco-hoverables/services/artdeco-hoverable","me/services/artdeco-hoverable")
+define.alias("artdeco-modal/services/artdeco-modal","me/services/artdeco-modal")
+define("me/services/fastboot",["exports"],function(e){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var t=Ember.Object.extend({init:function(){this._super.apply(this,arguments)
+this.headers=this.get("request.headers")}}),n=Ember.Service.extend({response:Ember.computed.readOnly("_fastbootInfo.response"),metadata:Ember.computed.readOnly("_fastbootInfo.metadata"),init:function(){this._super.apply(this,arguments)
+var e="undefined"!=typeof FastBoot
+this.isFastBoot=e
+this.isRehydrating=!e&&"function"==typeof _getRenderMode&&"SSRPIPE"===_getRenderMode()},request:Ember.computed((function(){return this.isFastBoot?t.create({request:Ember.get(this,"_fastbootInfo.request")}):null})),deferRendering:function(e){this._fastbootInfo.deferRendering(e)}})
+Object.defineProperty(n.prototype,"isSSRPath",{get:function(){return this.isRehydrating||this.isFastBoot}})
+var a=n
+e.default=a})
+define.alias("@linkedin/ember-pem/services/pem-tracking","me/services/pem-tracking")
+define.alias("ember-singularity/services/unified-event-handler","me/services/unified-event-handler")
+define("me/templates/application",["exports"],function(e){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var t=Ember.HTMLBars.template({id:"TcmaYntV",block:'{"symbols":[],"statements":[[7,"div"],[11,"id","me-content"],[12,"class",[28,[[27,"if",[[23,["model","isPremiumMember"]],"me-wvmp__premium-background"],null]," extended"]]],[9],[0,"\\n"],[4,"if",[[23,["model","welcomeBannerData"]]],null,{"statements":[[0,"    "],[1,[27,"s-upsell@premium-welcome-banner",null,[["welcomeBannerData"],[[23,["model","welcomeBannerData"]]]]],false],[0,"\\n"]],"parameters":[]},null],[0,"  "],[1,[27,"ads@ad-banner",null,[["slotSize","zone","pageZone"],["700x17","WVMP","PAGE_ZONE_HEADER"]]],false],[0,"\\n\\n  "],[7,"div"],[11,"class","neptune-grid ghost-animate-in"],[9],[0,"\\n    "],[7,"div"],[11,"class","core-rail mb3"],[9],[0,"\\n"],[4,"if",[[23,["model","isPremiumMember"]]],null,{"statements":[[0,"        "],[1,[27,"artdeco-icons-web@li-icon",null,[["type","size","a11y-text"],["premium-badge","8dp","Premium"]]],false],[0,"\\n"]],"parameters":[]},null],[0,"      "],[7,"h1"],[11,"class","t-20 t-black t-normal"],[9],[1,[27,"t",["i18n_wvmp_title","me/templates/application"],null],false],[10],[0,"\\n    "],[10],[0,"\\n  "],[10],[0,"\\n\\n  "],[7,"div"],[11,"class","neptune-grid two-column ghost-animate-in"],[9],[0,"\\n    "],[7,"div"],[11,"class","me-wvmp__core-rail core-rail relative"],[11,"role","main"],[9],[0,"\\n      "],[1,[21,"outlet"],false],[0,"\\n    "],[10],[0,"\\n\\n    "],[7,"div"],[11,"class","me-wvmp__right-rail right-rail"],[9],[0,"\\n      "],[7,"div"],[11,"class","container-with-shadow mb4"],[9],[0,"\\n        "],[7,"section"],[11,"class","me-wvmp-right-rail"],[9],[0,"\\n          "],[7,"h2"],[11,"class","title t-16 t-black t-normal"],[9],[0,"\\n            "],[1,[27,"t",["title","me/templates/application"],null],false],[0,"\\n          "],[10],[0,"\\n          "],[7,"h3"],[11,"class","subtitle t-14 t-black--light t-normal mv2 mh0"],[9],[0,"\\n            "],[1,[27,"t",["subtitle","me/templates/application"],null],false],[0,"\\n          "],[10],[0,"\\n          "],[7,"ul"],[11,"class","me-wvmp-right-rail__action-list"],[9],[0,"\\n            "],[7,"li"],[11,"class","me-wvmp-right-rail__action-item t-14 t-black--light t-normal"],[9],[0,"\\n              "],[1,[27,"t",["update_your_profile","me/templates/application"],[["link"],[[27,"ember-cli-pemberly-i18n@t-link-to",["profile"],[["class","control-name"],["me-wvmp-right-rail__link","edit_profile_CTA"]]]]]],false],[0,"\\n            "],[10],[0,"\\n            "],[7,"li"],[11,"class","me-wvmp-right-rail__action-item  t-14 t-black--light t-normal"],[9],[0,"\\n              "],[1,[27,"t",["connect_with_people","me/templates/application"],[["link"],[[27,"ember-cli-pemberly-i18n@t-link-to",["mynetwork.add-connections"],[["class","control-name"],["me-wvmp-right-rail__link","connect_with_people_CTA"]]]]]],false],[0,"\\n            "],[10],[0,"\\n            "],[7,"li"],[11,"class","me-wvmp-right-rail__action-item t-14 t-black--light t-normal"],[9],[0,"\\n              "],[1,[27,"t",["engage_with_feed","me/templates/application"],[["link"],[[27,"ember-cli-pemberly-i18n@t-link-to",["feed"],[["class","control-name"],["me-wvmp-right-rail__link","engage_feed_CTA"]]]]]],false],[0,"\\n            "],[10],[0,"\\n          "],[10],[0,"\\n        "],[10],[0,"\\n      "],[10],[0,"\\n"],[4,"sticky@sticky-container",null,null,{"statements":[[0,"        "],[7,"div"],[11,"class","right-rail-container"],[9],[0,"\\n          "],[1,[27,"ads@ad-banner",null,[["slotSize","zone","pageZone"],["300x250","WVMP","PAGE_ZONE_BODY_RIGHT"]]],false],[0,"\\n\\n          "],[1,[21,"global-footer@global-footer-compact"],false],[0,"\\n        "],[10],[0,"\\n"]],"parameters":[]},null],[0,"    "],[10],[0,"\\n  "],[10],[0,"\\n"],[10],[0,"\\n"]],"hasEval":false}',meta:{moduleName:"me/templates/application.hbs"}})
+e.default=t})
+define("me/templates/components/wvmp-ge-section",["exports"],function(e){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var t=Ember.HTMLBars.template({id:"pz7eX+ww",block:'{"symbols":[],"statements":[[7,"div"],[11,"class","artdeco-card__header"],[9],[0,"\\n  "],[7,"h2"],[11,"class","t-16"],[9],[1,[27,"t",["section_title","me/templates/components/wvmp-ge-section"],null],false],[10],[0,"\\n  "],[7,"p"],[11,"class","t-14 t-black--light"],[9],[1,[27,"t",["section_description","me/templates/components/wvmp-ge-section"],null],false],[10],[0,"\\n"],[10],[0,"\\n\\n"],[1,[27,"profile-ge-carousel@ge-cards-carousel",null,[["categories","dataForTemplateStrings","carouselConfig","geTaskRoute","contextType","updateWhenNoCards","class"],[[23,["geData"]],[23,["dataForTemplateStrings"]],[23,["carouselConfig"]],[23,["geTaskRoute"]],[23,["contextType"]],[23,["updateGECardsInStore"]],"ph5 pt5 pb4"]]],false],[0,"\\n"]],"hasEval":false}',meta:{moduleName:"me/templates/components/wvmp-ge-section.hbs"}})
+e.default=t})
+define("me/templates/components/wvmp-v2-insights-container",["exports"],function(e){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var t=Ember.HTMLBars.template({id:"Qm8KcgZu",block:'{"symbols":["section"],"statements":[[1,[27,"me@wvmp-v2-views",null,[["changePercentage","profileViews"],[[23,["profileViews","numViewsChangeInPercentage"]],[23,["profileViews","numViews"]]]]],false],[0,"\\n"],[4,"if",[[23,["showChart"]]],null,{"statements":[[0,"  "],[7,"div"],[11,"class","me-wvmp-insights-container__hide-chart"],[9],[0,"\\n    "],[7,"button"],[11,"aria-controls","wvmp-chart-expandable-area"],[12,"aria-expanded",[27,"if",[[23,["open"]],"true","false"],null]],[12,"aria-label",[27,"t",[[27,"if",[[23,["open"]],"hide_trends","show_trends"],null],"me/templates/components/wvmp-v2-insights-container"],null]],[11,"class","me-wvmp-insights-container__chevron-button t-14 t-black--light t-bold full-width display-flex justify-center align-items-center pv1"],[3,"action",[[22,0,[]],"toggleInsights"]],[9],[0,"\\n      "],[1,[27,"artdeco-icons-web@li-icon",null,[["type","class"],["chevron-down-icon","me-wvmp-insights-container__chevron mh3 quick-easeInOut-motion"]]],false],[0,"\\n      "],[7,"span"],[11,"class","me-wvmp-insights-container__trends pb1"],[9],[0,"\\n        "],[1,[27,"t",[[27,"if",[[23,["open"]],"hide_trends","show_trends"],null],"me/templates/components/wvmp-v2-insights-container"],null],false],[0,"\\n      "],[10],[0,"\\n    "],[10],[0,"\\n  "],[10],[0,"\\n  "],[7,"div"],[11,"class","me-wvmp-insights-container__hide-area relative quick-easeInOut-motion"],[11,"id","wvmp-chart-expandable-area"],[11,"role","region"],[9],[0,"\\n"],[4,"if",[[23,["chartDependenciesReady"]]],null,{"statements":[[4,"if",[[23,["showOnboarding"]]],null,{"statements":[[4,"feature-tipcard@feature-tipcard",null,[["cardId","placement","enableLegoTracking","enableLegoWidgetFetching","showDismissButton","classNames"],["me-wvmp-insights-container__onboarding","right",false,false,true,"me-wvmp-insights-container__tooltip absolute"]],{"statements":[[4,"if",[[22,1,["isAnchor"]]],null,{"statements":[[0,"            "],[7,"div"],[9],[10],[0,"\\n"]],"parameters":[]},{"statements":[[0,"            "],[7,"div"],[11,"class","me-wvmp-insights-container__tooltip-content ph4 pb4"],[9],[0,"\\n              "],[7,"h4"],[11,"class","t-16 t-white t-bold"],[9],[1,[27,"t",["onboarding_tooltip_title","me/templates/components/wvmp-v2-insights-container"],null],false],[10],[0,"\\n              "],[7,"p"],[11,"class","t-14 t-white t-normal"],[9],[1,[27,"t",["onboarding_tooltip_body","me/templates/components/wvmp-v2-insights-container"],null],false],[10],[0,"\\n            "],[10],[0,"\\n"]],"parameters":[]}]],"parameters":[1]},null]],"parameters":[]},null],[0,"\\n      "],[1,[27,"me-common@wvmp-v2-chart",null,[["chartData","chartTheme","chartOptions"],[[23,["chartData","chartData"]],[23,["highchartsTheme"]],[23,["highchartsOptions"]]]]],false],[0,"\\n"]],"parameters":[]},{"statements":[[0,"      "],[7,"div"],[11,"class","me-wvmp-insights-container__ghost-state display-flex pt6 pl6 mb3"],[9],[0,"\\n        "],[7,"div"],[11,"class","display-flex flex-column justify-space-between mr2 pb5"],[9],[0,"\\n          "],[7,"div"],[11,"class","me-wvmp-insights-container__ghost-state-block me-wvmp-insights-container__ghost-state-block--y"],[9],[10],[0,"\\n          "],[7,"div"],[11,"class","me-wvmp-insights-container__ghost-state-block me-wvmp-insights-container__ghost-state-block--y"],[9],[10],[0,"\\n          "],[7,"div"],[11,"class","me-wvmp-insights-container__ghost-state-block me-wvmp-insights-container__ghost-state-block--y"],[9],[10],[0,"\\n          "],[7,"div"],[11,"class","me-wvmp-insights-container__ghost-state-block me-wvmp-insights-container__ghost-state-block--y"],[9],[10],[0,"\\n          "],[7,"div"],[11,"class","me-wvmp-insights-container__ghost-state-block me-wvmp-insights-container__ghost-state-block--y"],[9],[10],[0,"\\n        "],[10],[0,"\\n        "],[7,"div"],[9],[0,"\\n          "],[7,"div"],[11,"class","me-wvmp-insights-container__ghost-state-block me-wvmp-insights-container__ghost-state-block--chart mt2"],[9],[10],[0,"\\n          "],[7,"div"],[11,"class","display-flex justify-space-between mt2"],[9],[0,"\\n            "],[7,"div"],[11,"class","me-wvmp-insights-container__ghost-state-block me-wvmp-insights-container__ghost-state-block--x"],[9],[10],[0,"\\n            "],[7,"div"],[11,"class","me-wvmp-insights-container__ghost-state-block me-wvmp-insights-container__ghost-state-block--x"],[9],[10],[0,"\\n            "],[7,"div"],[11,"class","me-wvmp-insights-container__ghost-state-block me-wvmp-insights-container__ghost-state-block--x"],[9],[10],[0,"\\n            "],[7,"div"],[11,"class","me-wvmp-insights-container__ghost-state-block me-wvmp-insights-container__ghost-state-block--x"],[9],[10],[0,"\\n            "],[7,"div"],[11,"class","me-wvmp-insights-container__ghost-state-block me-wvmp-insights-container__ghost-state-block--x"],[9],[10],[0,"\\n            "],[7,"div"],[11,"class","me-wvmp-insights-container__ghost-state-block me-wvmp-insights-container__ghost-state-block--x"],[9],[10],[0,"\\n            "],[7,"div"],[11,"class","me-wvmp-insights-container__ghost-state-block me-wvmp-insights-container__ghost-state-block--x"],[9],[10],[0,"\\n          "],[10],[0,"\\n        "],[10],[0,"\\n      "],[10],[0,"\\n"]],"parameters":[]}],[0,"  "],[10],[0,"\\n"]],"parameters":[]},null]],"hasEval":false}',meta:{moduleName:"me/templates/components/wvmp-v2-insights-container.hbs"}})
+e.default=t})
+define("me/templates/components/wvmp-v2-main",["exports"],function(e){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var t=Ember.HTMLBars.template({id:"Zk0XqRtR",block:'{"symbols":["&default"],"statements":[[4,"if",[[23,["showTopInsights"]]],null,{"statements":[[0,"  "],[1,[27,"me@wvmp-v2-insights-container",null,[["showChart","chartData","profileViews"],[[23,["showInsightChart"]],[23,["profileViewsByTime"]],[23,["overviewInsightCard","value"]]]]],false],[0,"\\n"]],"parameters":[]},null],[0,"\\n"],[4,"if",[[23,["showGESection"]]],null,{"statements":[[0,"  "],[1,[27,"me@wvmp-ge-section",null,[["geData","geTaskRoute","skillsCount","updateGECardsInStore"],[[23,["geData"]],[23,["geTaskRoute"]],[23,["skillsCount"]],[27,"action",[[22,0,[]],"updateGECardsInStore"],null]]]],false],[0,"\\n"]],"parameters":[]},null],[0,"\\n"],[4,"if",[[23,["loadViewers"]]],null,{"statements":[[0,"  "],[7,"div"],[11,"class","me-wvmp-main display-flex flex-column container-with-shadow p0"],[9],[0,"\\n"],[4,"if",[[23,["showPrivateModeHeader"]]],null,{"statements":[[0,"      "],[7,"div"],[11,"class","me-wvmp-main__private-mode-header me-wvmp-main__header-minimal display-flex justify-flex-end pv4 ph5"],[9],[0,"\\n"],[4,"ember-cli-pemberly-tracking@shared/external-link",null,[["href","data-control-name","class"],["/psettings/privacy","change_settings","me-wvmp-main__private-mode-header-link t-14 t-black t-bold link-without-visited-state"]],{"statements":[[0,"          "],[1,[27,"t",["i18n_private_mode_turn_off","me/templates/components/wvmp-v2-main"],null],false],[0,"\\n"]],"parameters":[]},null],[0,"      "],[10],[0,"\\n"]],"parameters":[]},{"statements":[[4,"if",[[23,["showBasicInsight"]]],null,{"statements":[[0,"      "],[7,"div"],[11,"class","me-wvmp-main__basic-insight-header me-wvmp-main__header-minimal"],[9],[0,"\\n        "],[1,[27,"me@wvmp-v2-views",null,[["profileViews","changePercentage"],[[23,["overviewInsightCard","value","numViews"]],[23,["overviewInsightCard","value","numViewsChangeInPercentage"]]]]],false],[0,"\\n      "],[10],[0,"\\n"]],"parameters":[]},{"statements":[[0,"      "],[7,"div"],[11,"class","me-wvmp-main__header me-wvmp-main__header--premium full-width relative"],[9],[10],[0,"\\n      "],[1,[27,"me@wvmp-v2-pills-tab-carousel",null,[["insightCards","currentIndex","showPremiumTeaser","navigateTo"],[[23,["insightCards"]],[23,["currentIndex"]],[23,["showPremiumTeaser"]],"navigateTo"]]],false],[0,"\\n    "]],"parameters":[]}]],"parameters":[]}],[0,"\\n    "],[14,1,[[27,"hash",null,[["setCurrentInsightCard","currentIndex","currentInsightCard","lastViewerCard"],[[27,"action",[[22,0,[]],"setCurrentInsightCard"],null],[23,["currentIndex"]],[23,["currentInsightCard"]],[23,["lastViewerCard"]]]]]]],[0,"\\n  "],[10],[0,"\\n"]],"parameters":[]},{"statements":[[0,"  "],[7,"div"],[11,"class","container-with-shadow p0"],[9],[0,"\\n"],[4,"if",[[23,["showPrivateModeHeader"]]],null,{"statements":[[0,"      "],[7,"div"],[11,"class","me-wvmp-main__ghost-state-block me-wvmp-main__ghost-state-header full-width"],[9],[10],[0,"\\n"]],"parameters":[]},{"statements":[[4,"if",[[23,["showBasicInsight"]]],null,{"statements":[[0,"      "],[7,"div"],[11,"class","me-wvmp-main__ghost-state-block me-wvmp-main__ghost-state-header full-width"],[9],[10],[0,"\\n"]],"parameters":[]},{"statements":[[0,"      "],[7,"div"],[11,"class","me-wvmp-main__ghost-state-block me-wvmp-main__ghost-state-pills-tab full-width"],[9],[10],[0,"\\n    "]],"parameters":[]}]],"parameters":[]}],[0,"    "],[7,"div"],[11,"class","me-wvmp-main__ghost-state-card-container display-flex"],[9],[0,"\\n"],[4,"each",[[23,["ghostCards"]]],null,{"statements":[[0,"        "],[7,"div"],[11,"class","me-wvmp-main__ghost-state-card container p5 pb6 display-flex flex-column align-items-center"],[9],[0,"\\n          "],[7,"div"],[11,"class","me-wvmp-main__ghost-state-block me-wvmp-main__ghost-state-block--circle mb4"],[9],[10],[0,"\\n          "],[7,"div"],[11,"class","me-wvmp-main__ghost-state-block me-wvmp-main__ghost-state-block--medium-line mb4"],[9],[10],[0,"\\n          "],[7,"div"],[11,"class","me-wvmp-main__ghost-state-block me-wvmp-main__ghost-state-block--long-line mb2"],[9],[10],[0,"\\n          "],[7,"div"],[11,"class","me-wvmp-main__ghost-state-block me-wvmp-main__ghost-state-block--short-line mb6"],[9],[10],[0,"\\n        "],[10],[0,"\\n"]],"parameters":[]},null],[0,"    "],[10],[0,"\\n  "],[10],[0,"\\n"]],"parameters":[]}]],"hasEval":false}',meta:{moduleName:"me/templates/components/wvmp-v2-main.hbs"}})
+e.default=t})
+define("me/templates/components/wvmp-v2-pills-tab-carousel",["exports"],function(e){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var t=Ember.HTMLBars.template({id:"5eRPRBNB",block:'{"symbols":["insightCard","index"],"statements":[[7,"div"],[11,"class","me-wvmp-pills-tab-carousel__pills-wrapper p3"],[9],[0,"\\n"],[0,"  "],[7,"ul"],[11,"class","me-wvmp-pills-tab-carousel__pills flex-shrink-zero list-style-none"],[12,"style",[27,"global-helpers@css-style",null,[["transform"],[[27,"concat",["translateX(",[23,["horizontalOffset"]],"px)"],null]]]]],[9],[0,"\\n"],[4,"each",[[23,["insightCards"]]],null,{"statements":[[0,"      "],[1,[27,"me@wvmp-v2-pills-tab",null,[["tagName","collectionCurrentIndex","index","card","objectUrn","trackingId","showPremiumTeaser","navigateTo","onCurrentIndexChanged","scrollIntoViewAction"],["li",[23,["currentIndex"]],[22,2,[]],[22,1,["value"]],[22,1,["objectUrn"]],[22,1,["trackingId"]],[23,["showPremiumTeaser"]],[23,["navigateTo"]],[23,["onCurrentIndexChanged"]],[27,"action",[[22,0,[]],"scrollIntoView"],null]]]],false],[0,"\\n"]],"parameters":[1,2]},null],[0,"  "],[10],[0,"\\n"],[10],[0,"\\n\\n"],[7,"button"],[12,"class",[28,["me-wvmp-pills-tab-carousel__button me-wvmp-pills-tab-carousel__button--left ",[27,"if",[[23,["hideCarouselLeftArrow"]],"me-wvmp-pills-tab-carousel__button--hidden"],null]," absolute"]]],[3,"action",[[22,0,[]],"horizontalScroll",1],[["bubbles"],[false]]],[9],[0,"\\n  "],[7,"span"],[11,"class","a11y-text"],[9],[1,[27,"t",["i18n_left_icon","me/templates/components/wvmp-v2-pills-tab-carousel"],null],false],[10],[0,"\\n  "],[1,[27,"artdeco-icons-web@li-icon",null,[["type","size"],["chevron-left-icon","small"]]],false],[0,"\\n"],[10],[0,"\\n\\n"],[7,"button"],[12,"class",[28,["me-wvmp-pills-tab-carousel__button me-wvmp-pills-tab-carousel__button--right ",[27,"if",[[23,["hideCarouselRightArrow"]],"me-wvmp-pills-tab-carousel__button--hidden"],null]," absolute"]]],[3,"action",[[22,0,[]],"horizontalScroll",-1],[["bubbles"],[false]]],[9],[0,"\\n  "],[7,"span"],[11,"class","a11y-text"],[9],[1,[27,"t",["i18n_right_icon","me/templates/components/wvmp-v2-pills-tab-carousel"],null],false],[10],[0,"\\n  "],[1,[27,"artdeco-icons-web@li-icon",null,[["type","size"],["chevron-right-icon","small"]]],false],[0,"\\n"],[10],[0,"\\n"]],"hasEval":false}',meta:{moduleName:"me/templates/components/wvmp-v2-pills-tab-carousel.hbs"}})
+e.default=t})
+define("me/templates/components/wvmp-v2-pills-tab",["exports"],function(e){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var t=Ember.HTMLBars.template({id:"pPvmxFko",block:'{"symbols":[],"statements":[[4,"link-to",["profile-views.insight",[23,["objectUrn"]]],[["class","activeClass","click"],["me-wvmp-pills-tab link-without-hover-state link-without-hover-state container display-flex align-items-center flex-shrink-zero pv2 ph3 mr3","me-wvmp-pills-tab--active",[27,"action",[[22,0,[]],"slideTab"],null]]],{"statements":[[0,"\\n  "],[7,"div"],[11,"class","mr2 display-flex align-items-center"],[9],[0,"\\n"],[4,"if",[[23,["isCompany"]]],null,{"statements":[[0,"      "],[7,"div"],[11,"class","me-wvmp-pills-tab__logo"],[9],[0,"\\n        "],[1,[27,"ember-mpr-images@lazy-image",null,[["image","alt","width","height","ghostType"],[[27,"readonly",[[23,["card","miniCompany","logo"]]],null],[27,"readonly",[[23,["card","miniCompany","name"]]],null],24,24,"company"]]],false],[0,"\\n      "],[10],[0,"\\n"]],"parameters":[]},{"statements":[[4,"if",[[23,["isSvgThumbnail"]]],null,{"statements":[[4,"if",[[23,["icon"]]],null,{"statements":[[0,"        "],[1,[27,"artdeco-icons-web@li-icon",null,[["class","size","type"],[[27,"concat",["me-wvmp-pills-tab__icon mr1 ",[27,"if",[[23,["icon","className"]],[23,["icon","className"]]],null]],null],"large",[23,["icon","name"]]]]],false],[0,"\\n"]],"parameters":[]},null]],"parameters":[]},{"statements":[[0,"      "],[7,"span"],[11,"class","visually-hidden"],[9],[1,[27,"t",["source_icon_a11y","me/templates/components/wvmp-v2-pills-tab"],null],false],[10],[0,"\\n      "],[1,[27,"artdeco-icons-web@li-icon",null,[["class","size","type"],["me-wvmp-pills-tab__icon mr1","large","radar-screen-icon"]]],false],[0,"\\n    "]],"parameters":[]}]],"parameters":[]}],[0,"  "],[10],[0,"\\n  "],[7,"h4"],[11,"class","me-wvmp-pills-tab__text t-14 t-black--light t-normal white-space-nowrap"],[9],[0,"\\n    "],[1,[27,"t",[[23,["headlineKey"]],"me/templates/components/wvmp-v2-pills-tab"],[["companyName","jobTitle","numViews","referrer"],[[27,"readonly",[[23,["card","miniCompany","name"]]],null],[27,"readonly",[[23,["card","viewerTitle"]]],null],[27,"readonly",[[23,["card","numViews"]]],null],[27,"readonly",[[23,["card","referrer","text"]]],null]]]],false],[0,"\\n  "],[10],[0,"\\n\\n"]],"parameters":[]},null]],"hasEval":false}',meta:{moduleName:"me/templates/components/wvmp-v2-pills-tab.hbs"}})
+e.default=t})
+define("me/templates/components/wvmp-v2-views",["exports"],function(e){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var t=Ember.HTMLBars.template({id:"III/pY/4",block:'{"symbols":[],"statements":[[7,"h3"],[11,"class","me-wvmp-views__profile-views t-12 t-black--light t-normal pr5"],[9],[1,[27,"t",["profile_views","me/templates/components/wvmp-v2-views"],[["numViews"],[[23,["profileViews"]]]]],false],[10],[0,"\\n"],[4,"if",[[23,["showChangePercentage"]]],null,{"statements":[[0,"  "],[7,"h4"],[12,"class",[28,["me-wvmp-views__percentual-text t-12 t-black t-normal ",[21,"changePercentageClass"]]]],[9],[1,[27,"t",[[27,"if",[[23,["isPositiveChange"]],"profile_view_change_positive","profile_view_change"],null],"me/templates/components/wvmp-v2-views"],[["percentChange"],[[23,["changePercentage"]]]]],false],[10],[0,"\\n"]],"parameters":[]},null]],"hasEval":false}',meta:{moduleName:"me/templates/components/wvmp-v2-views.hbs"}})
+e.default=t})
+define("me/templates/no-profile-views",["exports","me-common/templates/no-profile-views"],function(e,t){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+Object.defineProperty(e,"default",{enumerable:!0,get:function(){return t.default}})})
+define("me/templates/profile-views",["exports"],function(e){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var t=Ember.HTMLBars.template({id:"NbEPXW1T",block:'{"symbols":[],"statements":[[4,"wvmp-v2-main",null,[["expandWvmpMVPInsights","geData","skillsCount","isPremiumMember","isPrivateMode","insightCards","showPremiumTeaser","overviewInsightCard","profileViewsByTime","navigateTo"],[[23,["model","expandWvmpMVPInsights"]],[23,["model","geData"]],[23,["model","endorsedSkills","elements","length"]],[23,["model","isPremiumMember"]],[23,["model","isPrivateMode"]],[23,["model","insightCards"]],[23,["showPremiumTeaser"]],[23,["model","overviewInsightCard"]],[23,["model","profileViewsByTime"]],"navigateTo"]],{"statements":[[0,"  "],[1,[21,"outlet"],false],[0,"\\n"]],"parameters":[]},null]],"hasEval":false}',meta:{moduleName:"me/templates/profile-views.hbs"}})
+e.default=t})
+define("me/templates/profile-views/connections-in-common",["exports","me-common/templates/profile-views/connections-in-common"],function(e,t){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+Object.defineProperty(e,"default",{enumerable:!0,get:function(){return t.default}})})
+define("me/templates/profile-views/insight",["exports"],function(e){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var t=Ember.HTMLBars.template({id:"CCrbq38P",block:'{"symbols":[],"statements":[[4,"if",[[23,["model","currentInsightCard","showFullWidthUpsell"]]],null,{"statements":[[0,"  "],[1,[27,"me-common@card/wvmp-v2-premium-upsell-filtered",null,[["card","controlNameSuffix"],[[23,["model","lastViewerCard"]],[27,"me-common@control-name-suffix-for-insight",[[23,["model","currentInsightCard","value"]]],null]]]],false],[0,"\\n"]],"parameters":[]},{"statements":[[0,"  "],[1,[27,"me-common@wvmp-viewers-list",null,[["insightCard","navigateTo","isPremiumMember","initialLoadCount","loadCount","isPrivateMode","triggerAdRefreshAction"],[[23,["model","currentInsightCard"]],"navigateTo",[23,["model","isPremiumMember"]],6,9,[23,["model","isPrivateMode"]],[27,"ember-route-action-helper@route-action",["triggerAdRefresh"],null]]]],false],[0,"\\n"]],"parameters":[]}],[0,"\\n"],[1,[21,"outlet"],false]],"hasEval":false}',meta:{moduleName:"me/templates/profile-views/insight.hbs"}})
+e.default=t})
+define("me/templates/profile-views/network-company",["exports","me-common/templates/profile-views/network-company"],function(e,t){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+Object.defineProperty(e,"default",{enumerable:!0,get:function(){return t.default}})})
+define("me/utils/engine-dependencies",["exports","me-common/utils/engine-dependencies"],function(e,t){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.services=e.externalRoutes=void 0
+var n=t.externalRoutes.concat(["premium.my-premium","company-creation.create"])
+e.externalRoutes=n
+var a=t.services.concat(["ads@ad-banner-manager","msg-overlay-manager@msg-overlay-manager"])
+e.services=a})
+define("me/utils/ge-card-deck-config",["exports","me-common/utils/ge-card-deck-config","profile-ge-entry/utils/ge-card-deck-config"],function(e,t,n){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=void 0
+var a=new n.default(t.basicCard,t.wvmpGECardDeck)
+e.default=a})
+define("me/utils/scroll-position",["exports"],function(e){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=function(e){Ember.get(e||{},"intent.name")===t&&Ember.set(e,"data.canHandleScroll",!0)}
+e.INTENDED_ROUTE_NAME=void 0
+var t="me.profile-views.insight"
+e.INTENDED_ROUTE_NAME=t})
+define.alias("ember-mpr-images/utils/vector-url","me/utils/vector-url")
+
+//# sourceMappingURL=engine.map
