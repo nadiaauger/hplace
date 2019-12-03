@@ -1,7 +1,7 @@
 <div class="header-create-event">
   <div class="photo-create-event">
     <%= image_tag "placeholder.jpg", class: "hidden photo-create-event", id: "photo-preview" %>
-    <%= image_tag "icon.png", class: "add-event-picto", id: "browsing-photo" %>
+    <%#= image_tag "icon.png", class: "add-event-picto", id: "browsing-photo" %>
   </div>
 </div>
 
@@ -10,15 +10,37 @@
   <div class="row justify-content-center" >
     <div class="events-info col-12 col-lg-8">
       <%= simple_form_for(@event)  do |f| %>
+      <div class="first-block">
         <%= f.input :photo, input_html: { id: 'photo-input', class: 'd-none'}, label: false %>
-        <%= f.input :name, label: false,input_html: {class: 'ml-0'}, placeholder:'Nom de l\'évènement' %>
-        <%= f.input :start, label: false, wrapper_html: { class: 'fas fa-clock mr-10' }, as: :string, required: true, input_html: {class: "datepicker"}, placeholder: "YYYY/MM/DD" %>
-        <%= f.input :start, label: false, as: :string, required: true, input_html: {class: "startpicker time"}, placeholder:'Start' %>
-        <%= f.input :end, label: false, as: :string, required: true, input_html: {class: "endpicker time"}, placeholder:'End' %>
-        <%= f.input :description,label: false, wrapper_html: { class: 'fas fa-pen' },as: :string, placeholder: 'Détails' %>
-        <%= f.input :location, label: false,  wrapper_html: { class: 'fas fa-map-marker-alt' }, placeholder: 'Lieu' %>
-        <%= f.input :max_participants, label: false, wrapper_html: { class: 'fas fa-users' },  placeholder: 'Nombre maximum de participants' %>
-        <%= f.button :submit, class: "btn btn-primary", value: "CRÉER" %>
+        <%= f.input :name, label: false,input_html: {class: 'ml-0'}, placeholder:'Nom de l\'événement' %>
+        <%= f.input :description,label: false, as: :text, placeholder: 'Description' %>
+      </div>
+      <div class="second-block mt-5">
+        <%= f.input :date, label: false, as: :string, required: true, input_html: {class: "datepicker"}, placeholder: "YYYY/MM/DD" %>
+        <%= f.input :start, label: false, as: :string, required: true, input_html: {class: "startpicker time"}, placeholder:'Starting hour' %>
+        <%= f.input :end, label: false, as: :string, required: true, input_html: {class: "endpicker time"}, placeholder:'Ending time' %>
+      </div>
+      <br>
+      <div class="third-block mt-5">
+        <%= f.input :location, label: false, placeholder: 'Lieu' %>
+           <div class="actions">
+              <p>Nombre de participants</p>
+            </div>
+           <div class="three-blocks">
+            <div class="actions">
+              <a class="btn round-bordered incrementer-minus">-</a>
+            </div>
+            <div class="actions">
+            <span id="counter">1</span>
+            </div>
+            <div class="actions">
+              <a href="#" class="btn round-bordered incrementer-plus">+</a>
+            </div>
+          </div>
+      </div>
+        <div class="create-event-container">
+          <%= f.button :submit, class: "btn-lg btn-block", value: "CRÉER L'ÉVÉNEMENT", id: "create-event-cta" %>
+        </div>
       <% end %>
     </div>
   </div>
