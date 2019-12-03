@@ -35,5 +35,8 @@ window.scrollLastMessageIntoView = scrollLastMessageIntoView;
 
 notifRefresh();
 previewImageOnFileSelect();
+
+if ( document.querySelector('#counter')) {
 counterParticipants();
+}
 

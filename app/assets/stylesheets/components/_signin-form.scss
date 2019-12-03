@@ -1,0 +1,47 @@
+.title-signup {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  h2 {
+    font-size: 24px;
+  }
+}
+
+.form-inputs-signup label {
+  font-size: 14px;
+  text-align: left;
+}
+
+.form-inputs-signin label {
+  font-size: 14px;
+  text-align: left;
+}
+
+.form-inputs-signup select,
+.form-inputs-signup input {
+  width: 60%;
+  height: 40px;
+}
+
+.form-inputs-signup small {
+  font-size: 8px;
+  margin-left: 35%;
+}
+
+
+.form-inputs-signup div.form-group {
+  display: block!important;
+}
+
+a.login1 {
+  font-size: 12px;
+  text-decoration: underline;
+  color: $blue;
+  margin-left: 47%;
+}
+
+.signup-btn {
+  font-size: 24px;
+}
+
