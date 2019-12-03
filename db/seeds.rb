@@ -133,6 +133,60 @@ nadia.photo.attach(io: file, filename: 'nadia.jpg', content_type: 'image/jpg')
 boris.photo.attach(io: file, filename: 'boris.jpg', content_type: 'image/jpg')
 boris.save
 
+file = URI.open('https://images.pexels.com/photos/38554/girl-people-landscape-sun-38554.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
+
+
+   sarah = User.new ({
+    username:      'Sarah',
+    room:      '345',
+
+    email: 'sarah@gmail.com',
+    password: '123456'
+
+  })
+
+  sarah.hospital = st_louis
+
+sarah.photo.attach(io: file, filename: 'sarah.jpg', content_type: 'image/jpg')
+sarah.save
+
+
+file = URI.open('https://images.pexels.com/photos/773371/pexels-photo-773371.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
+
+
+   jeanne = User.new ({
+    username:      'Jeanne',
+    room:      '112',
+
+    email: 'jeanne@gmail.com',
+    password: '123456'
+
+  })
+
+  jeanne.hospital = st_louis
+
+jeanne.photo.attach(io: file, filename: 'jeanne.jpg', content_type: 'image/jpg')
+if jeanne.save
+  puts "heyyyyyyyyyy"
+end
+
+file = URI.open('https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
+
+
+   clemence = User.new ({
+    username:      'Clémence',
+    room:      '138',
+
+    email: 'clemence@gmail.com',
+    password: '123456'
+
+  })
+
+  clemence.hospital = st_louis
+
+clemence.photo.attach(io: file, filename: 'clemence.jpg', content_type: 'image/jpg')
+clemence.save
+
 
  file = URI.open('https://i.pinimg.com/originals/24/c6/50/24c65066e5a0df1548b96f52f88fec74.jpg')
 
@@ -152,12 +206,92 @@ donald.hospital = st_louis
 donald.photo.attach(io: file, filename: 'donald.jpg', content_type: 'image/jpg')
 donald.save
 
- file = URI.open('https://hips.hearstapps.com/digitalspyuk.cdnds.net/18/03/1516016506-vhp.jpg?crop=0.598xw:1.00xh;0.254xw,0&resize=480:*')
+
+file = URI.open('https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
+
+
+
+   cyril = User.new ({
+    username:      'Cyril.H',
+    room:      '43',
+
+    email: 'cyril@gmail.com',
+    password: '123456'
+
+  })
+
+cyril.hospital = st_louis
+
+cyril.photo.attach(io: file, filename: 'cyril.jpg', content_type: 'image/jpg')
+cyril.save
+
+
+
+file = URI.open('https://images.pexels.com/photos/1300402/pexels-photo-1300402.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
+
+
+
+   stephane = User.new ({
+    username:      'Steph',
+    room:      '280',
+
+    email: 'stephane@gmail.com',
+    password: '123456'
+
+  })
+
+stephane.hospital = st_louis
+
+stephane.photo.attach(io: file, filename: 'stephane.jpg', content_type: 'image/jpg')
+stephane.save
+
+
+file = URI.open('https://images.pexels.com/photos/1300402/pexels-photo-1300402.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
+
+
+
+   jean = User.new ({
+    username:      'Jeannot',
+    room:      '345',
+
+    email: 'jean@gmail.com',
+    password: '123456'
+
+  })
+
+jean.hospital = st_louis
+
+jean.photo.attach(io: file, filename: 'jean.jpg', content_type: 'image/jpg')
+jean.save
+
+
+file = URI.open('https://images.pexels.com/photos/1073097/pexels-photo-1073097.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')
+
+
+
+   benoit = User.new ({
+    username:      'Ben75',
+    room:      '335',
+
+    email: 'benoit@gmail.com',
+    password: '123456'
+
+  })
+
+benoit.hospital = st_louis
+
+benoit.photo.attach(io: file, filename: 'benoit.jpg', content_type: 'image/jpg')
+benoit.save
+
+
+
+
+ file = URI.open('https://images.pexels.com/photos/1906997/pexels-photo-1906997.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
 
 
 
    tom = User.new ({
-    username:      'Voldemort',
+    username:      'Tom',
     room:      'Lille',
 
     email: 'tom@gmail.com',
@@ -174,20 +308,20 @@ tom.save
 
 
 
-   beyonce = User.new ({
-    username:      'Queen-B',
-    room:      'LA',
+   chloe = User.new ({
+    username:      'Chloé',
+    room:      'Los Angeles',
 
 
-    email: 'beyonce@gmail.com',
+    email: 'chloe@gmail.com',
     password: '123456'
 
   })
 
-   beyonce.hospital = st_louis
+   chloe.hospital = st_louis
 
-beyonce.photo.attach(io: file, filename: 'beyonce.jpg', content_type: 'image/jpg')
-beyonce.save
+chloe.photo.attach(io: file, filename: 'chloe.jpg', content_type: 'image/jpg')
+chloe.save
 
 puts 'Finished!'
 
@@ -204,8 +338,8 @@ file = URI.open('https://images.unsplash.com/photo-1501003878151-d3cb87799705?ix
     location:      'Cafeteria',
     start:         Time.now + 300000,
     end:         Time.now + 450000,
-    max_participants: 6,
-    description: 'We rely on advertising to provide you with free content! Our third-party vendors or we use cookies to access and use information about your device to ensure the proper functioning of our website or as required for: personalization; ad selection, delivery, and reporting; content selection.'
+    max_participants: 4,
+    description: 'Je vous propose une petite partie de coinche pour se détendre, dans la bonne humeur. Je ramène le jeu de cartes!'
   })
 
 
@@ -226,7 +360,7 @@ file = URI.open('https://images.unsplash.com/photo-1568270363382-992bd101f48e?ix
     end:         DateTime.new(2019,12,4,17),
 
     max_participants: 6,
-    description: 'We rely on advertising to provide you with free content! Our third-party vendors or we use cookies to access and use information about your device to ensure the proper functioning of our website or as required for: personalization; ad selection, delivery, and reporting; content selection.'
+    description: 'Atelier démo pour apprendre à faire du tricot au point mousse pour cet hiver.'
 
   })
 
@@ -245,7 +379,7 @@ file = URI.open('https://images.unsplash.com/photo-1556112353-ad4fb98d81e7?ixlib
     start:          DateTime.new(2019,12,9,15),
     end:         DateTime.new(2019,12,9,17),
     max_participants: 8,
-    description: 'We rely on advertising to provide you with free content! Our third-party vendors or we use cookies to access and use information about your device to ensure the proper functioning of our website or as required for: personalization; ad selection, delivery, and reporting; content selection.'
+    description: 'Le Uno reste une valeur sûre pour passer une bonne après-midi.'
 
   })
 
@@ -262,10 +396,10 @@ file = URI.open('https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ix
    fifa = Event.new ({
     name:      'Tournoi de fifa',
     location:      'Salle de Television',
-    start:         Time.now - 900000,
-    end:         Time.now - 900800,
+    start:         Time.now + 900000,
+    end:         Time.now  900800,
     max_participants: 8,
-    description: 'We rely on advertising to provide you with free content! Our third-party vendors or we use cookies to access and use information about your device to ensure the proper functioning of our website or as required for: personalization; ad selection, delivery, and reporting; content selection.'
+    description: "On m'a offert une Playstation ce weekend, qui veut venir jouer à Fifa avec moi ??"
 
   })
 
@@ -277,12 +411,12 @@ fifa.save
 file = URI.open('https://images.unsplash.com/photo-1535016120720-40c646be5580?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
 
    film = Event.new ({
-    name:      'Projection des Misérables',
+    name:      'Projection des Miserables',
     location:      'Salle A204',
-    start:         Time.now + 2000000,
-    end:         Time.now + 2350000,
+    start:         DateTime.new(2019,12,27,15),
+    end:         DateTime.new(2019,12,27,18),
     max_participants: 8,
-    description: 'We rely on advertising to provide you with free content! Our third-party vendors or we use cookies to access and use information about your device to ensure the proper functioning of our website or as required for: personalization; ad selection, delivery, and reporting; content selection.'
+    description: 'Le film Les Misérables est un grand classique du cinéma qui vaut le détour, je vous propose une projection ensemble'
 
   })
 
@@ -299,7 +433,7 @@ file = URI.open('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ix
 
    code = Event.new ({
     name:      'Apprendre à coder',
-    location:      'Salle A204',
+    location:      'Salle détente',
     start:         DateTime.new(2019,12,7,15),
     end:         DateTime.new(2019,12,7,17),
     max_participants: 8,
@@ -333,7 +467,7 @@ reserve.event = belotte
 reserve.save
 
 reserve = Reservation.new
-reserve.user = beyonce
+reserve.user = chloe
 reserve.event = belotte
 reserve.save
 
@@ -343,7 +477,7 @@ reserve.event = tricot
 reserve.save
 
 reserve = Reservation.new
-reserve.user = beyonce
+reserve.user = chloe
 reserve.event = tricot
 reserve.save
 
@@ -358,7 +492,7 @@ reserve.event = code
 reserve.save
 
 reserve = Reservation.new
-reserve.user = beyonce
+reserve.user = chloe
 reserve.event = code
 reserve.save
 
