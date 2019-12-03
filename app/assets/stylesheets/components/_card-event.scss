@@ -7,7 +7,6 @@
   margin-bottom: 0.5em;
   position: relative;
   height: 22em;
-
     .event-image{
       background-size: cover;
       background-position: center;
@@ -15,7 +14,7 @@
     }
 
     .event-text{
-      margin-left: 1em;
+      margin-left: 2em;
       color:white;
     }
 
@@ -56,7 +55,10 @@
   position:relative;
   margin-bottom: 0.5em;
   position: relative;
-  height: 22em;
+  height: 65vh;
+  display: inline-grid;
+  min-width:80%;
+  margin: 1em;
 
 .disabled {
   pointer-events: none;
@@ -65,27 +67,37 @@
     .event-image{
       background-size: cover;
       background-position: center;
-      height:15em;
-    }
+      height:65vh;
+     }
 
     .card-title{
       color:white;
-      margin-left: 1em;
       font-weight: bold;
-      position:absolute;
-      top: 5em;
+      font-size: 5em;
+      margin: 1.5rem;
     }
+
+
     h2{
-      margin-bottom:0;
-      color: #8F5750;
+       color: white;
+       margin-bottom:0;
+
     }
     p{
       font-size:2em;
-      opacity: 0.6;
-      margin-top:0;
-      margin-bottom:0;
+      color:white;
     }
 }
+
+.card-top{
+  display:flex;
+  justify-content:space-between;
+   .max-participants{
+      font-size:2em;
+      margin:2rem;
+    }
+}
+
 
 .past-event{
   background-color: rgba(245, 245, 245, 1);
@@ -93,10 +105,7 @@
 }
 
 .card-event-infos-new{
-  display:flex;
-  margin-top:1em;
-  margin-bottom:1em;
-  position:relative;
+  margin: 1.5rem
 }
 .card-event-new .card-link{
   position: absolute;
@@ -105,6 +114,11 @@
   left: 0;
   top: 0;
   bottom: 0;
+}
+
+.cards_participant{
+  width: 100%;
+  overflow-y: auto;
 }
 .cards-new {
   display: grid;
@@ -156,6 +170,12 @@
   margin: 6px;
 
 }
+
+.cards-disc{
+ width: 100%;
+ overflow-y: scroll;
+ }
+
 
 
 // Smallest device

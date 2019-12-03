@@ -23,7 +23,7 @@ h2 {
   position: absolute;
   font-size: 3em;
   right: 5%;
-  top: 2%;
+  top: 20%;
   list-style: none;
 
 }
@@ -63,4 +63,13 @@ h2 {
 
 .dropdown-menu {
   width: 80px;
+}
+.discover-top{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1em;
+}
+
+.disc{
+  display: inline-grid
 }
