@@ -18,9 +18,6 @@
     <% else %>
       <p><i class="far fa-user"></i>  Il reste <%= (event.max_participants - event.reservations.count) if !event.max_participants.nil? %> places</p>
     <% end %>
-
-    <p> <i class="far fa-user"></i>  Il reste <%= (event.max_participants - event.reservations.count) if !event.max_participants.nil?%> places</p>
-
   </div>
     <%= link_to "", "#", class: "card-link", data: { toggle: "modal", target: "#event-show-#{event.id}"} %>
    </div>

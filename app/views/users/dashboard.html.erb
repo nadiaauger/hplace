@@ -14,13 +14,14 @@
 
 
 <div class="dashboard-main-container">
-  <div class="disc animated fadeIn" id="discover-container">
+  <div class="disc animated fadeIn mr-2" id="discover-container">
    <div class="discover-top">
      <div class="home-title">
        <p class="mb-0"><%="#{@user.hospital.events.count} événements"%></p>
        <h1 class="mb-2"><%="#{@user.hospital.name}" %></h2>
      </div>
    </div>
+
    <div class="d-flex cards-disc">
        <% events = @user.hospital.events.sort_by {|event| event.start} %>
        <% events.each do |event| %>
