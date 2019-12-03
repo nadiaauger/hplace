@@ -1,7 +1,7 @@
 <%#= link_to "LOGOUT",  destroy_user_session_path, method: :delete %>
 <div class="container">
   <% @notifications_new.each do |notification| %>
-    <div class="notification">
+    <div class="notification unseen">
       <%= render 'shared/notification', notification: notification %>
     </div>
   <% end %>

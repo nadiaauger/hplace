@@ -19,6 +19,7 @@
         </div>
       <% end %>
     </div>
+
     <p class="mb-3"> <%= event.description %> </p>
     <% if current_user == event.user %>
       <div class="d-flex justify-content-between">
@@ -31,7 +32,11 @@
       <%= render 'shared/participe_call_to_action' %>
     </div>
     <div class="participe-pas">
-      <%= link_to " Participer", event_reservations_path(@event), method: :post, remote: true, class: "btn-participer d-block"%>
+      <% if event.reservations.count < event.max_participants %>
+        <%= link_to " Participer", event_reservations_path(@event), method: :post, remote: true, class: "btn-participer d-block"%>
+      <% else %>
+        <p class="btn-complete d-block">Complet</p>
+      <% end %>
     </div>
     <% end %>
   </div>
