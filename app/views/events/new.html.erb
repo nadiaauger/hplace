@@ -16,7 +16,7 @@
         <%= f.input :description,label: false, as: :text, placeholder: 'Description' %>
       </div>
       <div class="second-block mt-5">
-        <%= f.input :start, label: false, as: :string, required: true, input_html: {class: "datepicker"}, placeholder: "YYYY/MM/DD" %>
+        <%= f.input :date, label: false, as: :string, required: true, input_html: {class: "datepicker"}, placeholder: "YYYY/MM/DD" %>
         <%= f.input :start, label: false, as: :string, required: true, input_html: {class: "startpicker time"}, placeholder:'Starting hour' %>
         <%= f.input :end, label: false, as: :string, required: true, input_html: {class: "endpicker time"}, placeholder:'Ending time' %>
       </div>
