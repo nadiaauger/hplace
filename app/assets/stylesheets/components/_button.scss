@@ -1,11 +1,12 @@
 .btn-round{
-  background-color: #75DEFB;
-  color: white;
+background-image: linear-gradient(111.5deg, #1464c4 0.4%, #2198d6 100.2%);
   padding: 14px 21px;
   border-radius: 50%;
   font-weight: bold;
   opacity: 1;
   font-size: 3em;
+  color:white !important;
+
   &.sticky{
     position: fixed;
     bottom: 2vh;
