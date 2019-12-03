@@ -1,0 +1,21 @@
+.chat-card{
+  display: flex;
+  justify-content: left;
+  padding: 1em;
+  border-bottom: solid .5px lightgrey;
+  position: relative;
+
+  img{
+    width:65px;
+    height: 65px;
+  }
+
+  .chat-link{
+    position:absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+  }
+  }
+
