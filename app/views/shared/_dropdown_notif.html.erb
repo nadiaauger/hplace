@@ -14,13 +14,13 @@
           <%= render 'shared/notification', notification: notification %>
         </div>
       <% end %>
-    <% end %>
-    <% target_user.seen_notifications.first(3).each do |notification| %>
-      <div class="notification seen">
-        <%= render 'shared/notification', notification: notification %>
-      </div>
-    <% end %>
-    <div class="dropdown-divider"></div>
-    <%= link_to "See more", notification_path, class: "dropdown-item text-center" %>
+      <% target_user.seen_notifications.first(3).each do |notification| %>
+        <div class="notification seen">
+          <%= render 'shared/notification', notification: notification %>
+        </div>
+      <% end %>
+      <div class="dropdown-divider"></div>
+      <%= link_to "See more", notification_path, class: "dropdown-item text-center" %>
+    </div>
   </div>
 </div>

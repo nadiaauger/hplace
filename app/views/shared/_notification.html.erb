@@ -1,26 +1,33 @@
-
 <% if notification.class.name == "Event" %>
   <%= link_to event_path(notification) do %>
-  <% if notification.user.photo.attached? %>
-      <%= cl_image_tag notification.user.photo.key, height: 50, width: 50, crop: :fill, class: "avatar" %>
-  <% else %>
-      <%= cl_image_tag "smiley-logo.jpg", height: 50, width: 50, crop: :fill, class: "avatar" %>
-  <% end %>
+  <div class="d-flex">
+    <div>
+    <% if notification.user.photo.attached? %>
+        <%= cl_image_tag notification.user.photo.key, height: 50, width: 50, crop: :fill, class: "avatar-large" %>
+    <% else %>
+        <%= cl_image_tag "smiley-logo.jpg", height: 50, width: 50, crop: :fill, class: "avatar-large" %>
+    <% end %>
+    </div>
     <div class="notification-content">
       <p><small><%= ((Time.now - notification.created_at) / 60).to_i %> minutes ago</small></p>
       <p>L'événement <strong> <%= notification.name %> </strong> organisé par <strong> <%= notification.user.username %> </strong> vient d'être créé. </p>
     </div>
+  </div>
   <% end %>
 <% else %>
   <%= link_to event_path(notification.event) do  %>
-    <% if notification.user.photo.attached? %>
-      <%= cl_image_tag notification.user.photo.key, height: 50, width: 50, crop: :fill, class: "avatar" %>
-    <% else %>
-      <%= cl_image_tag "smiley-logo.jpg", height: 50, width: 50, crop: :fill, class: "avatar" %>
-    <% end %>
-    <div class="notification-content">
-      <p><small><%= ((Time.now - notification.created_at) / 60).to_i %> minutes ago</small></p>
-      <p><strong> <%= notification.user.username %> </strong> a rejoint votre événement <strong> <%= notification.event.name %>.</strong></p>
+    <div class="d-flex">
+      <div>
+        <% if notification.user.photo.attached? %>
+          <%= cl_image_tag notification.user.photo.key, height: 50, width: 50, crop: :fill, class: "avatar-large" %>
+        <% else %>
+          <%= cl_image_tag "smiley-logo.jpg", height: 50, width: 50, crop: :fill, class: "avatar-large" %>
+        <% end %>
+      </div>
+      <div class="notification-content">
+        <p><small><%= ((Time.now - notification.created_at) / 60).to_i %> minutes ago</small></p>
+        <p><strong> <%= notification.user.username %> </strong> a rejoint votre événement <strong> <%= notification.event.name %>.</strong></p>
+      </div>
     </div>
   <% end %>
 <% end %>
