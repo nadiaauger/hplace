@@ -1,30 +1,29 @@
 const counterParticipants = () => {
 
-  const counter = document.querySelector('#counter');
-  const decrease = document.querySelector('.incrementer-minus');
-  const increase = document.querySelector('.incrementer-plus');
+  if (document.querySelector('#counter')) {
+    const counter = document.querySelector('#counter');
+    const decrease = document.querySelector('.incrementer-minus');
+    const increase = document.querySelector('.incrementer-plus');
 
-  increase.addEventListener('click', event => {
-    event.preventDefault();
-    const finalValue = Number.parseInt(counter.innerText, 10) + 1;
-    counter.innerText = finalValue;
-    if (decrease.classList.contains("disabled")) {
-      decrease.classList.remove("disabled");
-    }
-  });
-
-  decrease.addEventListener('click', event => {
-    event.preventDefault();
-    const finalValue = Number.parseInt(counter.innerText, 10) - 1;
-    if (finalValue < 1) {
-      event.currentTarget.classList.add("disabled");
-    } else {
+    increase.addEventListener('click', event => {
+      event.preventDefault();
+      const finalValue = Number.parseInt(counter.innerText, 10) + 1;
       counter.innerText = finalValue;
-    }
-  });
+      if (decrease.classList.contains("disabled")) {
+        decrease.classList.remove("disabled");
+      }
+    });
 
-
-
+    decrease.addEventListener('click', event => {
+      event.preventDefault();
+      const finalValue = Number.parseInt(counter.innerText, 10) - 1;
+      if (finalValue < 1) {
+        event.currentTarget.classList.add("disabled");
+      } else {
+        counter.innerText = finalValue;
+      }
+    });
+  }
 };
 export { counterParticipants };
 
