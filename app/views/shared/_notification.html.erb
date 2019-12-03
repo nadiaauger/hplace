@@ -1,12 +1,12 @@
 <%= link_to user_path(notification.user) do %>
   <% if notification.user.photo.attached? %>
-      <%= cl_image_tag notification.user.photo.key, height: 50, width: 50, crop: :fill, class: "avatar-large" %>
+      <%= cl_image_tag notification.user.photo.key, height: 50, width: 50, crop: :fill, class: "avatar" %>
   <% else %>
-      <%= cl_image_tag "smiley-logo.jpg", height: 50, width: 50, crop: :fill, class: "avatar-large" %>
+      <%= cl_image_tag "smiley-logo.jpg", height: 50, width: 50, crop: :fill, class: "avatar" %>
   <% end %>
 <% end %>
 <div class="notification-content">
-  <p><small><%= notification.created_at.strftime("%d %b %Y") %></small></p>
+  <p><small><%= ((Time.now - notification.created_at) / 60).to_i %> minutes ago</small></p>
   <% if notification.class.name == "Event" %>
     <p>L'événement <strong> <%= link_to notification.name, event_path(notification), class: "link_to" %> </strong> organisé par <strong> <%= notification.user.username %> </strong> vient d'être créé. </p>
   <% else %>

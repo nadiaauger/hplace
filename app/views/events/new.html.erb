@@ -10,21 +10,22 @@
   <div class="row justify-content-center" >
     <div class="events-info col-12 col-lg-8">
       <%= simple_form_for(@event)  do |f| %>
-      <div class="first-block">
-        <%= f.input :photo, input_html: { id: 'photo-input', class: 'd-none'}, label: false %>
-        <%= f.input :name, label: false,input_html: {class: 'ml-0'}, placeholder:'Nom de l\'événement' %>
-        <%= f.input :description,label: false, as: :text, placeholder: 'Description' %>
-      </div>
-      <div class="second-block mt-5">
-        <%= f.input :date, label: false, as: :string, required: true, input_html: {class: "datepicker"}, placeholder: "YYYY/MM/DD" %>
-        <%= f.input :start, label: false, as: :string, required: true, input_html: {class: "startpicker time"}, placeholder:'Starting hour' %>
-        <%= f.input :end, label: false, as: :string, required: true, input_html: {class: "endpicker time"}, placeholder:'Ending time' %>
-      </div>
-      <br>
-      <div class="third-block mt-5">
-        <%= f.input :location, label: false, placeholder: 'Lieu' %>
-        <%= f.input :max_participants, as: :hidden  %>
-           <div class="actions">
+        <div class="first-block">
+          <%= f.input :photo, input_html: { id: 'photo-input', class: 'd-none'}, label: false %>
+          <%= f.input :name, label: false,input_html: {class: 'ml-0'}, placeholder:'Nom de l\'événement' %>
+          <%= f.input :description,label: false, as: :text, placeholder: 'Description' %>
+        </div>
+        <div class="second-block">
+          <%= f.input :date, label: false, as: :string, required: true, input_html: {class: "datepicker"}, placeholder: "YYYY/MM/DD" %>
+          <div class="d-flex flex-start">
+            <%= f.input :start, label: false, as: :string, required: true, input_html: {class: "startpicker time mr-4"}, placeholder:'Starting hour' %>
+            <%= f.input :end, label: false, as: :string, required: true, input_html: {class: "endpicker time"}, placeholder:'Ending time' %>
+          </div>
+        </div>
+        <div class="third-block mb-5">
+          <%= f.input :location, label: false, placeholder: 'Lieu' %>
+          <%= f.input :max_participants, as: :hidden  %>
+            <div class="actions">
               <p>Nombre de participants</p>
             </div>
            <div class="three-blocks">
@@ -38,11 +39,11 @@
               <a href="#" class="btn round-bordered incrementer-plus">+</a>
             </div>
           </div>
-      </div>
-        <div class="create-event-container">
-          <%= f.button :submit, class: "btn-lg btn-block", value: "CRÉER L'ÉVÉNEMENT", id: "create-event-cta" %>
         </div>
-      <% end %>
+      </div>
     </div>
   </div>
-</div>
+  <div class="create-event-container">
+    <%= f.button :submit, class: "btn-lg btn-block", value: "CRÉER L'ÉVÉNEMENT", id: "create-event-cta" %>
+  </div>
+<% end %>
