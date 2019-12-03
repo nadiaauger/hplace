@@ -1,13 +1,18 @@
 .button_badge {
   background-color: #fa3e3e;
   border-radius: 50%;
-  color: white;
   z-index: 1;
   font-size: 0.5em;
-  left: -1em;
-  top:0;
+  left: 1em;
+  top: -5px;
+  height: 2em;
+  width: 2em;
+  display: none;
+  position:absolute;
+
   p{
     color:white;
+    top: auto;
   }
 }
 
