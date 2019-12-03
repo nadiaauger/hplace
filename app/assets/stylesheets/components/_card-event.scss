@@ -1,52 +1,3 @@
-.card-event-old{
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  border-radius: 5px;
-  position:relative;
-  margin-bottom: 0.5em;
-  position: relative;
-  height: 22em;
-    .event-image{
-      background-size: cover;
-      background-position: center;
-      height:10em;
-    }
-
-    .event-text{
-      margin-left: 2em;
-      color:white;
-    }
-
-
-    .card-info{
-      display:flex;
-      position:absolute;
-      bottom: 1em;
-      justify-content: space-between;
-    }
-
-    .card-title{
-      font-weight: bold;
-    }
-    h2{
-      margin-bottom:0;
-      color: #8F5750;
-    }
-    p{
-      color: white;
-      margin-top:0;
-      font-size:2em;
-    }
-    .card-link{
-      position: absolute;
-      right: 0;
-      left: 0;
-      top: 0;
-      bottom: 0;
-    }
-}
-
 .card-agenda {
   overflow: hidden;
   height: 120px;
@@ -159,6 +110,9 @@
 
 
 .card-event-infos-new{
+  position: absolute;
+  bottom:0;
+  left:23px;
   margin: 1.5rem
 }
 .card-event-new .card-link{
@@ -228,6 +182,7 @@
  width: 100%;
  overflow-y: scroll;
 }
+
 
 
 
