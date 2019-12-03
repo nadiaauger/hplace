@@ -14,30 +14,18 @@ class UsersController < ApplicationController
   end
 
   def notification
-    @name_page = 'notifications'
-    @notifications = []
-    @notifications_seen = []
-    @notifications_old = []
-    @notifications_new = []
-    nb_notif = 0
-    @user = current_user
-    @events = Event.where(user: @user)
-    @events.each do |event|
-      if EventSeen.find_by(user: @user, event: event).nil?
-        @notifications_new << event
-      else
-        @notifications_old << event
-      end
-      @reservations = Reservation.where(event: event)
-      @reservations.each do |resa|
-        if resa.notified == false && resa.user != current_user
-          @notifications << resa
-          resa.notified = true
-          resa.save
-        elsif resa.notified == true && resa.user != current_user
-          @notifications_seen << resa
-        end
-      end
+    @name_page = 'Notifications'
+    @events = Event.where(user: current_user)
+    @notifications_new = current_user.unseen_notifications
+    @notifications_seen = current_user.seen_notifications
+    current_user.events_created_by_someone_else_not_seen_yet.each do |event|
+      EventSeen.create(user: current_user, event: event)
     end
+    current_user.reservations_on_my_own_events_not_yet_seen.each do |resa|
+      resa.notified = true
+      resa.save
+    end
+    # @notifications_new.sort_by {|obj| obj.created_at}
+    # @notifications_seen.sort_by {|obj| obj.created_at}
   end
 end
