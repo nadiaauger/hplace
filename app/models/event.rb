@@ -20,7 +20,14 @@ class Event < ApplicationRecord
   def broadcast_notification
     hospital.users.each do |patient|
       if patient != self.user
-        ActionCable.server.broadcast("notification_for_user#{patient.id}", number_of_notifs: patient.number_of_notifications)
+        ActionCable.server.broadcast(
+          "notification_for_user#{patient.id}",
+          number_of_notifs: patient.number_of_notifications,
+          notifications_html: ActionController::Rendering.render_to_string(
+            partial: "shared/dropdown_notif",
+            locals: { target_user: patient }
+          )
+        )
       end
     end
   end
