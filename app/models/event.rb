@@ -19,7 +19,9 @@ class Event < ApplicationRecord
 
   def broadcast_notification
     hospital.users.each do |patient|
-      ActionCable.server.broadcast("notification_for_user#{patient.id}", number_of_notifs: patient.number_of_notifications)
+      if patient != self.user
+        ActionCable.server.broadcast("notification_for_user#{patient.id}", number_of_notifs: patient.number_of_notifications)
+      end
     end
   end
 end

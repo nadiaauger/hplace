@@ -20,12 +20,44 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
 
   def number_of_notifications
-    nb_of_notif = bookings.where(notified: false).where.not(user_id: id).count
-    hospital.events.each do |event|
+    nb_of_notif = reservations_on_my_own_events_not_yet_seen.count
+    nb_of_notif += events_created_by_someone_else_not_seen_yet.count
+    return nb_of_notif
+  end
+
+  def events_created_by_someone_else_not_seen_yet
+    events = []
+    hospital.events.where.not(user: self).each do |event|
       if EventSeen.find_by(user: self, event: event).nil?
-        nb_of_notif += 1
+        events << event
       end
     end
-    return nb_of_notif
+    events
+  end
+
+  def reservations_on_my_own_events_already_seen
+    bookings.where(notified: true).where.not(user_id: id)
+  end
+
+  def events_created_by_someone_else_already_seen
+    events = []
+    hospital.events.where.not(user: self).each do |event|
+      if EventSeen.find_by(user: self, event: event)
+        events << event
+      end
+    end
+    events
+  end
+
+  def reservations_on_my_own_events_not_yet_seen
+    bookings.where(notified: false).where.not(user_id: id)
+  end
+
+  def unseen_notifications
+    events_created_by_someone_else_not_seen_yet + reservations_on_my_own_events_not_yet_seen
+  end
+
+  def seen_notifications
+    events_created_by_someone_else_already_seen + reservations_on_my_own_events_already_seen
   end
 end
