@@ -8,8 +8,8 @@
 <div class="notification-content">
   <p><small><%= notification.created_at.strftime("%d %b %Y") %></small></p>
   <% if notification.class.name == "Event" %>
-    <p>L'évenement <strong> <%= link_to notification.name, event_path(notification), class: "link_to" %> </strong> organisé par <strong> <%= notification.user.username %> </strong> viens d'être creé. </p>
+    <p>L'événement <strong> <%= link_to notification.name, event_path(notification), class: "link_to" %> </strong> organisé par <strong> <%= notification.user.username %> </strong> vient d'être créé. </p>
   <% else %>
-    <p><strong> <%= notification.user.username %> </strong> souhaiterais rejoindre l'évenement <strong> <%= link_to notification.event.name, event_path(notification.event), class: "link_to" %>.</strong></p>
+    <p><strong> <%= notification.user.username %> </strong> a rejoint votre événement <strong> <%= link_to notification.event.name, event_path(notification.event), class: "link_to" %>.</strong></p>
   <% end %>
 </div>
