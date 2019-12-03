@@ -28,6 +28,13 @@ h2 {
 
 }
 
+.agenda{
+  margin-top: 1em;
+  h2{
+  margin: 0;
+  }
+}
+
 .dropdown-item {
   font-size: 12px;
   text-align: right;
@@ -72,6 +79,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   margin: 0 1em;
+  margin-top:1em;
 }
 
 .disc{

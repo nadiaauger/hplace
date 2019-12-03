@@ -1,13 +1,11 @@
 .btn-round{
-  background-color: $blue;
+  background-color: #75DEFB;
   color: white;
   padding: 14px 21px;
   border-radius: 50%;
   font-weight: bold;
   opacity: 1;
-  width: min-content;
-  height: min-content;
-  font-size: 3vh;
+  font-size: 3em;
   &.sticky{
     position: fixed;
     bottom: 2vh;

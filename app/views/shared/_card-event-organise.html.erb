@@ -18,5 +18,7 @@
     <p><i class="far fa-user"></i> <%= "#{event.reservations.count} participants" %></p>
     <p><i class="fas fa-map-marker-alt"></i> <%= event.location%></p>
   </div>
+  <div>
+    <%= render 'shared/chat_btn', event: event%>
+  </div>
 </div>
-
