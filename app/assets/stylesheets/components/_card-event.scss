@@ -60,6 +60,9 @@
   min-width:80%;
   margin: 1em;
 
+.disabled {
+  pointer-events: none;
+}
 
     .event-image{
       background-size: cover;
@@ -129,10 +132,50 @@
   padding-top: 30px;
 }
 
+.flex-between {
+  display: flex;
+  justify-content: left;
+  vertical-align: middle;
+  align-items: left;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.three-blocks {
+  display: flex;
+  justify-content: left;
+  vertical-align: middle;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+#submit {
+  width: 100%;
+  margin-top: 10px;
+}
+
+#counter {
+  margin: 0 15px;
+}
+
+.round-bordered {
+  border: 1px solid #5a5a5a;
+  border-radius: 50%;
+  width: 50px;
+  font-size: 18px;
+  color: #848484;
+  height: 50px;
+  padding: 6px;
+  margin: 6px;
+
+}
+
 .cards-disc{
  width: 100%;
  overflow-y: scroll;
  }
+
 
 
 // Smallest device

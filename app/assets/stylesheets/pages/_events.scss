@@ -58,8 +58,8 @@
 }
 
 .string.required, .text.required, .string.optional, .time.required, .integer.optional {
-  font-size: 15px;
-  color: #673ab7;
+  font-size: 16px;
+  color: #868686;
 }
 
  .add-event-picto {
@@ -82,5 +82,22 @@
 
 #title-hospital-index {
   text-align: center;
+  vertical-align: middle;
+}
+
+#create-event-cta {
+  background-color: $blue;
+  text-align: center;
+  height: 7vh;
+  justify-content: center;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.justify-content-center {
+  height: 100vh;
+}
+
+.actions {
   vertical-align: middle;
 }
