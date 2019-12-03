@@ -1,57 +1,66 @@
-.card-event-old{
+.card-agenda {
   overflow: hidden;
+  height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
   border-radius: 5px;
-  position:relative;
-  margin-bottom: 0.5em;
-  position: relative;
-  height: 22em;
-    .event-image{
-      background-size: cover;
-      background-position: center;
-      height:22em;
-    }
-
-    .event-text{
-      margin-left: 2em;
-      color:white;
-    }
-
-
-    .card-info{
-      display:flex;
-      position:absolute;
-      bottom: 1em;
-      justify-content: space-between;
-    }
-
-    .card-title{
-      font-weight: bold;
-    }
-    h2{
-      margin-bottom:0;
-      color: #8F5750;
-    }
-    p{
-      color: white;
-      margin-top:0;
-      font-size:2em;
-    }
-    .card-link{
-      position: absolute;
-      right: 0;
-      left: 0;
-      top: 0;
-      bottom: 0;
-    }
+  position: relative
 }
+
+.card-agenda .btn-round{
+  font-size: 2em;
+  padding: 10px 15px;
+  position: absolute;
+  right: 0.5em;
+}
+
+.card-agenda .organiser-star{
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  color: #F9D35F;
+  font-size: 2em;
+}
+
+.card-agenda img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-agenda h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.past-event{
+  background-color: rgba(245, 245, 245, 1);
+  opacity: 0.5;
+}
+
+.card-agenda p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.card-agenda .card-agenda-infos {
+  padding: 16px;
+}
+
+
+
 
 .card-event-new {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  border-radius: 5px;
+  border-radius: 20px;
   position:relative;
   margin-bottom: 0.5em;
   position: relative;
@@ -59,34 +68,34 @@
   display: inline-grid;
   min-width:80%;
   margin: 1em;
+  &:first-child {
+    margin-left: 2em;
+  }
 
-.disabled {
-  pointer-events: none;
-}
+   .event-image{
+    background-size: cover;
+    background-position: center;
+    height:65vh;
+   }
 
-    .event-image{
-      background-size: cover;
-      background-position: center;
-      height:65vh;
-     }
-
-    .card-title{
-      color:white;
-      font-weight: bold;
-      font-size: 5em;
-      margin: 1.5rem;
-    }
+  .card-title{
+    color:white;
+    font-weight: bold;
+    font-size: 5em;
+    margin: 1.5rem;
+  }
 
 
-    h2{
-       color: white;
-       margin-bottom:0;
 
-    }
-    p{
-      font-size:2em;
-      color:white;
-    }
+  h2{
+     color: white;
+     margin-bottom:0;
+
+  }
+  p{
+    font-size:2em;
+    color:white;
+  }
 }
 
 .card-top{
@@ -99,12 +108,11 @@
 }
 
 
-.past-event{
-  background-color: rgba(245, 245, 245, 1);
-  opacity: 0.5;
-}
 
 .card-event-infos-new{
+  position: absolute;
+  bottom:0;
+  left:23px;
   margin: 1.5rem
 }
 .card-event-new .card-link{
@@ -174,7 +182,7 @@
 .cards-disc{
  width: 100%;
  overflow-y: scroll;
- }
+}
 
 
 

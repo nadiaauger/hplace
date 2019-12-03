@@ -1,4 +1,4 @@
- <% if event.start.to_date == Time.now.to_date %>
+  <% if event.start.to_date == Time.now.to_date %>
   <h2 class="agenda-card-header">AUJOURD'HUI</h2>
   <% elsif event.start.to_date == (Time.now.to_date + 1) %>
    <h2 class="agenda-card-header">DEMAIN</h2>
@@ -7,7 +7,7 @@
   <% else %>
     <h2 class="agenda-card-header"><%= "#{I18n.localize(event.start, format: "%^a %d %^b")}"%></h2>
   <% end %>
-<div class="card-agenda">
+<div class="card-agenda past-event">
   <% if event.user == current_user %>
     <p class="organiser-star"><i class="fas fa-star"></i></p>
   <% end %>

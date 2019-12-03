@@ -222,8 +222,8 @@ file = URI.open('https://images.unsplash.com/photo-1568270363382-992bd101f48e?ix
     name:      'Tricot',
     location:      'Salle M304',
 
-    start:         Time.now + 600000,
-    end:         Time.now + 850000,
+    start:         DateTime.new(2019,12,4,15),
+    end:         DateTime.new(2019,12,4,17),
 
     max_participants: 6,
     description: 'We rely on advertising to provide you with free content! Our third-party vendors or we use cookies to access and use information about your device to ensure the proper functioning of our website or as required for: personalization; ad selection, delivery, and reporting; content selection.'
@@ -242,8 +242,8 @@ file = URI.open('https://images.unsplash.com/photo-1556112353-ad4fb98d81e7?ixlib
    uno = Event.new ({
     name:      'Uno',
     location:      'Salle A204',
-    start:         Time.now + 900000,
-    end:         Time.now + 1350000,
+    start:          DateTime.new(2019,12,9,15),
+    end:         DateTime.new(2019,12,9,17),
     max_participants: 8,
     description: 'We rely on advertising to provide you with free content! Our third-party vendors or we use cookies to access and use information about your device to ensure the proper functioning of our website or as required for: personalization; ad selection, delivery, and reporting; content selection.'
 
@@ -300,8 +300,8 @@ file = URI.open('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ix
    code = Event.new ({
     name:      'Apprendre à coder',
     location:      'Salle A204',
-    start:         Time.now + 20000000,
-    end:         Time.now + 20350000,
+    start:         DateTime.new(2019,12,7,15),
+    end:         DateTime.new(2019,12,7,17),
     max_participants: 8,
     description: 'L\'année dernière, j\'ai fait une formation intensive en dévelopment web. J\'adorerais partager ce que j\'ai appris avec ceux qui seraient intéressé. Ma spécialité etait le Javascript. Au menu: comment coder un super boutons avec de effets de ouf!'
 

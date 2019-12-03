@@ -3,22 +3,15 @@
   <%#= link_to image_tag("arrow-left.png"), :back, id:"arrow-picto" %>
   <div class="d-flex align-items-center">
     <div class="home-link d-flex justify-content-between mt-2">
-      <%= link_to dashboard_path do  %>
+
+      <%= link_to dashboard_path() do  %>
+
         <i class="fas fa-home" style="margin-right:1em; margin-left:0.3em;"></i>
       <% end %>
       <h1><%= @name_page %></h1>
     </div>
     <div class= "links-dash d-flex justify-content-between" style = "width:3em">
-      <div class="notification-topbar">
-        <%= link_to notification_path, class: "link-bell" do %>
-        <i class="far fa-bell"></i>
-          <div class="button_badge ">
-            <div class= "d-inline-flex align-items-center">
-              <p> <%= current_user.number_of_notifications %> </p>
-            </div>
-          </div>
-        <% end %>
-      </div>
+        <%= render "shared/dropdown_notif" %>
       <div>
         <li class="nav-item dropdown">
           <i class="fas fa-bars" class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" /></i>

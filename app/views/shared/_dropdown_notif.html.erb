@@ -1,0 +1,29 @@
+<!-- <div class="notification-topbar">
+  <%#= link_to notification_path, class: "link-bell" do %>
+  <i class="far fa-bell"></i>
+    <div class="button_badge ">
+      <div class= "d-inline-flex align-items-center">
+        <p class="number-of-notif"></p>
+      </div>
+    </div>
+  <%# end %>
+</div> -->
+<div>
+  <li class="nav-item dropdown">
+    <i class="fas fa-bell" class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" /></i>
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+      <% current_user.unseen_notifications.each do |notification| %>
+
+
+        <div class="notification" style= "">
+          <%= render 'shared/notification', notification: notification %>
+        </div>
+      <% end %>
+      <% current_user.seen_notifications.each do |notification| %>
+        <div class="notification seen">
+          <%= render 'shared/notification', notification: notification %>
+        </div>
+      <% end %>
+    </div>
+  </li>
+</div>

@@ -1,5 +1,6 @@
 const counterParticipants = () => {
 
+
   if (document.querySelector('#counter')) {
     const counter = document.querySelector('#counter');
     const decrease = document.querySelector('.incrementer-minus');
@@ -24,6 +25,7 @@ const counterParticipants = () => {
       }
     });
   }
+
 };
 export { counterParticipants };
 

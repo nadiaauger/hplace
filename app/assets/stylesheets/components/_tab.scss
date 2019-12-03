@@ -4,14 +4,16 @@
   margin: 0;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   background-color: white;
+  height: 7em;
   // position: fixed;
   // bottom:0;
 }
 
 .tabs-underlined .tab-underlined {
-  color: black;
-  margin: 8px 16px;
-  padding:5px;
+  color: $blue;
+  margin: 8px 7px;
+  padding:15px;
+  margin-bottom:0px;
   opacity: .4;
   cursor: pointer;
   text-decoration: none;
@@ -21,4 +23,6 @@
 .tabs-underlined .tab-underlined.active {
   opacity: 1;
   border-bottom: 3px solid #555555;
+  border-color: $blue;
+
 }
