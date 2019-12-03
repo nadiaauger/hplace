@@ -9,17 +9,25 @@
   <%# end %>
 </div> -->
 <div class="notification-dropwdown nav-item dropdown">
-  <i class="fas fa-bell" class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" /></i>
+  <%= simple_form_for target_user, url: notification_seen_path, method: :post, remote: true, html: {id: "form-notification-seen"} do |f| %>
+
+  <% end %>
+  <i class="fas fa-bell toggle-notifications" class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" /></i>
+  <div class="button_badge ">
+    <div class= "d-inline-flex align-items-center">
+      <p class="number-of-notif"></p>
+    </div>
+  </div>
   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-    <% notifications = current_user.unseen_notifications + current_user.seen_notifications  %>
-    <% if current_user.unseen_notifications.length > 0 %>
-      <% current_user.unseen_notifications.first(2).each do |notification| %>
-        <div class="notification" style= "">
+    <% notifications = target_user.unseen_notifications + target_user.seen_notifications  %>
+    <% if target_user.unseen_notifications.length > 0 %>
+      <% target_user.unseen_notifications.first(3).each do |notification| %>
+        <div class="notification unseen" >
           <%= render 'shared/notification', notification: notification %>
         </div>
       <% end %>
     <% end %>
-    <% current_user.seen_notifications.first(2).each do |notification| %>
+    <% target_user.seen_notifications.first(3).each do |notification| %>
       <div class="notification seen">
         <%= render 'shared/notification', notification: notification %>
       </div>
