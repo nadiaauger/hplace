@@ -12,7 +12,7 @@
     <h2><i class="far fa-clock"></i> <%= "#{event.start.strftime("%I:%M %p")} - #{event.end.strftime("%I:%M %p")} "%></h2>
     <p> <i class="far fa-user"></i>  Il reste <%= (event.max_participants - event.reservations.count) if !event.max_participants.nil?%> places</p>
   </div>
-    <%= link_to "", event_path(event), class: "card-link" %>
+    <%= link_to "", "#", class: "card-link", data: { toggle: "modal", target: "#event-show-#{event.id}"} %>
    </div>
 </div>
 
