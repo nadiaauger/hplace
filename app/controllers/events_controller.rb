@@ -17,6 +17,7 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
+    raise
     @event.user = current_user
     @event.hospital = current_user.hospital
     unless @event.photo.attached?
