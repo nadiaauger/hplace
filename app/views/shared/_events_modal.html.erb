@@ -1,0 +1,39 @@
+<% events.each do |event| %>
+  <div class="modal fade animated zoomIn faster effectspeed" id="event-show-<%=event.id%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+            <%= render 'shared/modal_show_event', event: event %>
+            <div class="d-flex justify-content-around mt-3">
+              <div class="participants text-center">
+                <p class= "title"><img src="https://img.icons8.com/cotton/64/000000/person-male--v2.png" height="25px", width="25px"></p>
+                <p> <%= event.max_participants %> people   </p>
+              </div>
+              <div class="loc text-center">
+                <p><img src="https://img.icons8.com/ios/100/000000/address.png" height="25px", width="25px"></p>
+                <p> <%= event.location %> </p>
+              </div>
+              <div class="time text-center">
+                <p><img src="https://img.icons8.com/dotty/80/000000/calendar-2.png" height="25px", width="25px"></p>
+                <p><%= event.start.hour %>h<%= event.start.min %> - <%= event.end.hour %>h<%= event.end.min %></p>
+              </div>
+            </div>
+
+          <div class="content border-top my-1">
+            <h2 id="number-of-participants"><%= Reservation.where(event: event).count %> participants :</h2>
+            <div class="d-flex cards_participant">
+              <% Reservation.where(event: event).each do |resa| %>
+                <%= link_to user_path(resa.user) , class: "link_to" do %>
+                  <div class="card_participant border">
+                    <%= render 'shared/card_participant', user: resa.user, event: event %>
+                  </div>
+                <% end %>
+              <% end %>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

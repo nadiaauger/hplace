@@ -4,23 +4,24 @@
        <h2 class="tab-underlined active découvrire">Découvrir</h2>
      </li>
      <li>
-       <h2 class="tab-underlined participe">Mon agenda</h2>
+       <h2 class="tab-underlined participe">Agenda</h2>
      </li>
      <li>
-       <h2 class="tab-underlined organise">J'organise</h2>
+       <h2 class="tab-underlined organise">Messages</h2>
      </li>
    </ul>
  </div>
 
 
 <div class="dashboard-main-container">
-  <div class="disc animated fadeIn" id="discover-container">
+  <div class="disc animated fadeIn mr-2" id="discover-container">
    <div class="discover-top">
      <div class="home-title">
        <p class="mb-0"><%="#{@user.hospital.events.count} événements"%></p>
        <h1 class="mb-2"><%="#{@user.hospital.name}" %></h2>
      </div>
    </div>
+
    <div class="d-flex cards-disc">
        <% events = @user.hospital.events.sort_by {|event| event.start} %>
        <% events.each do |event| %>
@@ -29,7 +30,7 @@
    </div>
   </div>
 
-  <div class="container their d-none animated fadeIn" id="my-agenda">
+  <div class="container their d-none animated fadeIn mt-3" id="my-agenda">
     <% reservations = @user.reservations %>
     <% events = reservations.map {|reservation| reservation.event} %>
     <% @user.events.each {|event| events << event}%>
@@ -48,22 +49,18 @@
     </div>
   </div>
 
-  <div class="container mine animated d-none fadeIn" id="my-workshops-container">
-    <% events = Event.where(user: current_user).sort_by {|event| event.start} %>
-    <% if Event.where("DATE(start) = ?", Date.today).count > 0 %>
-      <h2>Vos évéments</h2>
-    <% else %>
-      <h2> Vous n'avez pas d'événements à venir ! <%= link_to "CREEZ EN UN ", new_event_path %></h2>
+  <div class="container mine animated d-none fadeIn mt-3" id="my-workshops-container">
+    <% @user.events.each do |event| %>
+        <%= render "shared/messages", event: event %>
     <% end %>
-    <div class="cards-discover">
-      <% events.each do |event| %>
-        <%= (render 'shared/card-event-organise', event: event) if event.start > DateTime.now %>
-      <% end %>
-       <% events.each do |event| %>
-        <%= (render 'shared/card', event: event) if event.end < DateTime.now %>
-      <% end %>
-    </div>
   </div>
 </div>
 
+
+<%= render 'shared/events_modal', events: @user.hospital.events.sort_by {|event| event.start} %>
+
+
+
+
 <%= render "shared/add_event_btn" %>
+

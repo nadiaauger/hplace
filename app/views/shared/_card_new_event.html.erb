@@ -7,13 +7,19 @@
   <div class="card-top">
     <h1 class="card-title"><%= event.name %></h1>
   </div>
-    <div class="card-event-infos-new mt-0">
+  <div class="card-event-infos-new mt-0">
     <h2> <i class="far fa-calendar-alt"></i><%= " #{I18n.localize(event.start, format: "%^a %d %^b")}" %></h2>
     <h2><i class="far fa-clock"></i> <%= "#{event.start.strftime("%I:%M %p")} - #{event.end.strftime("%I:%M %p")} "%></h2>
+
     <p><%= event.location %></p>
-    <p> <i class="far fa-user"></i>  Il reste <%= (event.max_participants - event.reservations.count) if !event.max_participants.nil?%> places</p>
+
+    <% if (event.max_participants - event.reservations.count) == 0 %>
+      <p><em>Complet</em></p>
+    <% else %>
+      <p><i class="far fa-user"></i>  Il reste <%= (event.max_participants - event.reservations.count) if !event.max_participants.nil? %> places</p>
+    <% end %>
   </div>
-    <%= link_to "", event_path(event), class: "card-link" %>
+    <%= link_to "", "#", class: "card-link", data: { toggle: "modal", target: "#event-show-#{event.id}"} %>
    </div>
 </div>
 
