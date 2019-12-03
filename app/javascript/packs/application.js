@@ -23,6 +23,7 @@ import { notifRefresh } from "../plugins/init_action_cable_notif";
 
 import { previewImageOnFileSelect } from '../plugins/photopreview';
 
+import { markNotificationSeen } from '../plugins/mark_notification_seen';
 import { counterParticipants } from '../components/counterParticipants'
 import "pluralize";
 
@@ -32,7 +33,7 @@ eventFormExport();
 typedStringsExport();
 chatRefresh();
 window.scrollLastMessageIntoView = scrollLastMessageIntoView;
-
+markNotificationSeen();
 notifRefresh();
 previewImageOnFileSelect();
 

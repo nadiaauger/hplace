@@ -1,4 +1,5 @@
 <% if event.photo.attached? %>
+<% @event = event %>
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path event.photo.key%>'); background-position: inherit;">
 <% else %>
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1503482618211-c70b46ede8b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80'); background-position: inherit;">
@@ -6,11 +7,7 @@
   <div class="container">
     <div class="d-flex tete-single-event">
       <h1> <%= event.name %> </h1>
-     <% if @event.date == nil %>
-      <p class="date-event-show"><%= Date.today.strftime("%d %b %Y") %></p>
-     <% else %>
-       <p class="date-event-show"> <%= @event.date.day %>/<%= @event.date.month %></p>
-      <% end %>
+      <p id="date-event-show"> <%= @event.start.day %>/<%= @event.start.month %></p>
       <% if current_user == event.user %>
         <div class="update-event">
            <%= link_to edit_event_path(event) do %>
@@ -18,12 +15,16 @@
         <% end %>
         </div>
       <% end %>
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" style="font-weight: bold; font-size: 3em; position: relative; left: 2.4em; bottom: 0.4em; color: white;">&times;</span>
+        </button>
+      </div>
     </div>
-
     <p class="mb-3"> <%= event.description %> </p>
     <% if current_user == event.user %>
       <div class="d-flex justify-content-between">
-        <%= render 'shared/chat_btn', event: @event %>
+        <%= render 'shared/chat_btn'  %>
       </div>
     <% elsif Reservation.where(user: current_user, event: event).exists? %>
     <%= render 'shared/participe_call_to_action' %>
@@ -32,11 +33,7 @@
       <%= render 'shared/participe_call_to_action' %>
     </div>
     <div class="participe-pas">
-      <% if event.reservations.count < event.max_participants %>
-        <%= link_to " Participer", event_reservations_path(@event), method: :post, remote: true, class: "btn-participer d-block"%>
-      <% else %>
-        <p class="btn-complete d-block">Complet</p>
-      <% end %>
+      <%= link_to " Participer", event_reservations_path(@event), method: :post, remote: true, class: "btn-participer d-block"%>
     </div>
     <% end %>
   </div>

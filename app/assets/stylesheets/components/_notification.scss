@@ -1,7 +1,6 @@
 .notification {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
   background: white;
   padding: 8px 16px;
   border: 1px solid rgb(235,235,235);
@@ -9,6 +8,14 @@
 
 .notification.seen{
   background: $light-gray;
+
+}
+
+.notification.unseen{
+  background: $light-gray;
+  border-left : 1rem solid;
+  border-color: #00909e;
+  background: white;
 }
 
 .notification .notification-content {

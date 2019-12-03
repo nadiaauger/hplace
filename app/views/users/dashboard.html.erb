@@ -55,4 +55,11 @@
   </div>
 </div>
 
+
+<%= render 'shared/events_modal', events: @user.hospital.events.sort_by {|event| event.start} %>
+
+
+
+
 <%= render "shared/add_event_btn" %>
+
