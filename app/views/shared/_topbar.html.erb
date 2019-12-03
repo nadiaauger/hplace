@@ -9,16 +9,7 @@
       <h1><%= @name_page %></h1>
     </div>
     <div class= "links-dash d-flex justify-content-between" style = "width:3em">
-      <div class="notification-topbar">
-        <%= link_to notification_path, class: "link-bell" do %>
-        <i class="far fa-bell"></i>
-          <div class="button_badge ">
-            <div class= "d-inline-flex align-items-center">
-              <p class="number-of-notif"></p>
-            </div>
-          </div>
-        <% end %>
-      </div>
+        <%= render "shared/dropdown_notif" %>
       <div>
         <li class="nav-item dropdown">
           <i class="fas fa-bars" class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" /></i>
