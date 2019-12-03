@@ -25,7 +25,7 @@
             <% events.each do |event| %>
               <%= (render 'shared/card_new_event', event: event.event) if event.event.start > DateTime.now %>
             <% end %>
-            <h2>Évenements passé</h2>
+            <h2>Événements passés</h2>
             <% events.each do |event| %>
               <%= (render 'shared/card_new_event', event: event.event) if event.event.end < DateTime.now %>
             <% end %>
