@@ -1,7 +1,3 @@
-<div class="wrapper">
-  <%= link_to new_event_path do %>
-    <div class="btn-round sticky">
-        <i class="far fa-calendar-plus"></i>
-    </div>
-  <% end %>
-</div>
+<%= link_to new_event_path, class: "btn-round sticky" do %>
+  <i class="far fa-calendar-plus"></i>
+<% end %>

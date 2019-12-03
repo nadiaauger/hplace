@@ -1,17 +1,15 @@
 .btn-round{
-  background-color: $coral;
+  background-color: #75DEFB;
   color: white;
   padding: 14px 21px;
   border-radius: 50%;
   font-weight: bold;
-  opacity: 0.8;
-  width: min-content;
-  height: min-content;
-  font-size: 3vh;
+  opacity: 1;
+  font-size: 3em;
   &.sticky{
     position: fixed;
-    bottom: 5vh;
-    right: 2vh;
+    bottom: 2vh;
+    right: 7vw;
     z-index: 20;
   }
 }
