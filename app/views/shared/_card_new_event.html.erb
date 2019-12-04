@@ -10,9 +10,6 @@
   <div class="card-event-infos-new mt-0">
     <h2> <i class="far fa-calendar-alt"></i><%= " #{I18n.localize(event.start, format: "%^a %d %^b")}" %></h2>
     <h2><i class="far fa-clock"></i> <%= "#{event.start.strftime("%I:%M %p")} - #{event.end.strftime("%I:%M %p")} "%></h2>
-
-    <p><%= event.location %></p>
-
     <% if (event.max_participants - event.reservations.count) == 0 %>
       <p><em>Complet</em></p>
     <% else %>

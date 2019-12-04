@@ -19,11 +19,17 @@ height: 7em;
   pointer: cursor;
 }
 
+.fa-bars{
+  font-size: 1em !important;
+}
+
 .fa-home{
   position:relative;
   color:white;
-  font-size: 3em;
-}
+  font-size: 2.5em;
+  margin-left: 8px;
+
+ }
 
 #photo-preview{
   width:100%;
