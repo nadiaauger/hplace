@@ -677,7 +677,7 @@ reserve.event = coiffure
 reserve.save
 reserve = Reservation.new
 reserve.user = jeanne
-reserve.event = nadia
+reserve.event = coiffure
 reserve.save
 reserve = Reservation.new
 reserve.user = chloe
