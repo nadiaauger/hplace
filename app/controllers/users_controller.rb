@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   def dashboard
     @user = current_user
     @registrations = @user.reservations
-    @name_page = 'TODO'
+    @name_page = 'Hplace'
 
   end
 
