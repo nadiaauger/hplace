@@ -3,14 +3,14 @@
   <div class="d-flex">
     <div>
     <% if notification.user.photo.attached? %>
-        <%= cl_image_tag notification.user.photo.key, height: 50, width: 50, crop: :fill, class: "avatar-large" %>
+        <%= cl_image_tag notification.user.photo.key, height: 50, width: 50, crop: :fill, class: "avatar" %>
     <% else %>
-        <%= cl_image_tag "smiley-logo.jpg", height: 50, width: 50, crop: :fill, class: "avatar-large" %>
+        <%= cl_image_tag "smiley-logo.jpg", height: 50, width: 50, crop: :fill, class: "avatar" %>
     <% end %>
     </div>
     <div class="notification-content">
       <p><small><%= ((Time.now - notification.created_at) / 60).to_i %> minutes ago</small></p>
-      <p>L'événement <strong> <%= notification.name %> </strong> organisé par <strong> <%= notification.user.username %> </strong> vient d'être créé. </p>
+      <p><strong> <%= notification.name %> </strong> a été créé par <strong> <%= notification.user.username %> </strong>.</p>
     </div>
   </div>
   <% end %>
@@ -19,9 +19,9 @@
     <div class="d-flex">
       <div>
         <% if notification.user.photo.attached? %>
-          <%= cl_image_tag notification.user.photo.key, height: 50, width: 50, crop: :fill, class: "avatar-large" %>
+          <%= cl_image_tag notification.user.photo.key, height: 50, width: 50, crop: :fill, class: "avatar" %>
         <% else %>
-          <%= cl_image_tag "smiley-logo.jpg", height: 50, width: 50, crop: :fill, class: "avatar-large" %>
+          <%= cl_image_tag "smiley-logo.jpg", height: 50, width: 50, crop: :fill, class: "avatar" %>
         <% end %>
       </div>
       <div class="notification-content">

@@ -1,7 +1,7 @@
 .notification-dropwdown .dropdown-menu {
-  width: 80vw;
-  top: 3em !important;
-  left: 5em !important;
+  width: 95vw;
+  top: -2em !important;
+  left: 1em !important;
   position: relative !important;
   padding: 0px;
 }
@@ -9,7 +9,7 @@
   content: "";
   position: absolute;
   top: -6px;
-  right: 4em;
+  right: 7em;
   width: 40px;
   height: 40px;
   border-radius: 10px;
@@ -17,4 +17,9 @@
   border: 1px solid rgba(0,0,0,0.1);
   z-index: -1;
   transform: rotateZ(45deg);
+}
+
+.body-grise{
+  background-color:black;
+  opacity:0.5;
 }

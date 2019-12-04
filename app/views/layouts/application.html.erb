@@ -24,15 +24,17 @@
         <%= render "shared/topbar" %>
       </div>
     <% end %>
-    <div class='sticky-navbar'>
-      <%= yield %>
+    <div class="body-to-grey">
+      <div class='sticky-navbar'>
+        <%= yield %>
+      </div>
+      <%#= render 'shared/navbar' %>
+      <%= render 'shared/flashes' %>
+      <%= render 'shared/notification_alert' %>
+      <% if user_signed_in? %>
+        <div id="show-notif" data-user="<%= current_user.id %>" >
+      <% end %>
     </div>
-    <%#= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
-    <%= render 'shared/notification_alert' %>
-    <% if user_signed_in? %>
-      <div id="show-notif" data-user="<%= current_user.id %>" >
-    <% end %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>

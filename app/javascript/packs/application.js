@@ -27,7 +27,6 @@ import { markNotificationSeen } from '../plugins/mark_notification_seen';
 import { counterParticipants } from '../components/counterParticipants'
 import "pluralize";
 
-
 flatPickrJs();
 eventFormExport();
 typedStringsExport();
@@ -36,7 +35,6 @@ window.scrollLastMessageIntoView = scrollLastMessageIntoView;
 markNotificationSeen();
 notifRefresh();
 previewImageOnFileSelect();
-
 if ( document.querySelector('#counter')) {
 counterParticipants();
 }
