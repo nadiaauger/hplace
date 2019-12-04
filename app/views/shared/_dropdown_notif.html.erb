@@ -1,24 +1,29 @@
 <div class="notification-dropwdown nav-item dropdown">
-  <%= simple_form_for target_user, url: notification_seen_path, method: :post, remote: true, html: {id: "form-notification-seen"} do |f| %>
-  <% end %>
-  <i class="fas fa-bell toggle-notifications" class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" /></i>
-  <div class="button_badge ">
-    <div class= "d-inline-flex align-items-center">
-      <p class="number-of-notif"></p>
+  <div class="d-flex">
+    <%= simple_form_for target_user, url: notification_seen_path, method: :post, remote: true, html: {id: "form-notification-seen"} do |f| %>
+    <% end %>
+    <div class="animation">
+      <i class="fas fa-bell toggle-notifications" class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" /></i>
+      <div class="button_badge ">
+        <div class= "d-inline-flex align-items-center">
+          <p class="number-of-notif"></p>
+        </div>
+      </div>
+
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <% target_user.unseen_notifications.first(3).each do |notification| %>
+            <div class="notification unseen" >
+              <%= render 'shared/notification', notification: notification %>
+            </div>
+          <% end %>
+          <% target_user.seen_notifications.first(3).each do |notification| %>
+            <div class="notification seen">
+              <%= render 'shared/notification', notification: notification %>
+            </div>
+          <% end %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "See more", notification_path, class: "dropdown-item text-center" %>
+      </div>
     </div>
-  </div>
-  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-    <% target_user.unseen_notifications.first(3).each do |notification| %>
-      <div class="notification unseen" >
-        <%= render 'shared/notification', notification: notification %>
-      </div>
-    <% end %>
-    <% target_user.seen_notifications.first(3).each do |notification| %>
-      <div class="notification seen">
-        <%= render 'shared/notification', notification: notification %>
-      </div>
-    <% end %>
-    <div class="dropdown-divider"></div>
-    <%= link_to "See more", notification_path, class: "dropdown-item text-center" %>
   </div>
 </div>
