@@ -8,10 +8,17 @@
     <h2> <i class="far fa-calendar-alt"></i><%= " #{I18n.localize(event.start, format: "%^a %d %^b")}" %></h2>
     <h2><i class="far fa-clock"></i> <%= "#{event.start.strftime("%I:%M %p")} - #{event.end.strftime("%I:%M %p")} "%></h2>
     <!-- A refaire pour evenement complet -->
+    <% if event.start.to_date == Time.now.to_date %>
+     <h2 class="agenda-card-header">AUJOURD'HUI</h2>
+     <% elsif event.start.to_date == (Time.now.to_date + 1) %>
+      <h2 class="agenda-card-header">DEMAIN</h2>
+      <% elsif "#{I18n.localize(event.start, format: "%^Y %W")}" == "#{I18n.localize(Time.now, format: "%^Y %W")}" %>
+       <h2 class="agenda-card-header"><%= "#{I18n.localize(event.start, format: "%^A")}"%></h2>
+     <% else %>
+       <h2 class="agenda-card-header"><%= "#{I18n.localize(event.start, format: "%^a %d %^b")}"%></h2>
+     <% end %>
     <% if (event.max_participants - event.reservations.count) == 0 %>
       <p><em>Complet</em></p>
-    <% else %>
-      <p><i class="far fa-user"></i>  Il reste <%= (event.max_participants - event.reservations.count) unless event.max_participants.nil? %> places</p>
     <% end %>
   </div>
     <%= link_to "", "#", class: "card-link", data: { toggle: "modal", target: "#event-show-#{event.id}"} %>

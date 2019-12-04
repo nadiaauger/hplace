@@ -1,8 +1,7 @@
 .topbar {
-background-image: linear-gradient(111.5deg, #1464c4 0.4%, #2198d6 100.2%);
+background: white;
 height: 7em;
-  color:white;
-  position:sticky;
+   position:sticky;
   top:0;
   z-index: 1;
 
@@ -15,20 +14,21 @@ height: 7em;
 
 .fa-bell{
   position:relative;
-  color:white;
+  color:#3f3f3f;
   pointer: cursor;
 }
 
 .fa-bars{
+  color:#3f3f3f;
   font-size: 1em !important;
 }
-
-.fa-home{
+.home-link{
   position:relative;
-  color:white;
-  font-size: 2.5em;
-  margin-left: 8px;
-
+}
+#logo{
+position: absolute;
+top:0;
+margin-top:7px;
  }
 
 #photo-preview{
@@ -80,7 +80,7 @@ height: 7em;
 }
 
 #create-event-cta {
-  background-color: $blue;
+ background: #EA4242;
   text-align: center;
   height: 7vh;
   justify-content: center;

@@ -10,7 +10,7 @@
 }
 
 .tabs-underlined .tab-underlined {
-  color: $blue;
+  color: #3f3f3f;
   margin: 8px 12px;
   padding:15px;
   margin-bottom:0px;
@@ -18,11 +18,15 @@
   cursor: pointer;
   text-decoration: none;
   border-bottom: 4px solid transparent;
+
+  h2{
+    font-size: 22px;
+  }
 }
 
 .tabs-underlined .tab-underlined.active {
   opacity: 1;
   border-bottom: 3px solid #555555;
-  border-color: $blue;
+  border-color: #EA4242;
 
 }

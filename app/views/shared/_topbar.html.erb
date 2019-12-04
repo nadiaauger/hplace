@@ -2,14 +2,11 @@
 <div class="container-topbar">
   <%#= link_to image_tag("arrow-left.png"), :back, id:"arrow-picto" %>
   <div class="d-flex align-items-center">
-    <div class="home-link d-flex justify-content-between mt-2">
-
-      <%= link_to dashboard_path() do  %>
-
-        <i class="fas fa-home" style="margin-right:1em; margin-left:0.3em;"></i>
-      <% end %>
-      <h1><%= @name_page %></h1>
-    </div>
+      <div id="logo">
+          <%= link_to dashboard_path() do  %>
+          <%= image_tag "ballon.png", height: 55 %>
+        <% end %>
+      </div>
     <div class= "links-dash d-flex justify-content-between" style = "width:3em">
       <div class="button_badge ">
         <!-- <div class= ""> -->
