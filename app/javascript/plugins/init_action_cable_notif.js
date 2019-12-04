@@ -4,11 +4,17 @@ const displayNotifications = (data) => {
   const badge = document.querySelector(".button_badge");
   const baniere = document.querySelector("#notification-alert");
   const nbNotif = document.querySelector(".number-of-notif");
+  const animation = document.querySelector(".animation");
   badge.style.display = "inline";
-  nbNotif.innerHTML = data.number_of_notifs
-  badge.classList.add('animated', 'pulse')
-  markNotificationSeen()
-  console.log(data)
+  nbNotif.innerHTML = data.number_of_notifs;
+  animation.classList.add('animated', 'tada');
+  const notificationContainer = document.getElementById('notifications');
+  if (notificationContainer) {
+    notificationContainer.innerHTML = data.notifications_html
+  }
+  console.log(data.notifications_html);
+  console.log("here");
+  markNotificationSeen();
 }
 
 
