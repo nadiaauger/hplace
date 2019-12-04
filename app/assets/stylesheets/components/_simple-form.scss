@@ -27,6 +27,7 @@
     color: #5a4747;
     justify-content: space-between;
   }
+
   div.input {
     margin-bottom: 10px;
     clear: both;
@@ -36,11 +37,13 @@
     border-bottom: 1px solid black;
 
    }
+
   label {
     float: left;
     width: 100px;
     text-align: right;
     margin: 2px 10px;
+    color: red;
    }
 }
 
@@ -62,9 +65,15 @@ div.boolean label {
 
 .third-block {
   margin-bottom: 15px;
+  text-align: center;
 }
 
 
 .actions {
   vertical-align: middle;
+}
+
+.maxpart p {
+  font-size: 20px;
+  text-align: center;
 }
