@@ -23,7 +23,7 @@ class Event < ApplicationRecord
         ActionCable.server.broadcast(
           "notification_for_user#{patient.id}",
           number_of_notifs: patient.number_of_notifications,
-          notifications_html: ActionController::Rendering.render_to_string(
+          notifications_html: ApplicationController.render(
             partial: "shared/dropdown_notif",
             locals: { target_user: patient }
           )
