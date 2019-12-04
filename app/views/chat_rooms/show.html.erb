@@ -31,7 +31,7 @@
           <%= render "messages/message", message: message, class_name: message_class %>
         <% end %>
       </div>
-      <div id="create-message" style="position: sticky;">
+      <div id="create-message">
         <%= simple_form_for [ @event, @chat_room, Message.new ], remote: true do |f| %>
           <%= f.input :content, label: false, as: :string %>
         <% end %>
