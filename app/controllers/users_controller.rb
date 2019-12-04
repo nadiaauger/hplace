@@ -25,8 +25,6 @@ class UsersController < ApplicationController
       resa.notified = true
       resa.save
     end
-    # @notifications_new.sort_by {|obj| obj.created_at}
-    # @notifications_seen.sort_by {|obj| obj.created_at}
   end
 
   def mark_notifications_seen

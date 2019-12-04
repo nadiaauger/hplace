@@ -153,59 +153,88 @@ tom.save
    chloe.hospital = st_louis
 chloe.photo.attach(io: file, filename: 'chloe.jpg', content_type: 'image/jpg')
 chloe.save
-file = URI.open('https://images.unsplash.com/photo-1533101585792-27f81a845550?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')
+ file = URI.open('https://images.unsplash.com/photo-1533101585792-27f81a845550?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')
+ 
    roger = User.new ({
     username:      'Roger',
     room:      '12',
     email: 'roger@gmail.com',
     password: '123456'
-  })
+   })
    roger.hospital = st_louis
 roger.photo.attach(io: file, filename: 'roger.jpg', content_type: 'image/jpg')
 roger.save
 file = URI.open('https://images.unsplash.com/photo-1444069069008-83a57aac43ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80')
+ 
    michel = User.new ({
     username:      'Michel',
     room:      '15',
     email: 'michel@gmail.com',
     password: '123456'
+ 
+
   })
+
    michel.hospital = st_louis
+
 michel.photo.attach(io: file, filename: 'michel.jpg', content_type: 'image/jpg')
 michel.save
+
 file = URI.open('https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
-   anna = User.new ({
+
+
+
+    anna = User.new ({
     username:      'Anna',
     room:      '15',
     email: 'anna@gmail.com',
     password: '123456'
+ 
+
   })
+
    anna.hospital = st_louis
+
 anna.photo.attach(io: file, filename: 'anna.jpg', content_type: 'image/jpg')
 anna.save
+
 file = URI.open('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')
-   sophie = User.new ({
+
+
+
+    sophie = User.new ({
     username:      'Sophie',
     room:      '15',
     email: 'sophie@gmail.com',
     password: '123456'
+ 
   })
+
    sophie.hospital = st_louis
+
 sophie.photo.attach(io: file, filename: 'sophie.jpg', content_type: 'image/jpg')
 sophie.save
+
 file = URI.open('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')
-   eddie = User.new ({
+
+    eddie = User.new ({
     username:      'Eddie',
     room:      '15',
     email: 'eddie@gmail.com',
     password: '123456'
+ 
+
   })
+
    eddie.hospital = st_louis
+
 eddie.photo.attach(io: file, filename: 'eddie.jpg', content_type: 'image/jpg')
 eddie.save
-puts 'Finished!'
+
+ puts 'Finished!'
 puts 'Creating events...'
 file = URI.open('https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
+ 
    belote = Event.new ({
     name:      'Belote',
     location:      'Cafeteria',
@@ -213,13 +242,18 @@ file = URI.open('https://images.unsplash.com/photo-1501003878151-d3cb87799705?ix
     end:          DateTime.new(2019,12,14,18),
     max_participants: 4,
     description: 'Je vous propose une petite partie de coinche pour se détendre, dans la bonne humeur. Je ramène le jeu de cartes!'
-  })
+   })
+ 
 belote.hospital = st_louis
 belote.user = leo
 belote.photo.attach(io: file, filename: 'belote.jpg', content_type: 'image/jpg')
 belote.save
+ 
+
 file = URI.open('https://images.pexels.com/photos/1329645/pexels-photo-1329645.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')
-   monopoly = Event.new ({
+
+
+    monopoly = Event.new ({
     name:      'monopoly',
     location:      'Cafeteria',
     start:          DateTime.new(2019,12,7,15),
@@ -227,12 +261,17 @@ file = URI.open('https://images.pexels.com/photos/1329645/pexels-photo-1329645.j
     max_participants: 4,
     description: 'Je vous propose une petite partie de monopoly pour se détendre, dans la bonne humeur. Je ramène le jeu !'
   })
+ 
 monopoly.hospital = st_louis
 monopoly.user = cyril
 monopoly.photo.attach(io: file, filename: 'monopoly.jpg', content_type: 'image/jpg')
 monopoly.save
+ 
+
 file = URI.open('https://www.regles-de-jeux.com/wp-content/uploads/2017/12/regle-bridge-1024x768.jpg')
-   bridge = Event.new ({
+
+
+    bridge = Event.new ({
     name:      'Partie de bridge',
     location:      'Cafeteria',
     start:          DateTime.new(2019,12,7,15),
@@ -240,11 +279,16 @@ file = URI.open('https://www.regles-de-jeux.com/wp-content/uploads/2017/12/regle
     max_participants: 4,
     description: 'Je vous propose une petite partie de bridge pour se détendre, dans la bonne humeur. Je ramène le jeu !'
   })
+ 
+
+ 
 bridge.hospital = st_louis
 bridge.user = cyril
 bridge.photo.attach(io: file, filename: 'bridge.jpg', content_type: 'image/jpg')
 bridge.save
-file = URI.open('https://images.unsplash.com/photo-1568270363382-992bd101f48e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
+ 
+
+ file = URI.open('https://images.unsplash.com/photo-1568270363382-992bd101f48e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
    tricot = Event.new ({
     name:      'Tricot',
     location:      'Salle M304',
