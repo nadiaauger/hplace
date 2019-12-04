@@ -7,11 +7,12 @@
   <div class="card-event-infos-new mt-0">
     <h2> <i class="far fa-calendar-alt"></i><%= " #{I18n.localize(event.start, format: "%^a %d %^b")}" %></h2>
     <h2><i class="far fa-clock"></i> <%= "#{event.start.strftime("%I:%M %p")} - #{event.end.strftime("%I:%M %p")} "%></h2>
-    <% if (event.max_participants - event.reservations.count) == 0 %>
+    <!-- A refaire pour evenement complet -->
+<!--     <%# if (event.max_participants - event.reservations.count) == 0 %>
       <p><em>Complet</em></p>
-    <% else %>
+    <%# else %>
       <p><i class="far fa-user"></i>  Il reste <%= (event.max_participants - event.reservations.count) unless event.max_participants.nil? %> places</p>
-    <% end %>
+    <%# end %> -->
   </div>
     <%= link_to "", "#", class: "card-link", data: { toggle: "modal", target: "#event-show-#{event.id}"} %>
   </div>
