@@ -1,0 +1,338 @@
+Searching 252 files for "link-dash" (case sensitive)
+
+0 matches
+
+Searching 252 files for "links-dash" (case sensitive)
+
+/Users/louislescure/code/nadiaauger/hplace/app/assets/stylesheets/pages/dashboard.scss:
+   20  }
+   21
+   22: .links-dash {
+   23    position: absolute;
+   24    font-size: 3em;
+
+/Users/louislescure/code/nadiaauger/hplace/app/views/shared/_topbar.html.erb:
+    8          <% end %>
+    9        </div>
+   10:     <div class= "links-dash d-flex justify-content-between" style = "width:3em">
+   11        <div class="button_badge ">
+   12          <!-- <div class= ""> -->
+
+2 matches across 2 files
+
+
+Searching 252 files for "discover-top" (case sensitive)
+
+/Users/louislescure/code/nadiaauger/hplace/app/assets/stylesheets/pages/dashboard.scss:
+   76    width: 80px;
+   77  }
+   78: .discover-top{
+   79    display: flex;
+   80    justify-content: space-between;
+
+/Users/louislescure/code/nadiaauger/hplace/app/views/users/dashboard.html.erb:
+   16  <div class="dashboard-main-container">
+   17    <div class="disc animated fadeIn mr-2" id="discover-container">
+   18:    <div class="discover-top">
+   19       <div class="home-title">
+   20         <p class="mb-0"><%="#{@user.hospital.events.count} événements"%></p>
+
+2 matches across 2 files
+
+
+Searching 252 files for "body" (case sensitive)
+
+/Users/louislescure/code/nadiaauger/hplace/package-lock.json:
+ 1467        "integrity": "sha512-ItfYfPLkWHUjckQCk8xC+LwxgK8NYcXywGigJgSwOP8Y2iyWT4f2vsZnoOXTTbo+o5yXmIUJ4gn5538SO5S3gA=="
+ 1468      },
+ 1469:     "body-parser": {
+ 1470        "version": "1.19.0",
+ 1471:       "resolved": "https://registry.npmjs.org/body-parser/-/body-parser-1.19.0.tgz",
+ 1472        "integrity": "sha512-dhEPs72UPbDnAQJ9ZKMNTP6ptJaionhP5cBb541nXPlW60Jepo9RV/a4fX4XWW9CuFNK22krhrj1+rgzifNCsw==",
+ 1473        "dev": true,
+ ....
+ 1481          "on-finished": "~2.3.0",
+ 1482          "qs": "6.7.0",
+ 1483:         "raw-body": "2.4.0",
+ 1484          "type-is": "~1.6.17"
+ 1485        },
+ ....
+ 3092          "accepts": "~1.3.7",
+ 3093          "array-flatten": "1.1.1",
+ 3094:         "body-parser": "1.19.0",
+ 3095          "content-disposition": "0.5.3",
+ 3096          "content-type": "~1.0.4",
+ ....
+ 7195        "dev": true
+ 7196      },
+ 7197:     "raw-body": {
+ 7198        "version": "2.4.0",
+ 7199:       "resolved": "https://registry.npmjs.org/raw-body/-/raw-body-2.4.0.tgz",
+ 7200        "integrity": "sha512-4Oz8DUIwdvoa5qMJelxipzi/iJIi40O5cGV1wNYp5hvZP8ZN0T+jiNkL0QepXs+EsQ9XJ8ipEDoiH70ySUJP3Q==",
+ 7201        "dev": true,
+
+/Users/louislescure/code/nadiaauger/hplace/yarn.lock:
+ 1277    integrity sha512-ItfYfPLkWHUjckQCk8xC+LwxgK8NYcXywGigJgSwOP8Y2iyWT4f2vsZnoOXTTbo+o5yXmIUJ4gn5538SO5S3gA==
+ 1278
+ 1279: body-parser@1.19.0:
+ 1280    version "1.19.0"
+ 1281:   resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.19.0.tgz#96b2709e57c9c4e09a6fd66a8fd979844f69f08a"
+ 1282    integrity sha512-dhEPs72UPbDnAQJ9ZKMNTP6ptJaionhP5cBb541nXPlW60Jepo9RV/a4fX4XWW9CuFNK22krhrj1+rgzifNCsw==
+ 1283    dependencies:
+ ....
+ 1290      on-finished "~2.3.0"
+ 1291      qs "6.7.0"
+ 1292:     raw-body "2.4.0"
+ 1293      type-is "~1.6.17"
+ 1294
+ ....
+ 2647      accepts "~1.3.7"
+ 2648      array-flatten "1.1.1"
+ 2649:     body-parser "1.19.0"
+ 2650      content-disposition "0.5.3"
+ 2651      content-type "~1.0.4"
+ ....
+ 5882    integrity sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
+ 5883
+ 5884: raw-body@2.4.0:
+ 5885    version "2.4.0"
+ 5886:   resolved "https://registry.yarnpkg.com/raw-body/-/raw-body-2.4.0.tgz#a1ce6fb9c9bc356ca52e89256ab59059e13d0332"
+ 5887    integrity sha512-4Oz8DUIwdvoa5qMJelxipzi/iJIi40O5cGV1wNYp5hvZP8ZN0T+jiNkL0QepXs+EsQ9XJ8ipEDoiH70ySUJP3Q==
+ 5888    dependencies:
+
+/Users/louislescure/code/nadiaauger/hplace/app/assets/images/Louis Lescure _ LinkedIn.htm:
+  122
+  123    <script src="./Louis Lescure _ LinkedIn_files/d3jol1ooo3z21pa5oz2pdpji"></script><link rel="stylesheet" href="./Louis Lescure _ LinkedIn_files/d8i9v1hbh2cy3nzocdqujr7u4"><script src="./Louis Lescure _ LinkedIn_files/d3qfmk22c36lovki8hyyavcm0"></script><link rel="stylesheet" href="./Louis Lescure _ LinkedIn_files/e0oxjhw3e3wa4v81sbl8c3i04"><script type="text/javascript" src="./Louis Lescure _ LinkedIn_files/utag.js" async=""></script><script type="text/javascript" async="" charset="utf-8" id="utag_linkedin.voyager-web-feed_119" src="./Louis Lescure _ LinkedIn_files/visitor-api.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_linkedin.voyager-web-feed_120" src="./Louis Lescure _ LinkedIn_files/dil.js"></script><script src="./Louis Lescure _ LinkedIn_files/d8rq5h2dci1fcs6wpf4a3ilu4"></script><link rel="stylesheet" href="./Louis Lescure _ LinkedIn_files/aau9tf3u600m6aigsru4ntilw"><script src="./Louis Lescure _ LinkedIn_files/72hwxnzpbj3zzc5ojwltn7ol7"></script><link rel="stylesheet" href="./Louis Lescure _ LinkedIn_files/3qmx7bskgdhfp0x0wq4ieex9w"><script type="text/javascript" async="" charset="utf-8" id="utag_linkedin.voyager-web-feed_121" src="./Louis Lescure _ LinkedIn_files/utag.121.js"></script><script src="./Louis Lescure _ LinkedIn_files/coa7f3ykpl4n59lxspa6n42h5"></script><script src="./Louis Lescure _ LinkedIn_files/2fmky67o2l8ti8gtzaoiz8jqx"></script><link rel="stylesheet" href="./Louis Lescure _ LinkedIn_files/bqq3r25aaqb9id6ms2frrpfow"><script src="./Louis Lescure _ LinkedIn_files/akem1dgn1td88dka8cfb9tq09"></script><link rel="stylesheet" href="./Louis Lescure _ LinkedIn_files/27ingl83ov0kttzb33mklwpti"><script src="./Louis Lescure _ LinkedIn_files/bfm5niaikpp27z3qwe92vm118"></script><script src="./Louis Lescure _ LinkedIn_files/2566v14u14bsd1uf67oqtrj5y"></script><link rel="stylesheet" href="./Louis Lescure _ LinkedIn_files/dalt1lftyvw2im5ekwxyswnic"><script src="./Louis Lescure _ LinkedIn_files/cico85hfezf0d34fq0lahd5kh"></script><link rel="stylesheet" href="./Louis Lescure _ LinkedIn_files/7noikqwzsp1lkrqpothtsym4v"><script src="./Louis Lescure _ LinkedIn_files/b2gbawj4a9emuvhatf43x2n1g"></script><link rel="stylesheet" href="./Louis Lescure _ LinkedIn_files/cjrwqjdnhkzsz48c1gk3j3amt"><script src="./Louis Lescure _ LinkedIn_files/be65640ij0dw43nab09d770cp"></script><link rel="stylesheet" href="./Louis Lescure _ LinkedIn_files/610x8jncibbhoi2scucy64tg2"><script src="./Louis Lescure _ LinkedIn_files/c89xo3kyw9biw8iy5224i83"></script><link rel="stylesheet" href="./Louis Lescure _ LinkedIn_files/8yz86md431124ixrdtpn6792"><script src="./Louis Lescure _ LinkedIn_files/bww0sl3cwp8nbu9wqe8amz9ha"></script><link rel="stylesheet" href="./Louis Lescure _ LinkedIn_files/7wl8snbe30qulvarkoqkdiu99"><script src="./Louis Lescure _ LinkedIn_files/bvygbe6qczf04e0r242sezt5d"></script><link rel="stylesheet" href="./Louis Lescure _ LinkedIn_files/5fz44udcxg84ear3340ek7lkf"><script type="text/javascript" src="./Louis Lescure _ LinkedIn_files/utag(1).js" async=""></script><script type="text/javascript" async="" charset="utf-8" id="utag_linkedin.voyager-web-jobs_51" src="./Louis Lescure _ LinkedIn_files/visitor-api(1).js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_linkedin.voyager-web-jobs_52" src="./Louis Lescure _ LinkedIn_files/dil(1).js"></script><script src="./Louis Lescure _ LinkedIn_files/627akdzkpflen19jcwcgf9ykt"></script><link rel="stylesheet" href="./Louis Lescure _ LinkedIn_files/ame5o61i009c1qm0d7oevls9o"><script src="./Louis Lescure _ LinkedIn_files/76u1gzfwzn4c9jerr801bqr7x"></script><link rel="stylesheet" href="./Louis Lescure _ LinkedIn_files/2zkdzsmux32y63i079kihz0hh"><script type="text/javascript" async="" charset="utf-8" id="utag_linkedin.voyager-web-jobs_14" src="./Louis Lescure _ LinkedIn_files/utag.14.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_linkedin.voyager-web-jobs_22" src="./Louis Lescure _ LinkedIn_files/utag.22.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_linkedin.voyager-web-jobs_29" src="./Louis Lescure _ LinkedIn_files/utag.29.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_linkedin.voyager-web-jobs_54" src="./Louis Lescure _ LinkedIn_files/utag.54.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_linkedin.voyager-web-jobs_60" src="./Louis Lescure _ LinkedIn_files/utag.60.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_linkedin.voyager-web-jobs_64" src="./Louis Lescure _ LinkedIn_files/utag.64.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_linkedin.voyager-web-jobs_16" src="./Louis Lescure _ LinkedIn_files/utag.16.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_linkedin.voyager-web-jobs_17" src="./Louis Lescure _ LinkedIn_files/utag.17.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_linkedin.voyager-web-jobs_30" src="./Louis Lescure _ LinkedIn_files/utag.30.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_linkedin.voyager-web-jobs_34" src="./Louis Lescure _ LinkedIn_files/utag.34.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_linkedin.voyager-web-jobs_55" src="./Louis Lescure _ LinkedIn_files/utag.55.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_linkedin.voyager-web-jobs_61" src="./Louis Lescure _ LinkedIn_files/utag.61.js"></script><script src="./Louis Lescure _ LinkedIn_files/841wyl6tpex0spfygin2n7ksv"></script><link rel="stylesheet" href="./Louis Lescure _ LinkedIn_files/4uhq9f04k7xz9erynsybeh0yh"><script src="./Louis Lescure _ LinkedIn_files/3d7ha4y47wcfpi2fcmnqt83d4"></script><link rel="stylesheet" href="./Louis Lescure _ LinkedIn_files/92875s8kq317bhy5a0rfduk95"><script src="./Louis Lescure _ LinkedIn_files/jbevef2eshsf90hs9udzeno3"></script><script src="./Louis Lescure _ LinkedIn_files/8gq9abeur2x3h4h1h0v7j79r7"></script><script src="./Louis Lescure _ LinkedIn_files/eitbtprpdmaqdj2y6ie4458y"></script><link rel="stylesheet" href="./Louis Lescure _ LinkedIn_files/cz6t85h5a5obm1p3bahuw21bf"><script src="./Louis Lescure _ LinkedIn_files/91f0p6zoid50d2tigmx72ygxe"></script><link rel="stylesheet" href="./Louis Lescure _ LinkedIn_files/qtz4nyz131mx39ta3g4bg6cd"></head>
+  124:   <body dir="ltr" class="render-mode-BIGPIPE nav-v2 ember-application boot-complete icons-loaded" data-t-link-to-event-attached="true" cz-shortcut-listen="true">
+  125      <!-- HUED-11420 -->
+  126      <div id="artdeco-toasts__wormhole">  <section id="artdeco-toasts" class="artdeco-toasts">
+  ...
+  234  </code>
+  235  <code style="display: none" id="datalet-bpr-guid-4744481">
+  236:   {"request":"/voyager/api/takeovers","status":200,"body":"bpr-guid-4744481"}
+  237  </code>
+  238  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="display: none" class="datalet-bpr-guid-4744481"><code style="display: none" id="bpr-guid-4744482">
+  ...
+  240  </code>
+  241  <code style="display: none" id="datalet-bpr-guid-4744482">
+  242:   {"request":"/voyager/api/premium/featureAccess?name\u003DreactivationFeaturesEligible","status":200,"body":"bpr-guid-4744482"}
+  243  </code>
+  244  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="display: none" class="datalet-bpr-guid-4744482"><code style="display: none" id="bpr-guid-4744483">
+  ...
+  246  </code>
+  247  <code style="display: none" id="datalet-bpr-guid-4744483">
+  248:   {"request":"/voyager/api/nav","status":200,"body":"bpr-guid-4744483"}
+  249  </code>
+  250  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="display: none" class="datalet-bpr-guid-4744483"><code style="display: none" id="bpr-guid-4744484">
+  ...
+  252  </code>
+  253  <code style="display: none" id="datalet-bpr-guid-4744484">
+  254:   {"request":"/voyager/api/identity/dash/profilePrivacySettings?decorationId\u003Dcom.linkedin.voyager.dash.deco.identity.profile.PrivacySettings-3","status":200,"body":"bpr-guid-4744484"}
+  255  </code>
+  256  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="display: none" class="datalet-bpr-guid-4744484"><code style="display: none" id="bpr-guid-4744485">
+  ...
+  258  </code>
+  259  <code style="display: none" id="datalet-bpr-guid-4744485">
+  260:   {"request":"/voyager/api/identity/profiles/louis-lescure-19a157199/privacySettings","status":200,"body":"bpr-guid-4744485"}
+  261  </code>
+  262  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="display: none" class="datalet-bpr-guid-4744485"><code style="display: none" id="bpr-guid-4744486">
+  ...
+  264  </code>
+  265  <code style="display: none" id="datalet-bpr-guid-4744486">
+  266:   {"request":"/voyager/api/identity/profiles/louis-lescure-19a157199/memberBadges","status":200,"body":"bpr-guid-4744486"}
+  267  </code>
+  268  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="display: none" class="datalet-bpr-guid-4744486"><code style="display: none" id="bpr-guid-4744487">
+  ...
+  270  </code>
+  271  <code style="display: none" id="datalet-bpr-guid-4744487">
+  272:   {"request":"/voyager/api/me","status":200,"body":"bpr-guid-4744487"}
+  273  </code>
+  274  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="display: none" class="datalet-bpr-guid-4744487"><code style="display: none" id="bpr-guid-4744488">
+  ...
+  276  </code>
+  277  <code style="display: none" id="datalet-bpr-guid-4744488">
+  278:   {"request":"/voyager/api/identity/profiles/louis-lescure-19a157199/networkinfo","status":200,"body":"bpr-guid-4744488"}
+  279  </code>
+  280  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="display: none" class="datalet-bpr-guid-4744488"><code style="display: none" id="bpr-guid-4744489">
+  ...
+  282  </code>
+  283  <code style="display: none" id="datalet-bpr-guid-4744489">
+  284:   {"request":"/voyager/api/identity/profiles/ACoAAC55YUYBpmBjfuCTlSfu2EzyXJxtGe-3m60/versionTag","status":200,"body":"bpr-guid-4744489"}
+  285  </code>
+  286  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="display: none" class="datalet-bpr-guid-4744489"><code style="display: none" id="bpr-guid-4744490">
+  ...
+  288  </code>
+  289  <code style="display: none" id="datalet-bpr-guid-4744490">
+  290:   {"request":"/voyager/api/identity/profiles/louis-lescure-19a157199/memberConnections?count\u003D5\u0026q\u003Dconnections","status":200,"body":"bpr-guid-4744490"}
+  291  </code>
+  292  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="display: none" class="datalet-bpr-guid-4744490"><code style="display: none" id="bpr-guid-4744491">
+  ...
+  294  </code>
+  295  <code style="display: none" id="datalet-bpr-guid-4744491">
+  296:   {"request":"/voyager/api/identity/dash/profiles?q\u003DmemberIdentity\u0026memberIdentity\u003Dlouis-lescure-19a157199\u0026decorationId\u003Dcom.linkedin.voyager.dash.deco.identity.profile.FullProfileWithEntities-35","status":200,"body":"bpr-guid-4744491"}
+  297  </code>
+  298  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="display: none" class="datalet-bpr-guid-4744491"><code style="display: none" id="bpr-guid-4744492">
+  ...
+  300  </code>
+  301  <code style="display: none" id="datalet-bpr-guid-4744492">
+  302:   {"request":"/voyager/api/identity/notificationSegments?appName\u003DVOYAGER\u0026segmentCardCount\u003D1","status":200,"body":"bpr-guid-4744492"}
+  303  </code>
+  304  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="display: none" class="datalet-bpr-guid-4744492"><code style="display: none" id="bpr-guid-4744493">
+  ...
+  306  </code>
+  307  <code style="display: none" id="datalet-bpr-guid-4744493">
+  308:   {"request":"/voyager/api/identity/profiles/louis-lescure-19a157199/profileActions","status":200,"body":"bpr-guid-4744493"}
+  309  </code>
+  310  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="display: none" class="datalet-bpr-guid-4744493"><code style="display: none" id="bpr-guid-4744494">
+  ...
+  312  </code>
+  313  <code style="display: none" id="datalet-bpr-guid-4744494">
+  314:   {"request":"/voyager/api/identity/profiles/louis-lescure-19a157199/opportunityCards?q\u003Dgoals","status":200,"body":"bpr-guid-4744494"}
+  315  </code>
+  316  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="display: none" class="datalet-bpr-guid-4744494"><code style="display: none" id="clientPageInstance">
+  ...
+  395  <div class="authentication-outlet">
+  396    <div id="profile-content" class="extended">
+  397:   <div class="body">
+  398      <div id="profile-wrapper" class="pv-profile-wrapper pv-profile-wrapper--below-nav">
+  399      <iframe src="./Louis Lescure _ LinkedIn_files/saved_resource.html" class="pv-profile-wrapper__empty-iframe"></iframe>
+  ...
+ 1558    <iframe sandbox="allow-scripts" style="display:none;" src="./Louis Lescure _ LinkedIn_files/radar.html">
+ 1559    </iframe>
+ 1560: </div><iframe sandbox="allow-scripts allow-same-origin" title="Adobe ID Syncing iFrame" id="destination_publishing_iframe_lnkd_0" name="destination_publishing_iframe_lnkd_0_name" src="./Louis Lescure _ LinkedIn_files/dest5.html" style="display: none; width: 0px; height: 0px;" class="aamIframeLoaded"></iframe></body></html>
+
+/Users/louislescure/code/nadiaauger/hplace/app/assets/stylesheets/README.md:
+   87    <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
+   88    <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
+   89: </body>
+   90  ```
+   91  ## Adding new `.scss` files
+
+/Users/louislescure/code/nadiaauger/hplace/app/assets/stylesheets/components/_modal_show_event.scss:
+   22  }
+   23
+   24: .modal-body {
+   25    padding: 0rem;
+   26  }
+
+/Users/louislescure/code/nadiaauger/hplace/app/assets/stylesheets/config/_bootstrap_variables.scss:
+    5
+    6  // General style
+    7: $font-family-sans-serif:  $body-font;
+    8  $headings-font-family:    $headers-font;
+    9: $body-bg:                 $light-gray;
+   10  $font-size-base: .5rem;
+   11
+   12  // Colors
+   13: $body-color: $gray;
+   14  $primary:    $blue;
+   15  $success:    $green;
+
+/Users/louislescure/code/nadiaauger/hplace/app/assets/stylesheets/config/_fonts.scss:
+    1  // Import Google fonts
+    2  @import url('https://fonts.googleapis.com/css?family=Domine:400,700|Roboto:400,500,700&display=swap');
+    3: // Define fonts for body and headers
+    4
+    5  $headers-font: 'Roboto', sans-serif;
+    6: $body-font: 'Roboto', sans-serif;
+    7
+    8  p {
+
+/Users/louislescure/code/nadiaauger/hplace/app/assets/stylesheets/pages/_home.scss:
+    1: .body-home {
+    2    background-color: $coral;
+    3    height: 60vh;
+
+/Users/louislescure/code/nadiaauger/hplace/app/views/layouts/application.html.erb:
+   19      <meta name="theme-color" content="#ffffff">
+   20    </head>
+   21:   <body>
+   22      <% if user_signed_in? %>
+   23        <div class="topbar">
+   ..
+   36      <%= javascript_include_tag 'application' %>
+   37      <%= javascript_pack_tag 'application' %>
+   38:   </body>
+   39  </html>
+   40
+
+/Users/louislescure/code/nadiaauger/hplace/app/views/layouts/mailer.html.erb:
+    8    </head>
+    9
+   10:   <body>
+   11      <%= yield %>
+   12:   </body>
+   13  </html>
+   14
+
+/Users/louislescure/code/nadiaauger/hplace/app/views/pages/home.html.erb:
+    1: <div class="body-home">
+    2
+    3    <div class="text-home">
+
+/Users/louislescure/code/nadiaauger/hplace/app/views/shared/_events_modal.html.erb:
+    3      <div class="modal-dialog" role="document">
+    4        <div class="modal-content">
+    5:         <div class="modal-body">
+    6              <%= render 'shared/modal_show_event', event: event %>
+    7              <div class="d-flex justify-content-around mt-3">
+
+/Users/louislescure/code/nadiaauger/hplace/config/locales/fr.yml:
+  144           other: ne fait pas la bonne longueur (doit comporter %{count} caractères)
+  145       template:
+  146:        body: 'Veuillez vérifier les champs suivants : '
+  147         header:
+  148           one: 'Impossible d''enregistrer ce(tte) %{model} : 1 erreur'
+
+/Users/louislescure/code/nadiaauger/hplace/public/404.html:
+   55  </head>
+   56
+   57: <body class="rails-default-error-page">
+   58    <!-- This file lives in public/404.html -->
+   59    <div class="dialog">
+   ..
+   64      <p>If you are the application owner check the logs for more information.</p>
+   65    </div>
+   66: </body>
+   67  </html>
+   68
+
+/Users/louislescure/code/nadiaauger/hplace/public/422.html:
+   55  </head>
+   56
+   57: <body class="rails-default-error-page">
+   58    <!-- This file lives in public/422.html -->
+   59    <div class="dialog">
+   ..
+   64      <p>If you are the application owner check the logs for more information.</p>
+   65    </div>
+   66: </body>
+   67  </html>
+   68
+
+/Users/louislescure/code/nadiaauger/hplace/public/500.html:
+   55  </head>
+   56
+   57: <body class="rails-default-error-page">
+   58    <!-- This file lives in public/500.html -->
+   59    <div class="dialog">
+   ..
+   63      <p>If you are the application owner check the logs for more information.</p>
+   64    </div>
+   65: </body>
+   66  </html>
+   67
+
+54 matches across 16 files
+
+
+Searching 252 files for "body {" (case sensitive)
+
+/Users/louislescure/code/nadiaauger/hplace/app/assets/stylesheets/components/_modal_show_event.scss:
+   22  }
+   23
+   24: .modal-body {
+   25    padding: 0rem;
+   26  }
+
+1 match in 1 file

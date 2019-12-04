@@ -22,8 +22,8 @@ h2 {
 .links-dash {
   position: absolute;
   font-size: 3em;
-  right: 5%;
-  top: 20%;
+  right: 16px;
+  top: 12px;
   list-style: none;
 
 }
@@ -80,6 +80,9 @@ h2 {
   justify-content: space-between;
   margin: 0 1em;
   margin-top:1em;
+  p{
+    color:#EF8F6F;
+  }
 }
 
 .disc{
