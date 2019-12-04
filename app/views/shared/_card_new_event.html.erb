@@ -1,6 +1,6 @@
 <div class="card-event-new card-home-new  <%= 'past-event' if event.end < DateTime.now %>">
       <div class='event-image' style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path event.photo.key%>')">
- 
+
   <div class="card-top">
     <h1 class="card-title"><%= event.name %></h1>
   </div>
@@ -16,5 +16,5 @@
     <%= link_to "", "#", class: "card-link", data: { toggle: "modal", target: "#event-show-#{event.id}"} %>
   </div>
 </div>
-</div>
+
 
