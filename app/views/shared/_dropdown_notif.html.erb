@@ -2,7 +2,7 @@
   <div class="d-flex">
     <%= simple_form_for target_user, url: notification_seen_path, method: :post, remote: true, html: {id: "form-notification-seen"} do |f| %>
     <% end %>
-    <div class="animation">
+    <div class="animation helping">
       <i class="fas fa-bell toggle-notifications" class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" /></i>
       <div class="button_badge ">
         <div class= "d-inline-flex align-items-center">
@@ -16,7 +16,7 @@
               <%= render 'shared/notification', notification: notification %>
             </div>
           <% end %>
-          <% target_user.seen_notifications.first(3).each do |notification| %>
+          <% target_user.seen_notifications.first(5).each do |notification| %>
             <div class="notification seen">
               <%= render 'shared/notification', notification: notification %>
             </div>

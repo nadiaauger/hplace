@@ -8,7 +8,7 @@
   p{
   font-size:small;
     strong{
-      color:$light-blue;
+      color:#1D88D1;
     }
   }
 }
@@ -34,7 +34,7 @@
 
 .dropdown-item {
   font-size:14px;
-  color:$light-blue;
+  color:#1D88D1;
   font-weight:bold;
 }
 
@@ -44,15 +44,19 @@
 }
 
 .notification.unseen{
-  background: $light-gray;
-  border-left : 1rem solid;
-  border-color: #00909e;
+  background: black;
+  opacity:0.5;
+  border-left : 0.5rem solid;
+  border-color: #1D88D1;
   background: white;
 }
 
 .notification .notification-content {
   flex-grow: 1;
   padding: 0 24px;
+  p{
+    font-weight: 500;
+  }
 }
 
 .notification p {
