@@ -4,8 +4,9 @@ Rails.application.routes.draw do
 
 
   resources :users, only: [:show]
+  resources :reservations, only: [:destroy]
   resources :events, only: [:show, :new, :create,:edit, :update] do
-    resources :reservations, only: [:create, :destroy]
+    resources :reservations, only: [:create]
     resources :chat_rooms, only: [:create, :show] do
       resources :messages, only: [:create]
     end

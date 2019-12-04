@@ -5,7 +5,7 @@ class ReservationsController < ApplicationController
     @reservation.event = Event.find(params[:event_id])
     if @reservation.save
       respond_to do |format|
-        format.html {  redirect_to event_path(@reservation.event) }
+        format.html {  redirect_to dashboard_path }
         format.js
       end
     end
@@ -13,11 +13,10 @@ class ReservationsController < ApplicationController
 
   def destroy
     user = current_user
-    event = Event.find(params[:event_id])
-    @reservation = Reservation.find_by(user: user, event: event)
+    @reservation = Reservation.find(params[:id])
     @reservation.destroy
     respond_to do |format|
-      format.html { redirect_to event_path(event) }
+      format.html { redirect_to dashboard_path }
       format.js
     end
   end
