@@ -325,7 +325,7 @@ file = URI.open('https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ix
     description: "On m'a offert une Playstation ce weekend, qui veut venir jouer à Fifa avec moi ??"
   })
 fifa.hospital = st_louis
-fifa.user = nadia
+fifa.user = donald
 fifa.photo.attach(io: file, filename: 'fifa.jpg', content_type: 'image/jpg')
 fifa.save
 file = URI.open('https://images.unsplash.com/photo-1535016120720-40c646be5580?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
@@ -341,6 +341,7 @@ film.hospital = st_louis
 film.user = tom
 film.photo.attach(io: file, filename: 'film.jpg', content_type: 'image/jpg')
 film.save
+
 file = URI.open('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
    code = Event.new ({
     name:      'Apprendre à coder',
@@ -364,7 +365,7 @@ file = URI.open('https://images.pexels.com/photos/167446/pexels-photo-167446.jpe
     location:      'Cafeteria',
     start:          DateTime.new(2019,12,7,15),
     end:          DateTime.new(2019,12,7,18),
-    max_participants: 4,
+    max_participants: 10,
     description: 'Il paraît que tout le monde a une voix qui vaut le détour! Retrouvons-nous pour pousser la chansonnette !',
   })
 
@@ -569,6 +570,14 @@ reserve = Reservation.new
 reserve.user = nadia
 reserve.event = belote
 reserve.save
+reserve = Reservation.new
+reserve.user = sophie
+reserve.event = belote
+reserve.save
+reserve = Reservation.new
+reserve.user = tom
+reserve.event = belote
+reserve.save
 
 reserve = Reservation.new
 reserve.user = nadia
@@ -582,31 +591,149 @@ reserve = Reservation.new
 reserve.user = clemence
 reserve.event = impro
 reserve.save
-
 reserve = Reservation.new
-reserve.user = tom
-reserve.event = belote
+reserve.user = boris
+reserve.event = impro
 reserve.save
 reserve = Reservation.new
 reserve.user = donald
-reserve.event = belote
+reserve.event = impro
+reserve.save
+
+
+
+reserve = Reservation.new
+reserve.user = sophie
+reserve.event = tricot
 reserve.save
 reserve = Reservation.new
 reserve.user = chloe
-reserve.event = belote
+reserve.event = tricot
+reserve.save
+reserve = Reservation.new
+reserve.user = roger
+reserve.event = tricot
+reserve.save
+reserve = Reservation.new
+reserve.user = anna
+reserve.event = tricot
+reserve.save
+
+reserve = Reservation.new
+reserve.user = sophie
+reserve.event = lecture
+reserve.save
+reserve = Reservation.new
+reserve.user = boris
+reserve.event = lecture
+reserve.save
+reserve = Reservation.new
+reserve.user = clemence
+reserve.event = lecture
+reserve.save
+
+reserve = Reservation.new
+reserve.user = jeanne
+reserve.event = jardin
+reserve.save
+reserve = Reservation.new
+reserve.user = michel
+reserve.event = jardin
+reserve.save
+reserve = Reservation.new
+reserve.user = stephane
+reserve.event = jardin
+reserve.save
+
+reserve = Reservation.new
+reserve.user = jeanne
+reserve.event = tisane
+reserve.save
+reserve = Reservation.new
+reserve.user = anna
+reserve.event = tisane
+reserve.save
+reserve = Reservation.new
+reserve.user = eddie
+reserve.event = tisane
+reserve.save
+reserve = Reservation.new
+reserve.user = cyril
+reserve.event = tisane
+reserve.save
+
+reserve = Reservation.new
+reserve.user = jeanne
+reserve.event = blabla
+reserve.save
+reserve = Reservation.new
+reserve.user = jean
+reserve.event = blabla
+reserve.save
+
+reserve = Reservation.new
+reserve.user = sarah
+reserve.event = coiffure
+reserve.save
+reserve = Reservation.new
+reserve.user = jeanne
+reserve.event = nadia
+reserve.save
+reserve = Reservation.new
+reserve.user = chloe
+reserve.event = coiffure
+reserve.save
+reserve = Reservation.new
+reserve.user = nadia
+reserve.event = coiffure
+reserve.save
+reserve = Reservation.new
+reserve.user = clemence
+reserve.event = coiffure
+reserve.save
+
+reserve = Reservation.new
+reserve.user = eddie
+reserve.event = depart
 reserve.save
 reserve = Reservation.new
 reserve.user = leo
-reserve.event = tricot
+reserve.event = depart
+reserve.save
+reserve = Reservation.new
+reserve.user = nadia
+reserve.event = depart
 reserve.save
 reserve = Reservation.new
 reserve.user = chloe
-reserve.event = tricot
+reserve.event = depart
 reserve.save
 reserve = Reservation.new
-reserve.user = tom
-reserve.event = tricot
+reserve.user = clemence
+reserve.event = depart
 reserve.save
+reserve = Reservation.new
+reserve.user = roger
+reserve.event = depart
+reserve.save
+
+reserve = Reservation.new
+reserve.user = stephane
+reserve.event = bataille
+reserve.save
+reserve = Reservation.new
+reserve.user = jean
+reserve.event = bataille
+reserve.save
+reserve = Reservation.new
+reserve.user = sophie
+reserve.event = bataille
+reserve.save
+reserve = Reservation.new
+reserve.user = michel
+reserve.event = bataille
+reserve.save
+
 reserve = Reservation.new
 reserve.user = tom
 reserve.event = code
@@ -623,4 +750,64 @@ reserve = Reservation.new
 reserve.user = donald
 reserve.event = code
 reserve.save
+reserve = Reservation.new
+reserve.user = leo
+reserve.event = code
+reserve.save
+
+reserve = Reservation.new
+reserve.user = tom
+reserve.event = discussion
+reserve.save
+reserve = Reservation.new
+reserve.user = chloe
+reserve.event = discussion
+reserve.save
+reserve = Reservation.new
+reserve.user = anna
+reserve.event = discussion
+reserve.save
+reserve = Reservation.new
+reserve.user = boris
+reserve.event = discussion
+reserve.save
+
+reserve = Reservation.new
+reserve.user = donald
+reserve.event = fifa
+reserve.save
+reserve = Reservation.new
+reserve.user = tom
+reserve.event = fifa
+reserve.save
+reserve = Reservation.new
+reserve.user = cyril
+reserve.event = fifa
+reserve.save
+reserve = Reservation.new
+reserve.user = sophie
+reserve.event = fifa
+reserve.save
+reserve = Reservation.new
+reserve.user = nadia
+reserve.event = fifa
+reserve.save
+
+reserve = Reservation.new
+reserve.user = anna
+reserve.event = chant
+reserve.save
+reserve = Reservation.new
+reserve.user = roger
+reserve.event = chant
+reserve.save
+reserve = Reservation.new
+reserve.user = michel
+reserve.event = chant
+reserve.save
+reserve = Reservation.new
+reserve.user = clemence
+reserve.event = chant
+reserve.save
+
 puts 'Finished!'
