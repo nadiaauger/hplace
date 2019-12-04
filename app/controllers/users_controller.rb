@@ -25,7 +25,15 @@ class UsersController < ApplicationController
       resa.notified = true
       resa.save
     end
-    # @notifications_new.sort_by {|obj| obj.created_at}
-    # @notifications_seen.sort_by {|obj| obj.created_at}
+  end
+
+  def mark_notifications_seen
+    current_user.events_created_by_someone_else_not_seen_yet.each do |event|
+      EventSeen.create(user: current_user, event: event)
+    end
+    current_user.reservations_on_my_own_events_not_yet_seen.each do |resa|
+      resa.notified = true
+      resa.save
+    end
   end
 end

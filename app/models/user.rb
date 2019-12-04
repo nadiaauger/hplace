@@ -54,10 +54,12 @@ class User < ApplicationRecord
   end
 
   def unseen_notifications
-    events_created_by_someone_else_not_seen_yet + reservations_on_my_own_events_not_yet_seen
+    unseen_notifications = (events_created_by_someone_else_not_seen_yet + reservations_on_my_own_events_not_yet_seen).sort_by { |obj| obj.created_at }
+    unseen_notifications.reverse
   end
 
   def seen_notifications
-    events_created_by_someone_else_already_seen + reservations_on_my_own_events_already_seen
+    seen_notifications = (events_created_by_someone_else_already_seen + reservations_on_my_own_events_already_seen).sort_by { |obj| obj.created_at }
+    seen_notifications.reverse
   end
 end

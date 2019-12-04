@@ -1,14 +1,53 @@
 .notification {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
   background: white;
   padding: 8px 16px;
   border: 1px solid rgb(235,235,235);
+
+  p{
+  font-size:small;
+    strong{
+      color:$light-blue;
+    }
+  }
+}
+
+.button_badge {
+  background-color: #fa3e3e;
+  border-radius: 50%;
+  z-index: 1;
+  font-size: 0.5em;
+  left: 1em;
+  top: -5px;
+  height: 2em;
+  width: 2em;
+  display: none;
+  position:absolute;
+
+  p{
+    color:white;
+    top: auto;
+    text-align: center;
+  }
+}
+
+.dropdown-item {
+  font-size:14px;
+  color:$light-blue;
+  font-weight:bold;
 }
 
 .notification.seen{
   background: $light-gray;
+
+}
+
+.notification.unseen{
+  background: $light-gray;
+  border-left : 1rem solid;
+  border-color: #00909e;
+  background: white;
 }
 
 .notification .notification-content {

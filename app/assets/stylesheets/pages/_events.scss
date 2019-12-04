@@ -1,19 +1,6 @@
-.button_badge {
-  background-color: #fa3e3e;
-  border-radius: 50%;
-  color: white;
-  z-index: 1;
-  font-size: 0.5em;
-  left: -1em;
-  top:0;
-  p{
-    color:white;
-  }
-}
-
 .topbar {
-  background-color: $blue;
-  height: 7em;
+background-image: linear-gradient(111.5deg, #1464c4 0.4%, #2198d6 100.2%);
+height: 7em;
   color:white;
   position:sticky;
   top:0;
@@ -92,12 +79,12 @@
   height: 7vh;
   justify-content: center;
   font-weight: bold;
-  margin-top: 30px;
+  color: white;
 }
 
-.justify-content-center {
-  height: 100vh;
-}
+// .justify-content-center {
+//   height: 100vh;
+// }
 
 .actions {
   vertical-align: middle;

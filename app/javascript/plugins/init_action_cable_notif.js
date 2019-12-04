@@ -1,10 +1,13 @@
+import { markNotificationSeen } from './mark_notification_seen'
+
 const displayNotifications = (data) => {
   const badge = document.querySelector(".button_badge");
   const baniere = document.querySelector("#notification-alert");
   const nbNotif = document.querySelector(".number-of-notif");
+  badge.style.display = "inline";
   nbNotif.innerHTML = data.number_of_notifs
-  badge.style.display = "block";
-  // baniere.style.display = "inline";
+  badge.classList.add('animated', 'pulse')
+  markNotificationSeen()
   console.log(data)
 }
 

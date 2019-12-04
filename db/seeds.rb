@@ -425,6 +425,11 @@ file = URI.open('https://images.unsplash.com/photo-1501003878151-d3cb87799705?ix
     end:          DateTime.new(2019,12,14,18),
     max_participants: 4,
     description: 'Je vous propose une petite partie de coinche pour se détendre, dans la bonne humeur. Je ramène le jeu de cartes!'
+     start:        DateTime.new(2019,12,9,10),
+    end:         DateTime.new(2019,12,9,14),
+    max_participants: 6,
+    description: 'We rely on advertising to provide you with free content! Our third-party vendors or we use cookies to access and use information about your device to ensure the proper functioning of our website or as required for: personalization; ad selection, delivery, and reporting; content selection.'
+ 
   })
 
 
@@ -567,6 +572,44 @@ code.hospital = st_louis
 code.user = leo
 code.photo.attach(io: file, filename: 'code.jpg', content_type: 'image/jpg')
 code.save
+
+file = URI.open('https://images.unsplash.com/photo-1490914327627-9fe8d52f4d90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
+
+
+
+   macarons = Event.new ({
+    name:      'Dégustation de macarons',
+    location:      'Salle H-657',
+    start:        DateTime.new(2019,12,20,16),
+    end:         DateTime.new(2019,12,20,17),
+    max_participants: 8,
+    description: 'We rely on advertising to provide you with free content! Our third-party vendors or we use cookies to access and use information about your device to ensure the proper functioning of our website or as required for: personalization; ad selection, delivery, and reporting; content selection.'
+  })
+
+
+macarons.hospital = st_louis
+macarons.user = nadia
+macarons.photo.attach(io: file, filename: 'macarons.jpg', content_type: 'image/jpg')
+macarons.save
+
+
+
+file = URI.open('https://images.unsplash.com/photo-1474899452492-5eea44100ec4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80')
+
+foot = Event.new ({
+    name:      'Visonnement Champiosn League',
+    location:      'Salle G-321',
+    start:        DateTime.new(2019,12,11,21),
+    end:         DateTime.new(2019,12,11,23),
+    max_participants: 8,
+    description: 'We rely on advertising to provide you with free content! Our third-party vendors or we use cookies to access and use information about your device to ensure the proper functioning of our website or as required for: personalization; ad selection, delivery, and reporting; content selection.'
+  })
+
+
+foot.hospital = st_louis
+foot.user = boris
+foot.photo.attach(io: file, filename: 'foot.jpg', content_type: 'image/jpg')
+foot.save
 
 puts 'Finished!'
 

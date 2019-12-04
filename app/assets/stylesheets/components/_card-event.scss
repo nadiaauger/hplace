@@ -20,8 +20,6 @@
   position: absolute;
   top: .5em;
   right: .5em;
-  color: #F9D35F;
-  font-size: 2em;
 }
 
 .card-agenda img {
@@ -68,8 +66,13 @@
   display: inline-grid;
   min-width:80%;
   margin: 1em;
+
   &:first-child {
     margin-left: 2em;
+  }
+  &:last-child{
+    margin-right: 2em;
+
   }
 
    .event-image{
@@ -112,7 +115,7 @@
 .card-event-infos-new{
   position: absolute;
   bottom:0;
-  left:23px;
+  left: 5px;
   margin: 1.5rem
 }
 .card-event-new .card-link{
@@ -154,7 +157,6 @@
   justify-content: left;
   vertical-align: middle;
   align-items: center;
-  margin-bottom: 10px;
   font-size: 16px;
 }
 
