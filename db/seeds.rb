@@ -241,9 +241,10 @@ file = URI.open('https://images.unsplash.com/photo-1501003878151-d3cb87799705?ix
     start:          DateTime.new(2019,12,14,15),
     end:          DateTime.new(2019,12,14,18),
     max_participants: 4,
-    description: 'Je vous propose une petite partie de coinche pour se détendre, dans la bonne humeur. Je ramène le jeu de cartes!'
-   })
- 
+    description: 'Je vous propose une petite partie de coinche pour se détendre, dans la bonne humeur. Je ramène le jeu de cartes!',
+
+  })
+
 belote.hospital = st_louis
 belote.user = leo
 belote.photo.attach(io: file, filename: 'belote.jpg', content_type: 'image/jpg')
