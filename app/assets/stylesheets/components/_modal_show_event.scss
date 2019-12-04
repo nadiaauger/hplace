@@ -1,0 +1,27 @@
+.banner-modal {
+  height: 50vh;
+  margin: 0px !important;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+  }
+  p {
+    color: white;
+    opacity: .8;
+    font-size: 15px;
+    font-weight: lighter;
+  }
+  .btn {
+
+  }
+}
+
+.modal-body {
+  padding: 0rem;
+}
