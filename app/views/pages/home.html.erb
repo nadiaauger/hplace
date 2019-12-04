@@ -47,8 +47,7 @@
 <div class="top-events-new">
   <h2 style="margin-top: 1em; margin-left: 1em; margin-bottom: 1em;">Événements à venir</h2>
   <div class="cards-new container">
-    <% best_events = [Event.find_by(name: "Belotte"), Event.find_by(name: "Tricot"), Event.find_by(name: "Uno")] %>
-    <% best_events.each do |event| %>
+    <% @best_events.each do |event| %>
       <%= render  'shared/card_new_event', event: event%>
     <% end %>
   </div>

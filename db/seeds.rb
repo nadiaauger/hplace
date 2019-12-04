@@ -424,12 +424,8 @@ file = URI.open('https://images.unsplash.com/photo-1501003878151-d3cb87799705?ix
     start:          DateTime.new(2019,12,14,15),
     end:          DateTime.new(2019,12,14,18),
     max_participants: 4,
-    description: 'Je vous propose une petite partie de coinche pour se détendre, dans la bonne humeur. Je ramène le jeu de cartes!'
-     start:        DateTime.new(2019,12,9,10),
-    end:         DateTime.new(2019,12,9,14),
-    max_participants: 6,
-    description: 'We rely on advertising to provide you with free content! Our third-party vendors or we use cookies to access and use information about your device to ensure the proper functioning of our website or as required for: personalization; ad selection, delivery, and reporting; content selection.'
- 
+    description: 'Je vous propose une petite partie de coinche pour se détendre, dans la bonne humeur. Je ramène le jeu de cartes!',
+
   })
 
 
