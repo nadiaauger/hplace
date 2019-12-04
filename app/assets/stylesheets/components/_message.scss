@@ -6,7 +6,7 @@
   border: 1px solid #ececec;
   border-top: none;
   border-bottom-width: 0;
-  max-height: calc(100vh - 70px - 45px - 61px - 30px);
+  height: calc(100vh - 70px - 45px - 61px - 30px - 30px);
   overflow: scroll;
 }
 
@@ -37,6 +37,9 @@
   background-color: #ffffff;
   margin-bottom: 20px;
   border: 1px solid #ececec;
+  position: sticky;
+  bottom: 0px;
+
 }
 .message_content {
   margin-bottom: 0;
@@ -87,3 +90,4 @@ input.form-control {
   top: 0;
   bottom: 0;
 }
+
