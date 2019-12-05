@@ -1,5 +1,6 @@
 .banner-modal {
   height: 50vh;
+  position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -23,4 +24,14 @@
 
 .modal-body {
   padding: 0rem;
+}
+
+.closing-button {
+  font-weight: bold;
+  font-size: 3em;
+  position: absolute;
+  right: 0.8em;
+  top: 0.5em;
+  color: white !important;
+  opacity: 10 !important;
 }
