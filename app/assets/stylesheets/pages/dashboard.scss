@@ -12,7 +12,7 @@
 h2 {
   a{
     text-decoration: none;
-    color:black;
+    color: #3f3f3f;
     &:hover{
       opacity: 0.8;
     }
@@ -43,6 +43,10 @@ h2 {
 .home-title{
   margin-left: 1em;
   margin-top: 1em;
+
+  h1{
+    color: #3f3f3f
+  }
 }
 .profil-image-name {
   // position: absolute;
