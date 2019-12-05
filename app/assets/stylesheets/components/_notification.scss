@@ -6,9 +6,9 @@
   border: 1px solid rgb(235,235,235);
 
   p{
-  font-size:small;
+
     strong{
-      color:#1D88D1;
+      color: #EA4242;
     }
   }
 }
@@ -54,9 +54,6 @@
 .notification .notification-content {
   flex-grow: 1;
   padding: 0 24px;
-  p{
-    font-weight: 500;
-  }
 }
 
 .notification p {
@@ -66,7 +63,6 @@
 
 .notification small {
   color: #999999;
-  font-weight: bold;
 }
 .notification .notification-actions {
   opacity: 0;
@@ -109,4 +105,46 @@
 
 #notification-alert{
   display:none;
+}
+
+.notification-dropwdown .dropdown-menu {
+  width: 95vw;
+  top: -2em !important;
+  left: 1em !important;
+  position: relative !important;
+  padding: 0px;
+}
+.notification-dropwdown .dropdown-menu:before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: 7em;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: white;
+  border: 1px solid rgba(0,0,0,0.1);
+  z-index: -1;
+  transform: rotateZ(45deg);
+}
+
+.body-grise{
+  background: rgba(0,0,0,0.8);
+  z-index:400000000000!important;
+  height: 200vh;
+}
+
+.body-grise .card-event-new.card-home-new {
+  opacity:0.3!important
+}
+
+.animation.helping.show {
+    width: 1px;
+}
+
+.notification .notification-content p {
+  font-size:15px;
+  &:hover{
+    text-decoration: none;
+  }
 }

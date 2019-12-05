@@ -9,8 +9,8 @@
     <% end %>
     </div>
     <div class="notification-content">
-      <p><small><%= ((Time.now - notification.created_at) / 60).to_i %> minutes ago</small></p>
       <p><strong> <%= notification.name %> </strong> a été créé par <strong> <%= notification.user.username %> </strong>.</p>
+      <p><small><%= ((Time.now - notification.created_at) / 60).to_i %> minutes ago</small></p>
     </div>
   </div>
   <% end %>
@@ -25,8 +25,8 @@
         <% end %>
       </div>
       <div class="notification-content">
-        <p><small><%= ((Time.now - notification.created_at) / 60).to_i %> minutes ago</small></p>
         <p><strong> <%= notification.user.username %> </strong> a rejoint votre événement <strong> <%= notification.event.name %>.</strong></p>
+        <p><small><%= ((Time.now - notification.created_at) / 60).to_i %> minutes ago</small></p>
       </div>
     </div>
   <% end %>
