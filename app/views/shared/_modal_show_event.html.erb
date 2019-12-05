@@ -31,11 +31,11 @@
       <div class="d-flex justify-content-between">
         <%= render 'shared/chat_btn'  %>
       </div>
-    <% elsif Reservation.where(user: current_user, event: event).first.exists? %>
+    <% elsif Reservation.where(user: current_user, event: event).exists? %>
     <%= render 'shared/participe_call_to_action', reservation: Reservation.where(user: current_user, event: event).first %>
     <% else %>
     <div class="participe d-none">
-      <%= link_to "Participer", event_reservations_path(@event), method: :post, remote: true, class: "btn-participer d-block"%>
+    <%= render 'shared/participe_call_to_action', reservation: Reservation.where(user: current_user, event: event).first %>
 
      </div>
     <div class="participe-pas">

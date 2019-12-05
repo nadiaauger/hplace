@@ -26,7 +26,7 @@
        <% events = @user.hospital.events.sort_by {|event| event.start} %>
        <% events.each do |event| %>
          <% unless event.date.nil? %>
-           <%= (render 'shared/card_new_event', event: event) if event.date > DateTime.now %>
+           <%= (render 'shared/card_new_event', event: event) if event.start > DateTime.now %>
          <% end %>
        <% end %>
    </div>
