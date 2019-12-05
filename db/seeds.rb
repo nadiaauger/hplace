@@ -298,9 +298,10 @@ bridge.save
    tricot = Event.new ({
     name:      'Tricot',
     location:      'Salle M304',
-    date:             DateTime.new(2019,12,16),
-    start:         DateTime.new(2019,12,16,15),
-    end:         DateTime.new(2019,12,16,17),
+     date:           DateTime.new(2019,12,10),
+    start:         DateTime.new(2019,12,4,15),
+    end:         DateTime.new(2019,12,4,17),
+ 
     max_participants: 6,
     description: 'Atelier démo pour apprendre à faire du tricot au point mousse pour cet hiver.'
   })
