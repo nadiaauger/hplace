@@ -7,17 +7,19 @@ import "flatpickr/dist/flatpickr.min.css" // Note this is important!
 const flatPickrJs = () => {
   flatpickr(".startpicker", {
     enableTime: true,
+    enableSeconds: false,
     noCalendar: true,
     dateFormat: "H:i",
-    time_24hr: true,
-    defaultDate: "14:00"
+    time_12hr: true,
+    defaultDate: "10:00",
 });
     flatpickr(".endpicker", {
       enableTime: true,
+      enableSeconds: false,
       noCalendar: true,
       dateFormat: "H:i",
-      time_24hr: true,
-      defaultDate: "17:00"
+      time_12hr: true,
+      defaultDate: "12:00"
   });
 
 
