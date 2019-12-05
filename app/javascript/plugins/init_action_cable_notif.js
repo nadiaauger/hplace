@@ -5,7 +5,7 @@ const displayNotifications = (data) => {
   const baniere = document.querySelector("#notification-alert");
   const nbNotif = document.querySelector(".number-of-notif");
   const animation = document.querySelector(".animation");
-  badge.style.display = "inline";
+  badge.style.display = "flex";
   nbNotif.innerHTML = data.number_of_notifs;
   animation.classList.add('animated', 'tada');
   const notificationContainer = document.getElementById('notifications');
