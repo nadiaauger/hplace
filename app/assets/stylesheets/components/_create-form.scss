@@ -27,4 +27,22 @@
 
 .horaires {
   width: 100%;
+  justify-content: flex-between;
 }
+
+// input::placeholder {
+//   color: rgb(222, 226, 230) !important;
+//   font-size: 20px;
+// }
+
+#event_name::placeholder{
+    color: #bdbdbd;
+}
+
+#event_location::placeholder{
+    color: #bdbdbd;
+}
+
+
+
+

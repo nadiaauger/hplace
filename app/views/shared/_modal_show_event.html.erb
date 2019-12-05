@@ -7,7 +7,12 @@
   <div class="container">
     <div class="d-flex tete-single-event">
       <h1> <%= event.name %> </h1>
-      <p id="date-event-show"> <%= @event.start.day %>/<%= @event.start.month %></p>
+      <p id="date-event-show">
+        <% if @event.date == nil %>
+          <p class="date-event-show"><%= Date.today.strftime("%d %b %Y") %></p>
+        <% else %>
+          <p class="date-event-show"> <%= @event.date.day %>/<%= @event.date.month %></p>
+        <% end %></p>
       <% if current_user == event.user %>
         <div class="update-event">
            <%= link_to edit_event_path(event) do %>
@@ -26,17 +31,16 @@
       <div class="d-flex justify-content-between">
         <%= render 'shared/chat_btn'  %>
       </div>
-    <% elsif Reservation.where(user: current_user, event: event).exists? %>
+    <% elsif Reservation.where(user: current_user, event: event).first.exists? %>
     <%= render 'shared/participe_call_to_action', reservation: Reservation.where(user: current_user, event: event).first %>
     <% else %>
     <div class="participe d-none">
-      <%#= render 'shared/participe_call_to_action' %>
-      <%= link_to " Participer", event_reservations_path(@event), method: :post, remote: true, class: "btn-participer d-block"%>
+      <%= link_to "Participer", event_reservations_path(@event), method: :post, remote: true, class: "btn-participer d-block"%>
 
      </div>
     <div class="participe-pas">
       <% if event.reservations.count < event.max_participants %>
-        <%= link_to " Participer", event_reservations_path(@event), method: :post, remote: true, class: "btn-participer d-block"%>
+        <%= link_to "Participer", event_reservations_path(@event), method: :post, remote: true, class: "btn-participer d-block"%>
       <% else %>
         <p class="btn-complete d-block">Complet</p>
       <% end %>

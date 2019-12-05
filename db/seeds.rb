@@ -83,9 +83,11 @@ file = URI.open('https://images.pexels.com/photos/1181686/pexels-photo-1181686.j
   clemence.hospital = st_louis
 clemence.photo.attach(io: file, filename: 'clemence.jpg', content_type: 'image/jpg')
 clemence.save
- file = URI.open('https://i.pinimg.com/originals/24/c6/50/24c65066e5a0df1548b96f52f88fec74.jpg')
+
+
+ file = URI.open('https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')
    donald = User.new ({
-    username:      'TheDonald',
+    username:      'Donald',
     room:      'Florida',
     email: 'donald@gmail.com',
     password: '123456'
@@ -238,6 +240,7 @@ file = URI.open('https://images.unsplash.com/photo-1501003878151-d3cb87799705?ix
    belote = Event.new ({
     name:      'Belote',
     location:      'Cafeteria',
+    date:             DateTime.new(2019,12,14),
     start:          DateTime.new(2019,12,14,15),
     end:          DateTime.new(2019,12,14,18),
     max_participants: 4,
@@ -257,8 +260,9 @@ file = URI.open('https://images.pexels.com/photos/1329645/pexels-photo-1329645.j
     monopoly = Event.new ({
     name:      'monopoly',
     location:      'Cafeteria',
-    start:          DateTime.new(2019,12,7,15),
-    end:          DateTime.new(2019,12,7,18),
+    date:             DateTime.new(2019,12,11),
+    start:          DateTime.new(2019,12,11,15),
+    end:          DateTime.new(2019,12,11,18),
     max_participants: 4,
     description: 'Je vous propose une petite partie de monopoly pour se détendre, dans la bonne humeur. Je ramène le jeu !'
   })
@@ -275,8 +279,9 @@ file = URI.open('https://www.regles-de-jeux.com/wp-content/uploads/2017/12/regle
     bridge = Event.new ({
     name:      'Partie de bridge',
     location:      'Cafeteria',
-    start:          DateTime.new(2019,12,7,15),
-    end:          DateTime.new(2019,12,7,18),
+    date:             DateTime.new(2019,12,20),
+    start:          DateTime.new(2019,12,20,15),
+    end:          DateTime.new(2019,12,20,18),
     max_participants: 4,
     description: 'Je vous invite à une petite partie de bridge pour se détendre, dans la bonne humeur. Je ramène le jeu !'
   })
@@ -293,8 +298,10 @@ bridge.save
    tricot = Event.new ({
     name:      'Tricot',
     location:      'Salle M304',
+     date:           DateTime.new(2019,12,10),
     start:         DateTime.new(2019,12,4,15),
     end:         DateTime.new(2019,12,4,17),
+ 
     max_participants: 6,
     description: 'Atelier démo pour apprendre à faire du tricot au point mousse pour cet hiver.'
   })
@@ -306,8 +313,9 @@ file = URI.open('https://images.unsplash.com/photo-1556112353-ad4fb98d81e7?ixlib
    uno = Event.new ({
     name:      'Partie de Uno',
     location:      'Salle A204',
-    start:          DateTime.new(2019,12,9,15),
-    end:         DateTime.new(2019,12,9,17),
+    date:             DateTime.new(2019,12,15),
+    start:          DateTime.new(2019,12,15,15),
+    end:         DateTime.new(2019,12,15,17),
     max_participants: 8,
     description: 'Le Uno reste une valeur sûre pour passer une bonne après-midi.'
   })
@@ -319,8 +327,9 @@ file = URI.open('https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ix
    fifa = Event.new ({
     name:      'Tournoi de fifa',
     location:      'Salle de Television',
-    start:         DateTime.new(2019,12,16,11),
-    end:          DateTime.new(2019,12,16,13),
+    date:             DateTime.new(2019,12,18),
+    start:         DateTime.new(2019,12,18,21),
+    end:          DateTime.new(2019,12,18,23),
     max_participants: 8,
     description: "On m'a offert une Playstation ce weekend, qui veut venir jouer à Fifa avec moi ??"
   })
@@ -332,8 +341,9 @@ file = URI.open('https://images.unsplash.com/photo-1535016120720-40c646be5580?ix
    film = Event.new ({
     name:      'Projection des Miserables',
     location:      'Salle A204',
-    start:         DateTime.new(2019,12,27,15),
-    end:         DateTime.new(2019,12,27,18),
+    date:             DateTime.new(2019,12,19),
+    start:         DateTime.new(2019,12, 19,15),
+    end:         DateTime.new(2019,12,19,18),
     max_participants: 8,
     description: 'Le film Les Misérables est un grand classique du cinéma qui vaut le détour, je vous propose une projection ensemble'
   })
@@ -346,8 +356,9 @@ file = URI.open('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ix
    code = Event.new ({
     name:      'Apprendre à coder',
     location:      'Salle détente',
-    start:         DateTime.new(2019,12,7,15),
-    end:         DateTime.new(2019,12,7,17),
+    date:             DateTime.new(2019,12,14),
+    start:         DateTime.new(2019,12,14,15),
+    end:         DateTime.new(2019,12,14,17),
     max_participants: 8,
     description: 'L\'année dernière, j\'ai fait une formation intensive en dévelopment web. J\'adorerais partager ce que j\'ai appris avec ceux qui seraient intéressés. Ma spécialité etait le Javascript. Au menu: comment coder un super boutons avec de effets de ouf!',
   })
@@ -363,8 +374,9 @@ file = URI.open('https://images.pexels.com/photos/167446/pexels-photo-167446.jpe
     chant = Event.new ({
     name:      'Chant à capella',
     location:      'Cafeteria',
-    start:          DateTime.new(2019,12,7,15),
-    end:          DateTime.new(2019,12,7,18),
+    date:             DateTime.new(2019,12,5),
+    start:          DateTime.new(2019,12,5,15),
+    end:          DateTime.new(2019,12,5,18),
     max_participants: 10,
     description: 'Il paraît que tout le monde a une voix qui vaut le détour! Retrouvons-nous pour pousser la chansonnette !',
   })
@@ -380,8 +392,9 @@ file = URI.open('https://images.pexels.com/photos/2420585/pexels-photo-2420585.j
     discussion = Event.new ({
     name:      'discussion sur la pluie et le beau temps',
     location:      'Cafeteria',
-    start:          DateTime.new(2019,12,17,15),
-    end:          DateTime.new(2019,12,17,17),
+    date:             DateTime.new(2019,12,11),
+    start:          DateTime.new(2019,12,11,10),
+    end:          DateTime.new(2019,12,11,13),
     max_participants: 10,
     description: 'Nous sommes pas mal de nouveaux patients, et si on se retrouvait pour faire connaissance?',
   })
@@ -395,10 +408,11 @@ file = URI.open('https://images.pexels.com/photos/713149/pexels-photo-713149.jpe
 
 
     impro = Event.new ({
-    name:      'Initiation au théêtre d\'impro',
+    name:      'Initiation au théâtre d\'impro',
     location:      'Cafeteria',
-    start:          DateTime.new(2019,12,23,15),
-    end:          DateTime.new(2019,12,23,18),
+    date:             DateTime.new(2019,12,9),
+    start:          DateTime.new(2019,12,9,14),
+    end:          DateTime.new(2019,12,9,18),
     max_participants: 8,
     description: 'Le théâtre d\'impro est excellent pour la santé ! On essaie ensemble ? Même si vous êtes timide venez quand même !'
   })
@@ -412,10 +426,11 @@ file = URI.open('https://images.pexels.com/photos/973403/pexels-photo-973403.jpe
 
 
     coiffure = Event.new ({
-    name:      'Apprendre à jouer avec sa coiffure',
+    name:      'Se faire de super coiffures',
     location:      'Ma chambre, 207',
-    start:          DateTime.new(2019,12,22,10),
-    end:          DateTime.new(2019,12,22,13),
+    date:             DateTime.new(2019,12,6),
+    start:          DateTime.new(2019,12,6,10),
+    end:          DateTime.new(2019,12,6,13),
     max_participants: 6,
     description: 'Changer de coiffure fait du bien au moral ! Je peux vous montrer comment se faire des tresses indiennes super jolies en quelques minutes',
   })
@@ -431,8 +446,9 @@ file = URI.open('https://images.pexels.com/photos/6453/nature-flowers-plant-spri
     blabla = Event.new ({
     name:      'Simplement faire connaissance',
     location:      'Cafeteria',
-    start:          DateTime.new(2019,12,21,10),
-    end:          DateTime.new(2019,12,21,13),
+    date:             DateTime.new(2019,12,4),
+    start:          DateTime.new(2019,12,4,10),
+    end:          DateTime.new(2019,12,4,13),
     max_participants: 8,
     description: 'Je suis nouveau à l\'hôpital et je serai content de pouvoir passer du temps avec vous'
   })
@@ -448,8 +464,9 @@ file = URI.open('https://images.pexels.com/photos/6453/nature-flowers-plant-spri
     bataille = Event.new ({
     name:      'Bataille corse',
     location:      'Salle 203',
-    start:          DateTime.new(2019,12,14,10),
-    end:          DateTime.new(2019,12,14,12),
+    date:             DateTime.new(2019,12,12),
+    start:          DateTime.new(2019,12,12,10),
+    end:          DateTime.new(2019,12,12,12),
     max_participants: 4,
     description: 'Des intéressés par une petite bataille corse ? '
   })
@@ -465,8 +482,9 @@ file = URI.open('https://images.pexels.com/photos/1753411/pexels-photo-1753411.j
     tisane = Event.new ({
     name:      'Tisane de Noël',
     location:      'Salon du RDC',
-    start:          DateTime.new(2019,12,21,17),
-    end:          DateTime.new(2019,12,21,18),
+    date:             DateTime.new(2019,12,23),
+    start:          DateTime.new(2019,12,23,17),
+    end:          DateTime.new(2019,12,23,18),
     max_participants: 4,
     description: 'La tisane de l\'amitié, juste avant Noël. Je dispose de plusieurs tisanes délicieuses à vous faire goûter.'
   })
@@ -482,8 +500,9 @@ file = URI.open('https://images.pexels.com/photos/381739/pexels-photo-381739.jpe
     jardin = Event.new ({
     name:      'Promenade dans le jardin',
     location:      'Jardin',
-    start:          DateTime.new(2019,12,21,14),
-    end:          DateTime.new(2019,12,21,15),
+    date:             DateTime.new(2019,12,17),
+    start:          DateTime.new(2019,12,17,14),
+    end:          DateTime.new(2019,12,17,15),
     max_participants: 8,
     description: 'Une petite promenade digestive fait toujours plaisir, qui se joint à moi?'
   })
@@ -499,8 +518,9 @@ file = URI.open('https://images.pexels.com/photos/259698/pexels-photo-259698.jpe
     chanson = Event.new ({
     name:      'Chantons ensemble',
     location:      'Refectoire',
-    start:          DateTime.new(2019,12,20,15),
-    end:          DateTime.new(2019,12,20,17),
+    date:             DateTime.new(2019,12,14),
+    start:          DateTime.new(2019,12,14,15),
+    end:          DateTime.new(2019,12,14,17),
     max_participants: 15,
     description: 'L\'équipe médicale organise pour nous une session de chants de Noël, ça va être super beau, il faut être nombreux !'
   })
@@ -517,6 +537,7 @@ file = URI.open('https://images.pexels.com/photos/1708601/pexels-photo-1708601.j
     depart = Event.new ({
     name:      'Mon départ de la clinique',
     location:      'Cafeteria',
+    date:             DateTime.new(2019,12,18),
     start:          DateTime.new(2019,12,18,15),
     end:          DateTime.new(2019,12,18,17),
     max_participants: 15,
@@ -535,6 +556,7 @@ file = URI.open('https://images.pexels.com/photos/1708601/pexels-photo-1708601.j
     priere = Event.new ({
     name:      'Prière de Noël',
     location:      'Salon',
+    date:             DateTime.new(2019,12,25),
     start:          DateTime.new(2019,12,25,15),
     end:          DateTime.new(2019,12,25,17),
     max_participants: 10,
@@ -553,8 +575,9 @@ file = URI.open('https://images.pexels.com/photos/1257105/pexels-photo-1257105.j
     lecture = Event.new ({
     name:      'Lecture pour enfants',
     location:      'chambre 46',
-    start:          DateTime.new(2019,12,22,15),
-    end:          DateTime.new(2019,12,22,17),
+    date:             DateTime.new(2019,12,4),
+    start:          DateTime.new(2019,12,4,15),
+    end:          DateTime.new(2019,12,4,17),
     max_participants: 5,
     description: 'Mon fils sera ravi de partager ses livres avec les autres enfants et de lire tous ensemble'
   })
@@ -580,6 +603,10 @@ reserve.event = belote
 reserve.save
 
 reserve = Reservation.new
+reserve.user = jeanne
+reserve.event = impro
+reserve.save
+reserve = Reservation.new
 reserve.user = nadia
 reserve.event = impro
 reserve.save
@@ -601,7 +628,10 @@ reserve.event = impro
 reserve.save
 
 
-
+reserve = Reservation.new
+reserve.user = nadia
+reserve.event = tricot
+reserve.save
 reserve = Reservation.new
 reserve.user = sophie
 reserve.event = tricot
@@ -611,14 +641,14 @@ reserve.user = chloe
 reserve.event = tricot
 reserve.save
 reserve = Reservation.new
-reserve.user = roger
-reserve.event = tricot
-reserve.save
-reserve = Reservation.new
 reserve.user = anna
 reserve.event = tricot
 reserve.save
 
+reserve = Reservation.new
+reserve.user = sarah
+reserve.event = lecture
+reserve.save
 reserve = Reservation.new
 reserve.user = sophie
 reserve.event = lecture
@@ -633,7 +663,7 @@ reserve.event = lecture
 reserve.save
 
 reserve = Reservation.new
-reserve.user = jeanne
+reserve.user = jean
 reserve.event = jardin
 reserve.save
 reserve = Reservation.new
@@ -646,7 +676,7 @@ reserve.event = jardin
 reserve.save
 
 reserve = Reservation.new
-reserve.user = jeanne
+reserve.user = sophie
 reserve.event = tisane
 reserve.save
 reserve = Reservation.new
@@ -663,6 +693,10 @@ reserve.event = tisane
 reserve.save
 
 reserve = Reservation.new
+reserve.user = chloe
+reserve.event = blabla
+reserve.save
+reserve = Reservation.new
 reserve.user = jeanne
 reserve.event = blabla
 reserve.save
@@ -671,6 +705,10 @@ reserve.user = jean
 reserve.event = blabla
 reserve.save
 
+reserve = Reservation.new
+reserve.user = clemence
+reserve.event = coiffure
+reserve.save
 reserve = Reservation.new
 reserve.user = sarah
 reserve.event = coiffure
@@ -685,10 +723,6 @@ reserve.event = coiffure
 reserve.save
 reserve = Reservation.new
 reserve.user = nadia
-reserve.event = coiffure
-reserve.save
-reserve = Reservation.new
-reserve.user = clemence
 reserve.event = coiffure
 reserve.save
 
@@ -735,6 +769,10 @@ reserve.event = bataille
 reserve.save
 
 reserve = Reservation.new
+reserve.user = leo
+reserve.event = code
+reserve.save
+reserve = Reservation.new
 reserve.user = tom
 reserve.event = code
 reserve.save
@@ -748,10 +786,6 @@ reserve.event = code
 reserve.save
 reserve = Reservation.new
 reserve.user = donald
-reserve.event = code
-reserve.save
-reserve = Reservation.new
-reserve.user = leo
 reserve.event = code
 reserve.save
 
