@@ -35,3 +35,9 @@
 .dropdown-menu .dropdown-menu-right {
   width: 50px;
 }
+
+.dropdown-menu.dropdown-menu-right.show {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 13px;
+  border-top: 0px;
+}

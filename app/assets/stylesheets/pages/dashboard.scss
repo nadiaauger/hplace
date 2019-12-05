@@ -36,9 +36,18 @@ h2 {
 }
 
 .dropdown-item {
-  font-size: 20px;
+  font-size: 14px;
   text-align: right;
+  color: grey;
+  font-weight: normal;
 }
+
+.dropdown-item:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+
 
 .home-title{
   margin-left: 1em;
