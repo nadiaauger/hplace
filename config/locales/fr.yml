@@ -151,7 +151,7 @@
      select:
        prompt: Veuillez sélectionner
      submit:
-       create: CREER L'EVENEMENT
+       create: Créer l'événement
        submit: Enregistrer ce(tte) %{model}
        update: Modifier ce(tte) %{model}
    number:
