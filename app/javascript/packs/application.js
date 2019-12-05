@@ -19,6 +19,7 @@ import { scrollLastMessageIntoView } from "../plugins/scroll";
 import "../plugins/typed";
 
 import { notifRefresh } from "../plugins/init_action_cable_notif";
+import { dismissAlert } from "../plugins/dismiss-alerts";
 
 
 import { previewImageOnFileSelect } from '../plugins/photopreview';
@@ -40,4 +41,6 @@ previewImageOnFileSelect();
 if ( document.querySelector('#counter')) {
 counterParticipants();
 }
+
+dismissAlert();
 

@@ -1,8 +1,10 @@
 class ReservationsController < ApplicationController
   def create
     @reservation = Reservation.new()
+    @event = Event.find(params[:event_id])
     @reservation.user = current_user
-    @reservation.event = Event.find(params[:event_id])
+    @reservation.event = @event
+
     if @reservation.save
       respond_to do |format|
         format.html {  redirect_to dashboard_path }

@@ -1,13 +1,14 @@
 
-if (document.querySelector(".participe-pas")){
- const joinEvent = () => {
-  const participe = document.querySelector(".participe")
-  const participePas = document.querySelector(".participe-pas")
-  participe.classList.remove("d-none");
-  participePas.classList.add("d-none");
- }
 
- joinEvent()
 
+const joinEvent = () => {
+  const participe = document.querySelector("#event-show-<%=@event.id%> .participe");
+  const participePas = document.querySelector("#event-show-<%=@event.id%> .participe-pas");
+  participePas.classList.toggle("d-none");
+  participe.classList.toggle("d-none");
 }
+
+
+joinEvent();
+
 

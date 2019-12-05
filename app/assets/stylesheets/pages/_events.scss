@@ -31,13 +31,14 @@ top:-2;
 margin-top:7px;
  }
 
- 
+
 #photo-preview{
   width:100%;
+  object-fit: cover;
 }
 
 .photo-create-event {
-  height: 30vh;
+  height: 27vh;
   background-color: #f5efff;
   position: relative;
  }
