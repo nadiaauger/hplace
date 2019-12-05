@@ -27,6 +27,13 @@
               participant
              <% end %>
              </h2>
+             <h2 id="number-of-participants-a" class="d-none"><%= ((Reservation.where(event: @event).count) +1) %>
+              <% if Reservation.where(event: @event).count > 1 %>
+               participants
+               <% else %>
+               participant
+              <% end %>
+              </h2>
             <div class="d-flex cards_participant">
               <% Reservation.where(event: event).each do |resa| %>
                 <%= link_to user_path(resa.user) , class: "link_to" do %>

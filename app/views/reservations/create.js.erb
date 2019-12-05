@@ -6,6 +6,11 @@ const joinEvent = () => {
   const participePas = document.querySelector("#event-show-<%=@event.id%> .participe-pas");
   participePas.classList.toggle("d-none");
   participe.classList.toggle("d-none");
+
+  const x = document.querySelector("#event-show-<%=@event.id%> #number-of-participants-a");
+  const y = document.querySelector("#event-show-<%=@event.id%> #number-of-participants");
+  x.classList.toggle("d-none");
+  y.classList.toggle("d-none");
 }
 
 
