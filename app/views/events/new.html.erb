@@ -1,6 +1,6 @@
 <div class="header-create-event">
   <div class="photo-create-event">
-    <%= image_tag "placeholder.jpg", class: "hidden photo-create-event", id: "photo-preview" %>
+    <%= image_tag "placeholder-4.png", class: "hidden photo-create-event", id: "photo-preview" %>
     <%#= image_tag "icon.png", class: "add-event-picto", id: "browsing-photo" %>
   </div>
 </div>
@@ -22,13 +22,13 @@
             <%= f.input :end, label: false, as: :string, required: true, input_html: {class: "endpicker time"}, placeholder:'Ending time' %>
           </div>
         </div>
-        <div class="third-block mb-5">
+        <div class="third-block">
           <%= f.input :location, label: false, placeholder: 'Lieu' %>
           <%= f.input :max_participants, as: :hidden  %>
-   
+
               <p>Nombre de participants</p>
             </div>
-           <div class="three-blocks justify-content-center">
+           <div class="three-blocks justify-content-center mb-2">
             <div class="actions">
               <a class="btn round-bordered incrementer-minus">-</a>
             </div>
@@ -41,9 +41,9 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
   <div class="create-event-container">
-    <%= f.button :submit, class: "btn-lg btn-block", value: "CRÉER L'ÉVÉNEMENT", id: "create-event-cta" %>
+    <%= f.button :submit, class: "btn-lg btn-block", value: "Créer l'événement", id: "create-event-cta" %>
   </div>
 <% end %>
+    </div>
