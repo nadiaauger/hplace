@@ -6,18 +6,16 @@
   </div>
   <div class="card-event-infos-new mt-0">
     <!-- A refaire pour evenement complet -->
-    <% if event.start.to_date == Time.now.to_date %>
+    <% if event.date.to_date == Time.now.to_date %>
      <h2 class="agenda-card-header"><i class="far fa-calendar-alt"></i> AUJOURD'HUI</h2>
-     <% elsif event.start.to_date == (Time.now.to_date + 1) %>
+     <% elsif event.date.to_date == (Time.now.to_date + 1) %>
       <h2 class="agenda-card-header"><i class="far fa-calendar-alt"></i> DEMAIN</h2>
-      <% elsif "#{I18n.localize(event.start, format: "%^Y %W")}" == "#{I18n.localize(Time.now, format: "%^Y %W")}" %>
-       <h2 class="agenda-card-header"><i class="far fa-calendar-alt"></i><%= " #{I18n.localize(event.start, format: "%^A")}"%></h2>
+      <% elsif "#{I18n.localize(event.date, format: "%^Y %W")}" == "#{I18n.localize(Time.now, format: "%^Y %W")}" %>
+       <h2 class="agenda-card-header"><i class="far fa-calendar-alt"></i><%= " #{I18n.localize(event.date, format: "%^A")}"%></h2>
      <% else %>
-       <h2 class="agenda-card-header"><i class="far fa-calendar-alt"></i><%= " #{I18n.localize(event.start, format: "%^a %d %^b")}"%></h2>
+       <h2 class="agenda-card-header"><i class="far fa-calendar-alt"></i><%= " #{I18n.localize(event.date, format: "%^a %d %^b")}"%></h2>
      <% end %>
-     <% x = ((event.end - event.start) % 3600).to_i %>
-     <% x < 10 ? t = "0#{x}" : t = ((event.end - event.start) % 3600).to_i  %>
-      <h2><i class="far fa-clock"></i> <%= "#{event.start.strftime("%kh%M")}   (#{((event.end - event.start) / 3600).to_i}h#{t})"%></h2>
+      <h2><i class="far fa-clock"></i> <%= "#{event.start.strftime("%kh%M")}"%></h2>
   </div>
     <%= link_to "", "#", class: "card-link", data: { toggle: "modal", target: "#event-show-#{event.id}"} %>
   </div>

@@ -23,10 +23,10 @@
    </div>
 
    <div class="d-flex cards-disc">
-       <% events = @user.hospital.events.sort_by {|event| event.start} %>
+       <% events = @user.hospital.events.sort_by {|event| event.date} %>
        <% events.each do |event| %>
          <% unless event.date.nil? %>
-           <%= (render 'shared/card_new_event', event: event) if event.start > DateTime.now %>
+           <%= (render 'shared/card_new_event', event: event) if event.date > DateTime.now %>
          <% end %>
        <% end %>
    </div>
