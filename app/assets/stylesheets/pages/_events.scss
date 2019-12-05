@@ -14,13 +14,14 @@
  }
 
 .lower-page {
-  background-color: #b1dce3;
+  background-color: #eceff1;
 }
 
 .events-info {
   background-color: white;
   border-radius: 20px;
   margin: 20px 0px;
+  box-shadow: 0 1px 10px rgba(0,0,0,0.2);
 }
 
 
@@ -29,35 +30,35 @@
 }
 
 
-::-webkit-input-placeholder {
-    color: red;
-}
-:-moz-placeholder {
-    /* FF 4-18 */
-    color: red;
-    opacity: 1;
-}
-::-moz-placeholder {
-    /* FF 19+ */
-    color: red;
-    opacity: 1;
-}
-:-ms-input-placeholder {
-    /* IE 10+ */
-    color: red;
-}
-::-ms-input-placeholder {
-    /* Microsoft Edge */
-    color: red;
-}
-::placeholder {
-    /* modern browser */
-    color: red;
-}
+// ::-webkit-input-placeholder {
+//     color: red;
+// }
+// :-moz-placeholder {
+//     /* FF 4-18 */
+//     color: red;
+//     opacity: 1;
+// }
+// ::-moz-placeholder {
+//     /* FF 19+ */
+//     color: red;
+//     opacity: 1;
+// }
+// :-ms-input-placeholder {
+//     /* IE 10+ */
+//     color: red;
+// }
+// ::-ms-input-placeholder {
+//     /* Microsoft Edge */
+//     color: red;
+// }
+// ::placeholder {
+//     /* modern browser */
+//     color: red;
+// }
 
 
  .add-event-picto {
-      height: 50px;
+    height: 50px;
     position: absolute;
     bottom: -23px;
     right: 18px;
@@ -86,7 +87,7 @@
   justify-content: center;
   font-weight: bold;
   color: white;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: normal;
 }
 

@@ -3,7 +3,9 @@
     color: #838284;
 
   }
-
+.time::placeholder {
+  color: red !important;
+}
 .simple_form {
 
   margin-top: 1em;
@@ -67,6 +69,9 @@ div.boolean label {
   text-align: center;
 }
 
+.third-block p {
+  font-size: 20px;
+}
 
 .actions {
   vertical-align: middle;

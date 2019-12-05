@@ -2,7 +2,7 @@
   overflow: hidden;
   height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   border-radius: 5px;
@@ -46,7 +46,21 @@
 .past-event{
   background-color: rgba(245, 245, 245, 1);
   opacity: 0.5;
-}
+  filter: grayscale(100%);
+  border-radius: 20px;
+ }
+
+.complet{
+  font-size: 2.6em !important;
+  color: #3f3f3f !important;
+  position: absolute;
+  opacity: 0.8;
+  top: 184px;
+  background: white;
+  padding: 4px 229px;
+  left: -129px;
+
+ }
 
 .card-agenda p {
   font-size: 13px;
@@ -66,7 +80,7 @@
 .card-event-new {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   border-radius: 20px;
   position:relative;
   margin-bottom: 0.5em;
@@ -95,13 +109,16 @@
     font-weight: bold;
     font-size: 5em;
     margin: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.7);
   }
 
 
 
   h2{
      color: white;
-     margin-bottom:0;
+     font-size: 3em;
+    margin-bottom: 0.4em;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.7);
 
   }
   p{
@@ -119,6 +136,11 @@
     }
 }
 
+.event_max_participants {
+  p {
+  font-size: 20px;
+}
+}
 
 
 .card-event-infos-new{
