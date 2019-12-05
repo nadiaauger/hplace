@@ -1,8 +1,10 @@
 console.log("hey");
 
+ 
 const joinEvent = () => {
   const participe = document.querySelector("#event-show-<%=@event.id%> .participe");
   const participePas = document.querySelector("#event-show-<%=@event.id%> .participe-pas");
+ 
   participe.classList.remove("d-none");
   participePas.classList.add("d-none");
 }
