@@ -45,6 +45,8 @@ Rails.application.configure do
   # config.action_cable.mount_path = nil
   config.action_cable.url = "wss://hplace.herokuapp.com/cable"
   config.action_cable.allowed_request_origins = [ "http://hplace.herokuapp.com", "https://hplace.herokuapp.com" ]
+  config.action_cable.url = "wss://hplace.fun/cable"
+  config.action_cable.allowed_request_origins = [ "http://hplace.fun", "https://hplace.fun" ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   config.force_ssl = true
