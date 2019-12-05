@@ -11,18 +11,25 @@
       </div>
 
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <% target_user.unseen_notifications.first(3).each do |notification| %>
-            <div class="notification unseen" >
-              <%= render 'shared/notification', notification: notification %>
-            </div>
-          <% end %>
-          <% target_user.seen_notifications.first(5).each do |notification| %>
-            <div class="notification seen">
-              <%= render 'shared/notification', notification: notification %>
-            </div>
-          <% end %>
-          <div class="dropdown-divider"></div>
-          <%= link_to "See more", notification_path, class: "dropdown-item text-center" %>
+        <% target_user.unseen_notifications.first(3).each do |notification| %>
+          <div class="notification unseen" >
+            <%= render 'shared/notification', notification: notification %>
+          </div>
+        <% end %>
+        <% target_user.seen_notifications.first(5).each do |notification| %>
+          <div class="notification seen">
+            <%= render 'shared/notification', notification: notification %>
+          </div>
+        <% end %>
+        <div class="dropdown-divider"></div>
+        <div class= "see-more">
+          <div>
+            <i class="fas fa-arrow-down" style="color:#EA4242; padding:0;"></i>
+          </div>
+          <div>
+            <%= link_to "See more", notification_path, class: "dropdown-item" %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
