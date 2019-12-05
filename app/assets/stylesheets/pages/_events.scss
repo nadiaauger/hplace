@@ -1,3 +1,37 @@
+ .topbar {
+background: white;
+height: 7em;
+   position:sticky;
+  top:0;
+  z-index: 1;
+
+  h1 {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+  }
+}
+
+.fa-bell{
+  position:relative;
+  color:#3f3f3f;
+  pointer: cursor;
+}
+
+.fa-bars{
+  color:#3f3f3f;
+  font-size: 1em !important;
+}
+.home-link{
+  position:relative;
+}
+#logo{
+position: absolute;
+top:-2;
+margin-top:7px;
+ }
+
+ 
 #photo-preview{
   width:100%;
 }
