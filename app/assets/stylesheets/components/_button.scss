@@ -6,6 +6,7 @@ background: #EA4242;
   opacity: 1;
   font-size: 3em;
   color:white !important;
+  box-shadow:0 2px 4px rgba(0,0,0,0.1);
 
   &.sticky{
     position: fixed;
