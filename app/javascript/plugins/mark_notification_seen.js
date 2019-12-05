@@ -14,7 +14,6 @@ const markNotificationSeen = () => {
       // This is a disgusting hack, please forgive me. this marks all unseen elements
       // as seen upon the second click to see the notifications.
       if (i > 0) {
-        console.log(i);
         document.querySelectorAll(".unseen").forEach(function(element) {
           element.classList.remove("unseen");
           element.classList.add("seen");
@@ -22,7 +21,7 @@ const markNotificationSeen = () => {
 
       }
       i++
-      griseBody();
+      // griseBody();
     });
   }
 }

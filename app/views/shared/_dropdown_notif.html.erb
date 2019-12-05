@@ -4,13 +4,12 @@
     <% end %>
     <div class="animation helping">
       <i class="fas fa-bell toggle-notifications" class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" /></i>
-      <div class="button_badge ">
-        <div class= "d-inline-flex align-items-center">
+      <div class="button_badge">
           <p class="number-of-notif"></p>
-        </div>
       </div>
 
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+        <h3 class="notification-upper">Notification</h3>
         <% target_user.unseen_notifications.first(3).each do |notification| %>
           <div class="notification unseen" >
             <%= render 'shared/notification', notification: notification %>
@@ -21,13 +20,12 @@
             <%= render 'shared/notification', notification: notification %>
           </div>
         <% end %>
-        <div class="dropdown-divider"></div>
         <div class= "see-more">
           <div>
             <i class="fas fa-arrow-down" style="color:#EA4242; padding:0;"></i>
           </div>
           <div>
-            <%= link_to "See more", notification_path, class: "dropdown-item" %>
+            <%= link_to "Voir plus", notification_path, class: "dropdown-item" %>
           </div>
         </div>
       </div>

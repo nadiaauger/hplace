@@ -51,7 +51,7 @@
       <%= render 'shared/flashes' %>
       <%= render 'shared/notification_alert' %>
       <% if user_signed_in? %>
-        <div id="show-notif" data-user="<%= current_user.id %>" >
+        <div id="show-notif" data-user="<%= current_user.id %>"></div>
       <% end %>
     </div>
     <%= javascript_include_tag 'application' %>

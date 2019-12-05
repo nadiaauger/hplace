@@ -1,23 +1,7 @@
 <% if notification.class.name == "Event" %>
   <%= link_to event_path(notification) do %>
-  <div class="d-flex">
-    <div>
-    <% if notification.user.photo.attached? %>
-        <%= cl_image_tag notification.user.photo.key, height: 50, width: 50, crop: :fill, class: "avatar" %>
-    <% else %>
-        <%= cl_image_tag "smiley-logo.jpg", height: 50, width: 50, crop: :fill, class: "avatar" %>
-    <% end %>
-    </div>
-    <div class="notification-content">
-      <p> <span> <%= notification.name %></span> a été créé par <span> <%= notification.user.username %></span>.</p>
-      <p><small><%= ((Time.now - notification.created_at) / 60).to_i %> minutes ago</small></p>
-    </div>
-  </div>
-  <% end %>
-<% else %>
-  <%= link_to event_path(notification.event) do  %>
-    <div class="d-flex">
-      <div>
+    <div class="notification-container">
+      <div class="notification-picture">
         <% if notification.user.photo.attached? %>
           <%= cl_image_tag notification.user.photo.key, height: 50, width: 50, crop: :fill, class: "avatar" %>
         <% else %>
@@ -25,9 +9,39 @@
         <% end %>
       </div>
       <div class="notification-content">
-        <p> <span> <%= notification.user.username %></span> a rejoint votre événement <span> <%= notification.event.name %></span>.</p>
-        <p><small><%= ((Time.now - notification.created_at) / 60).to_i %> minutes ago</small></p>
+        <h4><%= notification.user.username.capitalize %></h4>
+        <p>A créé le nouvel événement<br/><span><%= notification.name %></span></p>
       </div>
+
+      <% if ((Time.now - notification.created_at) / 60).to_i == 0 %>
+        <p class="notification-time">À l'instant.</p>
+      <% else %>
+        <p class="notification-time">Il y a <%=((Time.now - notification.created_at) / 60).to_i %> minutes</p>
+      <% end %>
+
+    </div>
+  <% end %>
+<% else %>
+  <%= link_to event_path(notification.event) do  %>
+    <div class="notification-container">
+      <div class="notification-picture">
+        <% if notification.user.photo.attached? %>
+          <%= cl_image_tag notification.user.photo.key, height: 50, width: 50, crop: :fill, class: "avatar" %>
+        <% else %>
+          <%= cl_image_tag "smiley-logo.jpg", height: 50, width: 50, crop: :fill, class: "avatar" %>
+        <% end %>
+      </div>
+      <div class="notification-content">
+        <h4><%= notification.user.username.capitalize %></h4>
+        <p>A rejoint votre événement<br/><span><%= notification.event.name %></span></p>
+      </div>
+
+      <% if ((Time.now - notification.created_at) / 60).to_i == 0 %>
+        <p class="notification-time">À l'instant.</p>
+      <% else %>
+        <p class="notification-time">Il y a <%=((Time.now - notification.created_at) / 60).to_i %> minutes</p>
+      <% end %>
+
     </div>
   <% end %>
 <% end %>
