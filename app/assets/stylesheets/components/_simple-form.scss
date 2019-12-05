@@ -3,9 +3,7 @@
     color: #838284;
 
   }
-.time::placeholder {
-  color: red !important;
-}
+
 .simple_form {
 
   margin-top: 1em;
@@ -14,7 +12,6 @@
   .form-control {
       border: 0;
       border-bottom: solid 1px #dee2e6;
-      // margin-left: 1em;
       padding:0;
 
       &.active{

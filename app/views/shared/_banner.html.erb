@@ -26,10 +26,10 @@
         <%= render 'shared/chat_btn', event: @event %>
       </div>
     <% elsif Reservation.where(user: current_user, event: event).exists? %>
-    <%= render 'shared/participe_call_to_action' %>
+    <%= render 'shared/participe_call_to_action', reservation: Reservation.where(user: current_user, event: event).first %>
     <% else %>
     <div class="participe d-none">
-      <%= render 'shared/participe_call_to_action' %>
+      <%= render 'shared/participe_call_to_action', reservation: Reservation.where(user: current_user, event: event).first%>
     </div>
     <div class="participe-pas">
       <% if event.reservations.count < event.max_participants %>
