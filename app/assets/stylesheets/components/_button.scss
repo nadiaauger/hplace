@@ -1,5 +1,5 @@
 .btn-round{
-background: #EA4242;
+  background: #EA4242;
   padding: 14px 21px;
   border-radius: 50%;
   font-weight: bold;
@@ -7,6 +7,11 @@ background: #EA4242;
   font-size: 3em;
   color:white !important;
   box-shadow:0 2px 4px rgba(0,0,0,0.1);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &.sticky{
     position: fixed;

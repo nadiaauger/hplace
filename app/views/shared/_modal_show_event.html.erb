@@ -5,14 +5,20 @@
   <div class="banner-modal" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1503482618211-c70b46ede8b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80'); background-position: inherit;">
 <% end %>
   <div class="container">
-    <div class="d-flex tete-single-event">
-      <h1> <%= event.name %> </h1>
-      <p id="date-event-show">
-        <% if @event.date == nil %>
-          <p class="date-event-show"><%= Date.today.strftime("%d %b %Y") %></p>
-        <% else %>
-          <p class="date-event-show"> <%= @event.date.day %>/<%= @event.date.month %></p>
-        <% end %></p>
+    <div class="tete-single-event">
+      <h1><%= event.name %></h1>
+      <p id="date-event-show-modal">
+        <% if event.start.to_date == Time.now.to_date %>
+         <h2 class="agenda-card-header" style="color:white;"> AUJOURD'HUI</h2>
+         <% elsif event.start.to_date == (Time.now.to_date + 1) %>
+          <h2 class="agenda-card-header" style="color:white;"> DEMAIN</h2>
+          <% elsif "#{I18n.localize(event.start, format: "%^Y %W")}" == "#{I18n.localize(Time.now, format: "%^Y %W")}" %>
+           <h2 class="agenda-card-header" style="color:white;"><%= " #{I18n.localize(event.start, format: "%^A")}"%></h2>
+         <% else %>
+           <h2 class="agenda-card-header" style="color:white;"><%= " #{I18n.localize(event.start, format: "%^a %d %^B")}"%></h2>
+         <% end %>
+       </p>
+       <p>Créé par: <%= event.user.username %></p>
       <% if current_user == event.user %>
         <div class="update-event">
            <%= link_to edit_event_path(event) do %>
@@ -26,7 +32,7 @@
         </button>
       </div>
     </div>
-    <p class="mb-3"> <%= event.description %> </p>
+    <!-- <p class="mb-3"> <%#= event.description %> </p> -->
     <% if current_user == event.user %>
       <div class="d-flex justify-content-between">
         <%= render 'shared/chat_btn'  %>
