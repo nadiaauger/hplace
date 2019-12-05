@@ -1,13 +1,9 @@
 .notification {
-  display: flex;
-  align-items: center;
-  background: white;
-  padding: 8px 16px;
-  border: 1px solid rgb(235,235,235);
-
+  background: #F9F9F9;
+  padding: 14px 16px;
   p{
     span{
-      color: #EA4242;
+      color: $orange;
     }
   }
 }
@@ -23,30 +19,43 @@
   width: 2em;
   display: none;
   position:absolute;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 
   p{
     color:white;
     top: auto;
     text-align: center;
+    margin:0;
   }
 }
 
 .dropdown-item {
-  font-size:14px;
+  font-size:14px !important;
   color:#EA4242;
   font-weight:bold;
-}
-
-.notification.seen{
-  background: black;
-  opacity:0.5;
-
 }
 
 .notification.unseen{
   border-left : 0.5rem solid;
   border-color: #EA4242;
   background: white;
+}
+
+.notification.unseen {
+  a:hover,
+  a:focus {
+    text-decoration: none;
+  }
+}
+
+.notification.seen {
+  a:hover,
+  a:focus {
+    text-decoration: none;
+  }
+  border-left: 0.5rem solid transparent;
 }
 
 .notification .notification-content {
@@ -82,7 +91,7 @@
   color: #555555;
 }
 
-.link_to{
+.link_to {
   color:black;
 }
 
@@ -111,6 +120,9 @@
   left: 1em !important;
   position: relative !important;
   padding: 0px;
+  border-radius: 20px !important;
+  border: none !important;
+  box-shadow: 0px 4px 16px rgba(0,0,0,0.2);
 }
 .notification-dropwdown .dropdown-menu:before {
   content: "";
@@ -120,9 +132,9 @@
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background: white;
+  background: #F9F9F9;
   border: 1px solid rgba(0,0,0,0.1);
-  // z-index: -1;
+  z-index: -1;
   transform: rotateZ(45deg);
 }
 
@@ -144,11 +156,22 @@
     width: 1px;
 }
 
-.notification .notification-content p {
-  font-size:13px;
-  &:hover{
-    text-decoration: none;
-  }
+.notification .notification-content {
+    p {
+      font-size: 1.5em;
+      line-height: 1.1em;
+      opacity: 0.8;
+    }
+    h4 {
+      font-size: 1.8em;
+      color: $orange;
+      margin-bottom: 0;
+    }
+}
+
+.notification.seen .notification-content h4 {
+  color: $super-gray;
+  opacity: 0.5;
 }
 
 .see-more{
@@ -156,5 +179,31 @@
   align-items: center;
   justify-content: center;
   font-size: 15px;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 0.5em;
 }
 
+.notification-upper {
+  text-align: center;
+  padding: 1.1em;
+  font-size: 2em;
+  font-weight: bolder;
+  background-color: #F9F9F9;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: 0px;
+}
+
+.notification-time {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  font-style: italic;
+  font-size: 1em;
+}
+
+.notification-container {
+  display: flex;
+  align-items: center;
+}
