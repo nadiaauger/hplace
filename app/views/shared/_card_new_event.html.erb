@@ -1,28 +1,29 @@
-<div class="card-event-new card-home-new  <%= 'past-event' if event.end < DateTime.now %>">
-      <div class='event-image' style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path event.photo.key%>')">
+<div class="card-event-new card-home-new ">
+      <div class='event-image <%= 'past-event' if (event.max_participants - event.reservations.count) == 0 %>' style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path event.photo.key%>')">
 
   <div class="card-top">
     <h1 class="card-title"><%= event.name %></h1>
   </div>
   <div class="card-event-infos-new mt-0">
-    <h2> <i class="far fa-calendar-alt"></i><%= " #{I18n.localize(event.start, format: "%^a %d %^b")}" %></h2>
-    <h2><i class="far fa-clock"></i> <%= "#{event.start.strftime("%I:%M %p")} - #{event.end.strftime("%I:%M %p")} "%></h2>
     <!-- A refaire pour evenement complet -->
     <% if event.start.to_date == Time.now.to_date %>
-     <h2 class="agenda-card-header">AUJOURD'HUI</h2>
+     <h2 class="agenda-card-header"><i class="far fa-calendar-alt"></i> AUJOURD'HUI</h2>
      <% elsif event.start.to_date == (Time.now.to_date + 1) %>
-      <h2 class="agenda-card-header">DEMAIN</h2>
+      <h2 class="agenda-card-header"><i class="far fa-calendar-alt"></i> DEMAIN</h2>
       <% elsif "#{I18n.localize(event.start, format: "%^Y %W")}" == "#{I18n.localize(Time.now, format: "%^Y %W")}" %>
-       <h2 class="agenda-card-header"><%= "#{I18n.localize(event.start, format: "%^A")}"%></h2>
+       <h2 class="agenda-card-header"><i class="far fa-calendar-alt"></i><%= " #{I18n.localize(event.start, format: "%^A")}"%></h2>
      <% else %>
-       <h2 class="agenda-card-header"><%= "#{I18n.localize(event.start, format: "%^a %d %^b")}"%></h2>
+       <h2 class="agenda-card-header"><i class="far fa-calendar-alt"></i><%= " #{I18n.localize(event.start, format: "%^a %d %^b")}"%></h2>
      <% end %>
-    <% if (event.max_participants - event.reservations.count) == 0 %>
-      <p><em>Complet</em></p>
-    <% end %>
+     <% x = ((event.end - event.start) % 3600).to_i %>
+     <% x < 10 ? t = "0#{x}" : t = ((event.end - event.start) % 3600).to_i  %>
+      <h2><i class="far fa-clock"></i> <%= "#{event.start.strftime("%kh%M")}   (#{((event.end - event.start) / 3600).to_i}h#{t})"%></h2>
   </div>
     <%= link_to "", "#", class: "card-link", data: { toggle: "modal", target: "#event-show-#{event.id}"} %>
   </div>
+  <% if (event.max_participants - event.reservations.count) == 0 %>
+    <p class="complet">Complet</p>
+  <% end %>
 </div>
 
 
