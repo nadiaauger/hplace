@@ -823,7 +823,7 @@ reserve.user = sophie
 reserve.event = fifa
 reserve.save
 reserve = Reservation.new
-reserve.user = nadia
+reserve.user = leo
 reserve.event = fifa
 reserve.save
 
