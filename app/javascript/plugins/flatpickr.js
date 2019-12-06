@@ -11,7 +11,7 @@ const flatPickrJs = () => {
     noCalendar: true,
     dateFormat: "H:i",
     time_12hr: true,
-    defaultDate: "10:00",
+    defaultDate: "20:00",
 });
     flatpickr(".endpicker", {
       enableTime: true,
@@ -19,7 +19,7 @@ const flatPickrJs = () => {
       noCalendar: true,
       dateFormat: "H:i",
       time_12hr: true,
-      defaultDate: "12:00"
+      defaultDate: "22:00"
   });
 
 

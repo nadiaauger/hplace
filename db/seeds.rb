@@ -33,7 +33,7 @@ leo.hospital = st_louis
 leo.save
 file = URI.open('https://avatars1.githubusercontent.com/u/54894352?v=4')
   nadia = User.new ({
-    username:      'nadiachou',
+    username:      'Julie',
     room:      'Sydney',
     email: 'nadia@gmail.com',
     password: '123456'
