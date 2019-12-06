@@ -327,7 +327,7 @@ file = URI.open('https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ix
    fifa = Event.new ({
     name:      'Tournoi de Fifa',
     location:      'Salle de Television',
-    date:             DateTime.new(2019,12,9),
+    date:             DateTime.new(2019,12,10),
     start:         DateTime.new(2019,12,18,21),
     end:          DateTime.new(2019,12,18,23),
     max_participants: 8,
@@ -356,7 +356,7 @@ file = URI.open('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ix
    code = Event.new ({
     name:      'Apprendre à Coder',
     location:      'Salle détente',
-    date:             DateTime.new(2019,12,9),
+    date:             DateTime.new(2019,12,8),
     start:         DateTime.new(2019,12,14,15),
     end:         DateTime.new(2019,12,14,17),
     max_participants: 8,
@@ -464,7 +464,7 @@ file = URI.open('https://images.pexels.com/photos/6453/nature-flowers-plant-spri
     bataille = Event.new ({
     name:      'Bataille Corse',
     location:      'Salle 203',
-    date:             DateTime.new(2019,12,12),
+    date:             DateTime.new(2019,12,9),
     start:          DateTime.new(2019,12,12,10),
     end:          DateTime.new(2019,12,12,12),
     max_participants: 4,
