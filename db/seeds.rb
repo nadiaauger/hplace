@@ -240,7 +240,7 @@ file = URI.open('https://images.unsplash.com/photo-1501003878151-d3cb87799705?ix
    belote = Event.new ({
     name:      'Belote',
     location:      'Cafeteria',
-    date:             DateTime.new(2019,12,14),
+    date:             DateTime.new(2019,12,7),
     start:          DateTime.new(2019,12,14,15),
     end:          DateTime.new(2019,12,14,18),
     max_participants: 4,
@@ -258,7 +258,7 @@ file = URI.open('https://images.pexels.com/photos/1329645/pexels-photo-1329645.j
 
 
     monopoly = Event.new ({
-    name:      'monopoly',
+    name:      'Monopoly',
     location:      'Cafeteria',
     date:             DateTime.new(2019,12,11),
     start:          DateTime.new(2019,12,11,15),
@@ -277,10 +277,10 @@ file = URI.open('https://www.regles-de-jeux.com/wp-content/uploads/2017/12/regle
 
 
     bridge = Event.new ({
-    name:      'Partie de bridge',
+    name:      'Partie de Bridge',
     location:      'Cafeteria',
-    date:             DateTime.new(2019,12,20),
-    start:          DateTime.new(2019,12,20,15),
+    date:             DateTime.new(2019,12,13),
+    start:          DateTime.new(2019,12,20,13),
     end:          DateTime.new(2019,12,20,18),
     max_participants: 4,
     description: 'Je vous invite à une petite partie de bridge pour se détendre, dans la bonne humeur. Je ramène le jeu !'
@@ -301,7 +301,7 @@ bridge.save
      date:           DateTime.new(2019,12,10),
     start:         DateTime.new(2019,12,4,15),
     end:         DateTime.new(2019,12,4,17),
- 
+
     max_participants: 6,
     description: 'Atelier démo pour apprendre à faire du tricot au point mousse pour cet hiver.'
   })
@@ -313,8 +313,8 @@ file = URI.open('https://images.unsplash.com/photo-1556112353-ad4fb98d81e7?ixlib
    uno = Event.new ({
     name:      'Partie de Uno',
     location:      'Salle A204',
-    date:             DateTime.new(2019,12,15),
-    start:          DateTime.new(2019,12,15,15),
+    date:             DateTime.new(2019,12,6),
+    start:          DateTime.new(2019,12,15,16),
     end:         DateTime.new(2019,12,15,17),
     max_participants: 8,
     description: 'Le Uno reste une valeur sûre pour passer une bonne après-midi.'
@@ -325,9 +325,9 @@ uno.photo.attach(io: file, filename: 'uno.jpg', content_type: 'image/jpg')
 uno.save
 file = URI.open('https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
    fifa = Event.new ({
-    name:      'Tournoi de fifa',
+    name:      'Tournoi de Fifa',
     location:      'Salle de Television',
-    date:             DateTime.new(2019,12,18),
+    date:             DateTime.new(2019,12,9),
     start:         DateTime.new(2019,12,18,21),
     end:          DateTime.new(2019,12,18,23),
     max_participants: 8,
@@ -341,9 +341,9 @@ file = URI.open('https://images.unsplash.com/photo-1535016120720-40c646be5580?ix
    film = Event.new ({
     name:      'Projection des Miserables',
     location:      'Salle A204',
-    date:             DateTime.new(2019,12,19),
-    start:         DateTime.new(2019,12, 19,15),
-    end:         DateTime.new(2019,12,19,18),
+    date:             DateTime.new(2019,12,6),
+    start:         DateTime.new(2019,12, 19,21),
+    end:         DateTime.new(2019,12,19,23),
     max_participants: 8,
     description: 'Le film Les Misérables est un grand classique du cinéma qui vaut le détour, je vous propose une projection ensemble'
   })
@@ -354,9 +354,9 @@ film.save
 
 file = URI.open('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
    code = Event.new ({
-    name:      'Apprendre à coder',
+    name:      'Apprendre à Coder',
     location:      'Salle détente',
-    date:             DateTime.new(2019,12,14),
+    date:             DateTime.new(2019,12,9),
     start:         DateTime.new(2019,12,14,15),
     end:         DateTime.new(2019,12,14,17),
     max_participants: 8,
@@ -372,9 +372,9 @@ file = URI.open('https://images.pexels.com/photos/167446/pexels-photo-167446.jpe
 
 
     chant = Event.new ({
-    name:      'Chant à capella',
+    name:      'Chant à Capella',
     location:      'Cafeteria',
-    date:             DateTime.new(2019,12,5),
+    date:             DateTime.new(2019,12,25),
     start:          DateTime.new(2019,12,5,15),
     end:          DateTime.new(2019,12,5,18),
     max_participants: 10,
@@ -390,9 +390,9 @@ file = URI.open('https://images.pexels.com/photos/2420585/pexels-photo-2420585.j
 
 
     discussion = Event.new ({
-    name:      'discussion sur la pluie et le beau temps',
+    name:      'Discussion sur la Pluie et leBeau Temps',
     location:      'Cafeteria',
-    date:             DateTime.new(2019,12,11),
+    date:             DateTime.new(2019,12,31),
     start:          DateTime.new(2019,12,11,10),
     end:          DateTime.new(2019,12,11,13),
     max_participants: 10,
@@ -408,9 +408,9 @@ file = URI.open('https://images.pexels.com/photos/713149/pexels-photo-713149.jpe
 
 
     impro = Event.new ({
-    name:      'Initiation au théâtre d\'impro',
+    name:      'Initiation au Théâtre d\'Impro',
     location:      'Cafeteria',
-    date:             DateTime.new(2019,12,9),
+    date:             DateTime.new(2019,12,19),
     start:          DateTime.new(2019,12,9,14),
     end:          DateTime.new(2019,12,9,18),
     max_participants: 8,
@@ -426,9 +426,9 @@ file = URI.open('https://images.pexels.com/photos/973403/pexels-photo-973403.jpe
 
 
     coiffure = Event.new ({
-    name:      'Se faire de super coiffures',
+    name:      'Se faire de Super Coiffures',
     location:      'Ma chambre, 207',
-    date:             DateTime.new(2019,12,6),
+    date:             DateTime.new(2019,12,22),
     start:          DateTime.new(2019,12,6,10),
     end:          DateTime.new(2019,12,6,13),
     max_participants: 6,
@@ -444,9 +444,9 @@ file = URI.open('https://images.pexels.com/photos/6453/nature-flowers-plant-spri
 
 
     blabla = Event.new ({
-    name:      'Simplement faire connaissance',
+    name:      'Simplement faire Connaissance',
     location:      'Cafeteria',
-    date:             DateTime.new(2019,12,4),
+    date:             DateTime.new(2019,12,23),
     start:          DateTime.new(2019,12,4,10),
     end:          DateTime.new(2019,12,4,13),
     max_participants: 8,
@@ -462,7 +462,7 @@ file = URI.open('https://images.pexels.com/photos/6453/nature-flowers-plant-spri
 
 
     bataille = Event.new ({
-    name:      'Bataille corse',
+    name:      'Bataille Corse',
     location:      'Salle 203',
     date:             DateTime.new(2019,12,12),
     start:          DateTime.new(2019,12,12,10),
@@ -498,7 +498,7 @@ file = URI.open('https://images.pexels.com/photos/381739/pexels-photo-381739.jpe
 
 
     jardin = Event.new ({
-    name:      'Promenade dans le jardin',
+    name:      'Promenade dans le Jardin',
     location:      'Jardin',
     date:             DateTime.new(2019,12,17),
     start:          DateTime.new(2019,12,17,14),
@@ -516,7 +516,7 @@ file = URI.open('https://images.pexels.com/photos/259698/pexels-photo-259698.jpe
 
 
     chanson = Event.new ({
-    name:      'Chantons ensemble',
+    name:      'Chantons Ensemble',
     location:      'Refectoire',
     date:             DateTime.new(2019,12,14),
     start:          DateTime.new(2019,12,14,15),
@@ -535,7 +535,7 @@ file = URI.open('https://images.pexels.com/photos/1708601/pexels-photo-1708601.j
 
 
     depart = Event.new ({
-    name:      'Mon départ de la clinique',
+    name:      'Mon Départ de la Clinique',
     location:      'Cafeteria',
     date:             DateTime.new(2019,12,18),
     start:          DateTime.new(2019,12,18,15),
@@ -573,9 +573,9 @@ file = URI.open('https://images.pexels.com/photos/1257105/pexels-photo-1257105.j
 
 
     lecture = Event.new ({
-    name:      'Lecture pour enfants',
+    name:      'Lecture pour Enfants',
     location:      'chambre 46',
-    date:             DateTime.new(2019,12,4),
+    date:             DateTime.new(2019,12,28),
     start:          DateTime.new(2019,12,4,15),
     end:          DateTime.new(2019,12,4,17),
     max_participants: 5,
