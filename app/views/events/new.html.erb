@@ -25,25 +25,23 @@
         <div class="third-block">
           <%= f.input :location, label: false, placeholder: 'Lieu' %>
           <%= f.input :max_participants, as: :hidden  %>
-
-              <p>Nombre de participants</p>
-            </div>
-           <div class="three-blocks justify-content-center mb-2">
-            <div class="actions">
-              <a class="btn round-bordered incrementer-minus">-</a>
-            </div>
-            <div class="actions">
+            <p>Nombre de participants</p>
+        </div>
+        <div class="three-blocks justify-content-center mb-2">
+          <div class="actions">
+            <a class="btn round-bordered incrementer-minus">-</a>
+          </div>
+          <div class="actions">
             <span id="counter">1</span>
-            </div>
-            <div class="actions">
-              <a href="#" class="btn round-bordered incrementer-plus">+</a>
-            </div>
+          </div>
+          <div class="actions">
+            <a href="#" class="btn round-bordered incrementer-plus">+</a>
           </div>
         </div>
       </div>
+    </div>
   </div>
   <div class="create-event-container">
     <%= f.button :submit, class: "btn-lg btn-block", value: "Créer l'événement", id: "create-event-cta" %>
   </div>
-<% end %>
-    </div>
+      <% end %>

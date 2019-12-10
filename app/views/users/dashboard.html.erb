@@ -1,3 +1,4 @@
+<% if user_signed_in? %>
  <div class="subnavbar">
    <ul class="list-inline tabs-underlined">
      <li>
@@ -11,7 +12,12 @@
      </li>
    </ul>
  </div>
-
+<% else %>
+  <div class="top-home sign-in-home">
+    <h2 id="btn-signin"><%=link_to "Sign in", new_user_session_path%></h2>
+    <h2 id="btn-signin"><%=link_to "Sign up", new_user_registration_path%></h2>
+  </div>
+<% end %>
 
 <div class="dashboard-main-container">
   <div class="disc animated fadeIn mr-2" id="discover-container">
