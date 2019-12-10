@@ -46,10 +46,9 @@
     <% unless events.length > 0 %>
       <h2> Vous ne participez à aucun événement, <%= link_to 'allez découvrir les événements proche de vous', hospital_path(@user.hospital) %> </h2>
     <% end %>
-    <div class="cards-new agenda">
-      <% events.each do |event| %>
-        <%= (render 'shared/card', event: event) if event.start > DateTime.now %>
-      <% end %>
+
+    <div class="agenda">
+        <%= (render 'shared/card', events: events) %>
       <h2>Évenements passés</h2>
       <% events.each do |event| %>
         <%= (render 'shared/card-past-event', event: event) if event.end < DateTime.now %>

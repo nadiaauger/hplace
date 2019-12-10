@@ -1,6 +1,6 @@
 .card-agenda {
   overflow: hidden;
-  height: 120px;
+  height: 100%;
   background: white;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   display: flex;
@@ -76,6 +76,14 @@
 
 
 
+.card-event-new .card-link{
+  position: absolute;
+  display: inline-grid;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
 
 .card-event-new {
   overflow: hidden;
@@ -87,7 +95,7 @@
   position: relative;
   height: 65vh;
   display: inline-grid;
-  min-width:80%;
+  min-width:80vw;
   margin: 1em;
 
   &:first-child {
@@ -98,7 +106,7 @@
 
   }
 
-   .event-image{
+  .event-image{
     background-size: cover;
     background-position: center;
     height:65vh;
@@ -148,14 +156,6 @@
   bottom:0;
   left: 5px;
   margin: 1.5rem
-}
-.card-event-new .card-link{
-  position: absolute;
-  display: inline-grid;
-  right: 0;
-  left: 0;
-  top: 0;
-  bottom: 0;
 }
 
 .cards_participant{
@@ -227,36 +227,36 @@
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
-  .cards-new {
-    grid-template-columns: 1fr;
+  .card-event-new .card-home-new  {
+    max-width:40vh;
   }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  .cards-new {
-    grid-template-columns: 1fr;
+  .card-event-new .card-home-new {
+    max-width:40vh;
   }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  .cards-new {
-    grid-template-columns: 1fr 1fr;
+  .card-event-new .card-home-new  {
+    max-width:40vh;
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .cards-new {
-    grid-template-columns: 1fr 1fr 1fr;
+  .card-event-new .card-home-new  {
+    max-width:40vh;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  .cards-new {
-    grid-template-columns: 1fr 1fr 1fr;
+  .card-event-new .card-home-new  {
+    max-width:40vh;
   }
 }
 

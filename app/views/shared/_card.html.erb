@@ -1,24 +1,32 @@
- <% if event.start.to_date == Time.now.to_date %>
-  <h2 class="agenda-card-header">AUJOURD'HUI</h2>
-  <% elsif event.start.to_date == (Time.now.to_date + 1) %>
-   <h2 class="agenda-card-header">DEMAIN</h2>
-   <% elsif "#{I18n.localize(event.start, format: "%^Y %W")}" == "#{I18n.localize(Time.now, format: "%^Y %W")}" %>
-    <h2 class="agenda-card-header"><%= "#{I18n.localize(event.start, format: "%^A")}"%></h2>
-  <% else %>
-    <h2 class="agenda-card-header"><%= "#{I18n.localize(event.start, format: "%^a %d %^b")}"%></h2>
-  <% end %>
-<div class="card-agenda">
-  <% if event.user == current_user %>
-    <p class="organiser-star badge badge-pill badge-warning">Votre Événement</p>
-  <% end %>
-  <%= cl_image_tag event.photo.key%>
-  <div class="card-agenda-infos">
-    <h2> <%= event.name %></h2>
-      <div classs="agenda-info-not-title">
-        <p><i class="far fa-clock"></i> <%= "#{event.start.strftime("%I:%M %p")} - #{event.end.strftime("%I:%M %p")} "%></p>
-        <p><i class="far fa-user"></i> <%= "#{event.reservations.count} participants" %></p>
-        <p><i class="fas fa-map-marker-alt"></i> <%= event.location%></p>
-      </div>
-  </div>
-</div>
+    <% last_date = nil %>
+    <% events.each do |event| %>
+      <% if event.start > DateTime.now %>
+         <% if last_date != event.start.to_date %>
+           <% if event.start.to_date == Time.now.to_date %>
+            <h2 class="agenda-card-header">AUJOURD'HUI</h2>
+            <% elsif event.start.to_date == (Time.now.to_date + 1) %>
+             <h2 class="agenda-card-header">DEMAIN</h2>
+             <% elsif "#{I18n.localize(event.start, format: "%^Y %W")}" == "#{I18n.localize(Time.now, format: "%^Y %W")}" %>
+              <h2 class="agenda-card-header"><%= "#{I18n.localize(event.start, format: "%^A")}"%></h2>
+            <% else %>
+              <h2 class="agenda-card-header"><%= "#{I18n.localize(event.start, format: "%^a %d %^b")}"%></h2>
+            <% end %>
+          <% end %>
+          <% last_date = event.start.to_date %>
+        <div class="card-agenda mb-3">
+          <% if event.user == current_user %>
+            <p class="organiser-star badge badge-pill badge-warning">Votre Événement</p>
+          <% end %>
+          <%= cl_image_tag event.photo.key%>
+          <div class="card-agenda-infos">
+            <h2> <%= event.name %></h2>
+              <div classs="agenda-info-not-title">
+                <p><i class="far fa-clock"></i> <%= "#{event.start.strftime("%I:%M %p")} - #{event.end.strftime("%I:%M %p")} "%></p>
+                <p><i class="far fa-user"></i> <%= "#{event.reservations.count} participants" %></p>
+                <p><i class="fas fa-map-marker-alt"></i> <%= event.location%></p>
+              </div>
+          </div>
+        </div>
 
+    <% end %>
+    <% end %>
