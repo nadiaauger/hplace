@@ -38,11 +38,9 @@
     <meta name="twitter:image:src" content="<%= meta_image %>">
   </head>
   <body>
-    <% if user_signed_in? %>
-      <div class="topbar">
-        <%= render "shared/topbar" %>
-      </div>
-    <% end %>
+    <div class="topbar">
+      <%= render "shared/topbar" %>
+    </div>
     <div class="body-to-grey">
       <div class='sticky-navbar'>
         <%= yield %>

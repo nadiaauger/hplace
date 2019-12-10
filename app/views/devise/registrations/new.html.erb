@@ -11,7 +11,7 @@
           <%= f.input :username,
                 autofocus: true,
                 required: true,
-                input_html: { autocomplete: "username" } %>
+                input_html: { autocomplete: "username" }, id: "username_login_form" %>
           <%= f.input :email,
                       required: true,
                       input_html: { autocomplete: "email" }%>
@@ -31,8 +31,10 @@
           <%= f.button :submit, "Sign up", class: 'btn btn-primary btn-block py-2 signup-btn' %>
         </div>
       <% end %>
+      <div class="my-10" style = "font-size: 15px; margin: 10px">
+        <%= render "devise/shared/links" %>
+      </div>
     </div>
   </div>
 </div>
 
-<%= render "devise/shared/links" %>

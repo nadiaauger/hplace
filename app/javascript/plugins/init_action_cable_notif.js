@@ -12,8 +12,6 @@ const displayNotifications = (data) => {
   if (notificationContainer) {
     notificationContainer.innerHTML = data.notifications_html
   }
-  console.log(data.notifications_html);
-  console.log("here");
   markNotificationSeen();
 }
 

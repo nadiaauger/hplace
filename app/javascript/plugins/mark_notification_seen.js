@@ -7,7 +7,7 @@ const markNotificationSeen = () => {
   if (toogleNotif){
     toogleNotif.addEventListener('click', () => {
       const badge = document.querySelector(".button_badge");
-      badge.style.display = "flex";
+      badge.style.display = "";
       const formNotif = document.querySelector("#form-notification-seen");
       Rails.fire(formNotif, 'submit');
       // body.classList.add('body-grise')

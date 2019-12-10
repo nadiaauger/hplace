@@ -1,22 +1,15 @@
-  .time{
-    // margin-left: 11vw !important;
-    color: #838284;
-
-  }
-
-.simple_form {
-
+.time{
+  // margin-left: 11vw !important;
+  color: #838284;
+}
+.new_event .simple_form {
   margin-top: 1em;
-
-
   .form-control {
       border: 0;
       border-bottom: solid 1px #dee2e6;
       padding:0;
-
       &.active{
-              border: 0;
-
+        border: 0;
       }
   }
 
