@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-
+  # root to: 'users#dashboard'
 
   resources :users, only: [:show]
   resources :reservations, only: [:destroy]
