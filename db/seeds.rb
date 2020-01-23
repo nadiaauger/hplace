@@ -240,9 +240,9 @@ file = URI.open('https://images.unsplash.com/photo-1501003878151-d3cb87799705?ix
    belote = Event.new ({
     name:      'Belote',
     location:      'Cafeteria',
-    date:             DateTime.new(2019,12,7),
-    start:          DateTime.new(2019,12,14,15),
-    end:          DateTime.new(2019,12,14,18),
+    date:             DateTime.new(2020,12,7),
+    start:          DateTime.new(2020,12,14,15),
+    end:          DateTime.new(2020,12,14,18),
     max_participants: 4,
     description: 'Je vous propose une petite partie de coinche pour se détendre, dans la bonne humeur. Je ramène le jeu de cartes!',
 
@@ -260,9 +260,9 @@ file = URI.open('https://images.pexels.com/photos/1329645/pexels-photo-1329645.j
     monopoly = Event.new ({
     name:      'Monopoly',
     location:      'Cafeteria',
-    date:             DateTime.new(2019,12,11),
-    start:          DateTime.new(2019,12,11,15),
-    end:          DateTime.new(2019,12,11,18),
+    date:             DateTime.new(2020,12,11),
+    start:          DateTime.new(2020,12,11,15),
+    end:          DateTime.new(2020,12,11,18),
     max_participants: 4,
     description: 'Je vous propose une petite partie de monopoly pour se détendre, dans la bonne humeur. Je ramène le jeu !'
   })
@@ -279,9 +279,9 @@ file = URI.open('https://www.regles-de-jeux.com/wp-content/uploads/2017/12/regle
     bridge = Event.new ({
     name:      'Partie de Bridge',
     location:      'Cafeteria',
-    date:             DateTime.new(2019,12,13),
-    start:          DateTime.new(2019,12,20,13),
-    end:          DateTime.new(2019,12,20,18),
+    date:             DateTime.new(2020,12,13),
+    start:          DateTime.new(2020,12,20,13),
+    end:          DateTime.new(2020,12,20,18),
     max_participants: 4,
     description: 'Je vous invite à une petite partie de bridge pour se détendre, dans la bonne humeur. Je ramène le jeu !'
   })
@@ -298,9 +298,9 @@ bridge.save
    tricot = Event.new ({
     name:      'Tricot',
     location:      'Salle M304',
-     date:           DateTime.new(2019,12,10),
-    start:         DateTime.new(2019,12,4,15),
-    end:         DateTime.new(2019,12,4,17),
+     date:           DateTime.new(2020,12,10),
+    start:         DateTime.new(2020,12,4,15),
+    end:         DateTime.new(2020,12,4,17),
 
     max_participants: 6,
     description: 'Atelier démo pour apprendre à faire du tricot au point mousse pour cet hiver.'
@@ -313,9 +313,9 @@ file = URI.open('https://images.unsplash.com/photo-1556112353-ad4fb98d81e7?ixlib
    uno = Event.new ({
     name:      'Partie de Uno',
     location:      'Salle A204',
-    date:             DateTime.new(2019,12,6),
-    start:          DateTime.new(2019,12,15,16),
-    end:         DateTime.new(2019,12,15,17),
+    date:             DateTime.new(2020,12,6),
+    start:          DateTime.new(2020,12,15,16),
+    end:         DateTime.new(2020,12,15,17),
     max_participants: 8,
     description: 'Le Uno reste une valeur sûre pour passer une bonne après-midi.'
   })
@@ -327,9 +327,9 @@ file = URI.open('https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ix
    fifa = Event.new ({
     name:      'Tournoi de Fifa',
     location:      'Salle de Television',
-    date:             DateTime.new(2019,12,10),
-    start:         DateTime.new(2019,12,18,21),
-    end:          DateTime.new(2019,12,18,23),
+    date:             DateTime.new(2020,12,10),
+    start:         DateTime.new(2020,12,18,21),
+    end:          DateTime.new(2020,12,18,23),
     max_participants: 8,
     description: "On m'a offert une Playstation ce weekend, qui veut venir jouer à Fifa avec moi ??"
   })
@@ -341,9 +341,9 @@ file = URI.open('https://images.unsplash.com/photo-1535016120720-40c646be5580?ix
    film = Event.new ({
     name:      'Projection des Miserables',
     location:      'Salle A204',
-    date:             DateTime.new(2019,12,6),
-    start:         DateTime.new(2019,12, 19,21),
-    end:         DateTime.new(2019,12,19,23),
+    date:             DateTime.new(2020,12,6),
+    start:         DateTime.new(2020,12, 20,21),
+    end:         DateTime.new(2020,12,20,23),
     max_participants: 8,
     description: 'Le film Les Misérables est un grand classique du cinéma qui vaut le détour, je vous propose une projection ensemble'
   })
@@ -356,9 +356,9 @@ file = URI.open('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ix
    code = Event.new ({
     name:      'Apprendre à Coder',
     location:      'Salle détente',
-    date:             DateTime.new(2019,12,8),
-    start:         DateTime.new(2019,12,14,15),
-    end:         DateTime.new(2019,12,14,17),
+    date:             DateTime.new(2020,12,8),
+    start:         DateTime.new(2020,12,14,15),
+    end:         DateTime.new(2020,12,14,17),
     max_participants: 8,
     description: 'L\'année dernière, j\'ai fait une formation intensive en dévelopment web. J\'adorerais partager ce que j\'ai appris avec ceux qui seraient intéressés. Ma spécialité etait le Javascript. Au menu: comment coder un super boutons avec de effets de ouf!',
   })
@@ -374,9 +374,9 @@ file = URI.open('https://images.pexels.com/photos/167446/pexels-photo-167446.jpe
     chant = Event.new ({
     name:      'Chant à Capella',
     location:      'Cafeteria',
-    date:             DateTime.new(2019,12,25),
-    start:          DateTime.new(2019,12,5,15),
-    end:          DateTime.new(2019,12,5,18),
+    date:             DateTime.new(2020,12,25),
+    start:          DateTime.new(2020,12,5,15),
+    end:          DateTime.new(2020,12,5,18),
     max_participants: 10,
     description: 'Il paraît que tout le monde a une voix qui vaut le détour! Retrouvons-nous pour pousser la chansonnette !',
   })
@@ -392,9 +392,9 @@ file = URI.open('https://images.pexels.com/photos/2420585/pexels-photo-2420585.j
     discussion = Event.new ({
     name:      'Discussion sur la Pluie et leBeau Temps',
     location:      'Cafeteria',
-    date:             DateTime.new(2019,12,31),
-    start:          DateTime.new(2019,12,11,10),
-    end:          DateTime.new(2019,12,11,13),
+    date:             DateTime.new(2020,12,31),
+    start:          DateTime.new(2020,12,11,10),
+    end:          DateTime.new(2020,12,11,13),
     max_participants: 10,
     description: 'Nous sommes pas mal de nouveaux patients, et si on se retrouvait pour faire connaissance?',
   })
@@ -410,9 +410,9 @@ file = URI.open('https://images.pexels.com/photos/713149/pexels-photo-713149.jpe
     impro = Event.new ({
     name:      'Initiation au Théâtre d\'Impro',
     location:      'Cafeteria',
-    date:             DateTime.new(2019,12,19),
-    start:          DateTime.new(2019,12,9,14),
-    end:          DateTime.new(2019,12,9,18),
+    date:             DateTime.new(2020,12,19),
+    start:          DateTime.new(2020,12,9,14),
+    end:          DateTime.new(2020,12,9,18),
     max_participants: 8,
     description: 'Le théâtre d\'impro est excellent pour la santé ! On essaie ensemble ? Même si vous êtes timide venez quand même !'
   })
@@ -428,9 +428,9 @@ file = URI.open('https://images.pexels.com/photos/973403/pexels-photo-973403.jpe
     coiffure = Event.new ({
     name:      'Se faire de Super Coiffures',
     location:      'Ma chambre, 207',
-    date:             DateTime.new(2019,12,22),
-    start:          DateTime.new(2019,12,6,10),
-    end:          DateTime.new(2019,12,6,13),
+    date:             DateTime.new(2020,12,22),
+    start:          DateTime.new(2020,12,6,10),
+    end:          DateTime.new(2020,12,6,13),
     max_participants: 6,
     description: 'Changer de coiffure fait du bien au moral ! Je peux vous montrer comment se faire des tresses indiennes super jolies en quelques minutes',
   })
@@ -446,9 +446,9 @@ file = URI.open('https://images.pexels.com/photos/6453/nature-flowers-plant-spri
     blabla = Event.new ({
     name:      'Simplement faire Connaissance',
     location:      'Cafeteria',
-    date:             DateTime.new(2019,12,23),
-    start:          DateTime.new(2019,12,4,10),
-    end:          DateTime.new(2019,12,4,13),
+    date:             DateTime.new(2020,12,23),
+    start:          DateTime.new(2020,12,4,10),
+    end:          DateTime.new(2020,12,4,13),
     max_participants: 8,
     description: 'Je suis nouveau à l\'hôpital et je serai content de pouvoir passer du temps avec vous'
   })
@@ -464,9 +464,9 @@ file = URI.open('https://images.pexels.com/photos/6453/nature-flowers-plant-spri
     bataille = Event.new ({
     name:      'Bataille Corse',
     location:      'Salle 203',
-    date:             DateTime.new(2019,12,9),
-    start:          DateTime.new(2019,12,12,10),
-    end:          DateTime.new(2019,12,12,12),
+    date:             DateTime.new(2020,12,9),
+    start:          DateTime.new(2020,12,12,10),
+    end:          DateTime.new(2020,12,12,12),
     max_participants: 4,
     description: 'Des intéressés par une petite bataille corse ? '
   })
@@ -482,9 +482,9 @@ file = URI.open('https://images.pexels.com/photos/1753411/pexels-photo-1753411.j
     tisane = Event.new ({
     name:      'Tisane de Noël',
     location:      'Salon du RDC',
-    date:             DateTime.new(2019,12,23),
-    start:          DateTime.new(2019,12,23,17),
-    end:          DateTime.new(2019,12,23,18),
+    date:             DateTime.new(2020,12,23),
+    start:          DateTime.new(2020,12,23,17),
+    end:          DateTime.new(2020,12,23,18),
     max_participants: 4,
     description: 'La tisane de l\'amitié, juste avant Noël. Je dispose de plusieurs tisanes délicieuses à vous faire goûter.'
   })
@@ -500,9 +500,9 @@ file = URI.open('https://images.pexels.com/photos/381739/pexels-photo-381739.jpe
     jardin = Event.new ({
     name:      'Promenade dans le Jardin',
     location:      'Jardin',
-    date:             DateTime.new(2019,12,17),
-    start:          DateTime.new(2019,12,17,14),
-    end:          DateTime.new(2019,12,17,15),
+    date:             DateTime.new(2020,12,17),
+    start:          DateTime.new(2020,12,17,14),
+    end:          DateTime.new(2020,12,17,15),
     max_participants: 8,
     description: 'Une petite promenade digestive fait toujours plaisir, qui se joint à moi?'
   })
@@ -518,9 +518,9 @@ file = URI.open('https://images.pexels.com/photos/259698/pexels-photo-259698.jpe
     chanson = Event.new ({
     name:      'Chantons Ensemble',
     location:      'Refectoire',
-    date:             DateTime.new(2019,12,14),
-    start:          DateTime.new(2019,12,14,15),
-    end:          DateTime.new(2019,12,14,17),
+    date:             DateTime.new(2020,12,14),
+    start:          DateTime.new(2020,12,14,15),
+    end:          DateTime.new(2020,12,14,17),
     max_participants: 15,
     description: 'L\'équipe médicale organise pour nous une session de chants de Noël, ça va être super beau, il faut être nombreux !'
   })
@@ -537,9 +537,9 @@ file = URI.open('https://images.pexels.com/photos/1708601/pexels-photo-1708601.j
     depart = Event.new ({
     name:      'Mon Départ de la Clinique',
     location:      'Cafeteria',
-    date:             DateTime.new(2019,12,18),
-    start:          DateTime.new(2019,12,18,15),
-    end:          DateTime.new(2019,12,18,17),
+    date:             DateTime.new(2020,12,18),
+    start:          DateTime.new(2020,12,18,15),
+    end:          DateTime.new(2020,12,18,17),
     max_participants: 15,
     description: 'Chers tous, ça y est je quitte la clinique après 4 mois de soins intensifs. Je vous invite à un petit goûter pour fêter ça.'
   })
@@ -556,9 +556,9 @@ file = URI.open('https://images.pexels.com/photos/1708601/pexels-photo-1708601.j
     priere = Event.new ({
     name:      'Prière de Noël',
     location:      'Salon',
-    date:             DateTime.new(2019,12,25),
-    start:          DateTime.new(2019,12,25,15),
-    end:          DateTime.new(2019,12,25,17),
+    date:             DateTime.new(2020,12,25),
+    start:          DateTime.new(2020,12,25,15),
+    end:          DateTime.new(2020,12,25,17),
     max_participants: 10,
     description: 'Prions ensemble pour Noël et pour garder espoir'
   })
@@ -575,9 +575,9 @@ file = URI.open('https://images.pexels.com/photos/1257105/pexels-photo-1257105.j
     lecture = Event.new ({
     name:      'Lecture pour Enfants',
     location:      'chambre 46',
-    date:             DateTime.new(2019,12,28),
-    start:          DateTime.new(2019,12,4,15),
-    end:          DateTime.new(2019,12,4,17),
+    date:             DateTime.new(2020,12,28),
+    start:          DateTime.new(2020,12,4,15),
+    end:          DateTime.new(2020,12,4,17),
     max_participants: 5,
     description: 'Mon fils sera ravi de partager ses livres avec les autres enfants et de lire tous ensemble'
   })
