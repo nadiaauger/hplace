@@ -7,7 +7,7 @@
     "bootstrap": "^4.3.1",
     "datepicker": "^0.0.0",
     "flatpickr": "^4.6.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "pluralize": "^8.0.0",
     "popper.js": "^1.16.0",
     "typed.js": "^2.0.11"
